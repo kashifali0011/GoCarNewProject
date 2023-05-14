@@ -1,0 +1,33 @@
+<resources>
+
+    <!--Towsal Server Links Production-->
+    <string name="production_towsal" translatable="false">http://gocar.sa/api/</string>
+    <string name="production_towsal_image" translatable="false">http://gocar.sa/storage/</string>
+    <string name="production_towsal_deepLink" translatable="false">http://gocar.sa/</string>
+    <string name="production_towsal_web" translatable="false">http://gocar.sa/</string>
+
+
+    <!--Towsal Server Links Development-->
+
+    <string name="development_towsal" translatable="false">http://gocar.sa:8080/api/</string>
+    <string name="development_towsal_image" translatable="false">http://gocar.sa:8080/storage/</string>
+    <string name="development_towsal_deeplink" translatable="false">http://gocar.sa:8080/</string>
+    <string name="development_towsal_web" translatable="false">http://gocar.sa:8080/</string>
+
+
+    <!--Towsal Server Links Staging-->
+
+    <string name="staging_towsal" translatable="false">http://gocar.sa:8888/api/</string>
+    <string name="staging_towsal_image" translatable="false">http://gocar.sa:8888/storage/</string>
+    <string name="staging_towsal_deeplink" translatable="false">http://gocar.sa:8888/</string>
+    <string name="staging_towsal_web" translatable="false">http://gocar.sa:8888/</string>
+
+    <!--Towsal Server Links Local-->
+    <!--...it was befor http://172.16.0.146:8000/api/-->
+
+    <string name="local_towsal" translatable="false">http://172.16.0.95:8000/api/</string>
+    <string name="local_towsal_image" translatable="false">http://172.16.0.95:8000/storage/</string>
+    <string name="local_towsal_deeplink" translatable="false">http://172.16.0.95:8000/</string>
+    <string name="local_towsal_web" translatable="false">http://172.16.0.95:8000/</string>
+
+</resources>

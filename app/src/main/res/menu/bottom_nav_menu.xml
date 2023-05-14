@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/bnv_search"
+        android:icon="@drawable/search_selector"
+        android:title="@string/search"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/bnv_trips"
+        android:icon="@drawable/trips_selector"
+        android:title="@string/trips"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/bnv_message"
+        android:icon="@drawable/messages_selector"
+        android:title="@string/messages"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/bnv_host"
+        android:icon="@drawable/host_selector"
+        android:title="@string/host"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/bnv_profile"
+        android:icon="@drawable/profile_selector"
+        android:title="@string/profile"
+        app:showAsAction="always" />
+
+</menu>

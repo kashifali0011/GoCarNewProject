@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="activity"
+            type="com.towsal.towsal.views.activities.ListingStatusActivity" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorWhite"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/mainLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <include
+                android:id="@+id/layoutToolBar"
+                layout="@layout/layout_new_custom_action_bar" />
+
+            <RadioGroup
+                android:id="@+id/radioGroup"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/layoutToolBar">
+
+                <RadioButton
+                    android:id="@+id/listed"
+                    style="@style/InterRegularFont"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/colorPrimaryDark"
+                    android:paddingStart="@dimen/_15sdp"
+                    android:paddingEnd="@dimen/_15sdp"
+                    android:text="@string/listed"
+                    android:textSize="@dimen/_13ssp" />
+
+                <RadioButton
+                    android:id="@+id/snoozed"
+                    style="@style/InterRegularFont"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:buttonTint="@color/colorPrimaryDark"
+                    android:paddingStart="@dimen/_15sdp"
+                    android:paddingEnd="@dimen/_15sdp"
+                    android:text="@string/snoozed"
+                    android:textSize="@dimen/_13ssp" />
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/date"
+                style="@style/InterRegularFont"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:textSize="@dimen/_13ssp"
+                app:layout_constraintEnd_toEndOf="@id/radioGroup"
+                app:layout_constraintStart_toStartOf="@+id/radioGroup"
+                app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+            <TextView
+                android:id="@+id/deleteListing"
+                style="@style/SharpGroteskSemiBoldFont11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:onClick="@{(view)->activity.onClick(view)}"
+                android:text="@string/delete_listing"
+                android:textAllCaps="true"
+
+                android:textColor="@color/text_color_red_variation_"
+                android:textSize="@dimen/_36ssp"
+                app:layout_constraintBottom_toTopOf="@+id/textView41"
+                app:layout_constraintStart_toStartOf="@+id/textView41" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_2sdp"
+                android:background="@color/text_color_red_variation_"
+                app:layout_constraintEnd_toEndOf="@id/deleteListing"
+                app:layout_constraintStart_toStartOf="@id/deleteListing"
+                app:layout_constraintTop_toBottomOf="@id/deleteListing" />
+
+            <TextView
+                android:id="@+id/textView41"
+                style="@style/InterRegularFont"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_20sdp"
+                android:text="@string/deleting_your_listing_permanently_remove_it_from_gocar"
+                android:textSize="@dimen/_13ssp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/radioGroup"
+                app:layout_constraintStart_toStartOf="@+id/radioGroup" />
+
+            <!--            <Button-->
+            <!--                android:id="@+id/next"-->
+            <!--                style="@style/ButtonStyle"-->
+            <!--                android:layout_width="0dp"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_marginTop="@dimen/_15sdp"-->
+            <!--                android:background="@drawable/button_primary_bg"-->
+            <!--                android:onClick="@{(view)->activity.onClick(view)}"-->
+            <!--                android:text="@string/next"-->
+            <!--                android:textAllCaps="false"-->
+            <!--                app:layout_constraintBottom_toBottomOf="parent"-->
+            <!--                app:layout_constraintEnd_toEndOf="@+id/zipCodeEdt"-->
+            <!--                app:layout_constraintStart_toStartOf="@+id/zipCodeEdt"-->
+            <!--                app:layout_constraintTop_toBottomOf="@+id/zipCodeEdt"-->
+            <!--                 />-->
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</layout>

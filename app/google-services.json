@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "763076761420",
+    "project_id": "towsal-9f623",
+    "storage_bucket": "towsal-9f623.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:763076761420:android:d6db8c87fd6825b33821e9",
+        "android_client_info": {
+          "package_name": "com.towsal.towsal"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "763076761420-90vqlm0l2bq1cd2pce2ff7bgdne6r021.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBgMp__N-UIPwKhaBpqCofPud_9kJo_04E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "763076761420-90vqlm0l2bq1cd2pce2ff7bgdne6r021.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

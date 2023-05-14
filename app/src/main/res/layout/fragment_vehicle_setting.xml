@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="fragment"
+            type="com.towsal.towsal.views.fragments.VehicleSettingFragment" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:background="@color/colorWhite"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/layoutToolBar"
+            layout="@layout/layout_new_custom_action_bar" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@id/constraintLayout7"
+            app:layout_constraintTop_toBottomOf="@id/layoutToolBar">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/mainLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/_20sdp">
+
+
+                <ImageView
+                    android:id="@+id/ivCarImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_212sdp"
+                    android:nestedScrollingEnabled="true"
+                    android:scaleType="centerCrop"
+                    app:autoScroll="false"
+                    app:isInfinite="true"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvViewList"
+                    android:onClick="@{(view)->fragment.onClick(view)}"
+                    style="@style/SharpGroteskSemiBoldFont10"
+                    android:layout_marginEnd="@dimen/_15ssp"
+                    android:layout_marginTop="@dimen/_7ssp"
+                    android:textAllCaps="true"
+                    android:textSize="@dimen/_22ssp"
+                    android:textColor="@color/white"
+                    android:text="@string/view_listing"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/tvViewListingDesign"
+                    style="@style/SharpGroteskSemiBoldFont10"
+                    android:layout_marginEnd="@dimen/_15ssp"
+                    android:layout_marginTop="@dimen/_7ssp"
+                    android:textAllCaps="true"
+                    android:textSize="@dimen/_22ssp"
+                    android:textColor="@color/black"
+                    android:text="@string/view_listing"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+
+
+
+
+
+                <TextView
+                    app:layout_constraintTop_toBottomOf="@+id/ivCarImage"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:id="@+id/carName"
+                    style="@style/SharpGroteskSemiBoldFont11"
+                    android:layout_width="0dp"
+                    android:layout_marginTop="@dimen/_6sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:gravity="start"
+                    android:paddingVertical="@dimen/_10sdp"
+                    android:paddingStart="@dimen/_10sdp"
+                    android:paddingEnd="@dimen/_5sdp"
+                    android:singleLine="true"
+                    app:layout_constraintEnd_toStartOf="@+id/rbCarRating"
+                    android:textAllCaps="true"
+                    android:textSize="@dimen/_25ssp"
+                    tools:text="sssssssssssssssssssssssssssssss" />
+
+
+                <com.willy.ratingbar.BaseRatingBar
+                    android:id="@+id/rbCarRating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_15sdp"
+                    app:layout_constraintBottom_toBottomOf="@id/carName"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/carName"
+                    app:srb_clearRatingEnabled="false"
+                    app:srb_clickable="false"
+                    app:srb_drawableEmpty="@drawable/ic_empty_star"
+                    app:srb_drawableFilled="@drawable/ic_filled_star"
+                    app:srb_isIndicator="true"
+                    app:srb_numStars="5"
+                    app:srb_scrollable="false"
+                    app:srb_starHeight="@dimen/_13sdp"
+                    app:srb_starPadding="@dimen/_2sdp"
+                    app:srb_starWidth="@dimen/_13sdp" />
+
+                <View
+                    android:id="@+id/view"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_10ssp"
+                    android:background="@color/bg_chat_bottom"
+                    app:layout_constraintTop_toBottomOf="@+id/carName"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_1sdp"/>
+
+                <TextView
+
+                    app:layout_constraintTop_toBottomOf="@+id/view"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:id="@+id/tvLicenseNumber"
+                    style="@style/InterRegularFont"
+                    android:layout_width="wrap_content"
+                    android:textSize="@dimen/_12ssp"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_7sdp"
+                    android:textColor="@color/grey_text_color_new"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    tools:text="7492 BFL" />
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clActionButtons"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    app:layout_constraintTop_toBottomOf="@id/tvLicenseNumber">
+
+
+                    <RadioGroup
+                        android:id="@+id/rgStatus"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_31sdp"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:background="@drawable/bg_my_car_action_buttons"
+                        android:checkedButton="@+id/snoozed"
+                        android:orientation="horizontal"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/ivDeleteCar"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <!--android:clickable="false"-->
+
+                        <RadioButton
+                            android:id="@+id/rbActive"
+                            style="@style/SharpGroteskSemiBoldFont11"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginVertical="@dimen/_3sdp"
+                            android:layout_marginStart="@dimen/_3sdp"
+                            android:layout_weight="1"
+                            android:onClick="@{(view)->fragment.onClick(view)}"
+                            android:background="@drawable/toggle_widget_background"
+                            android:button="@null"
+                            android:gravity="center"
+                            android:text="@string/active"
+                            android:textAllCaps="true"
+                            android:textColor="@color/selector_color"
+                            android:textSize="@dimen/_19ssp" />
+
+                        <RadioButton
+                            android:id="@+id/rbSnooze"
+                            style="@style/SharpGroteskSemiBoldFont11"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="@dimen/_3sdp"
+                            android:layout_weight="1"
+                            android:background="@drawable/toggle_widget_background"
+                            android:button="@null"
+                            android:onClick="@{(view)->fragment.onClick(view)}"
+                            android:gravity="center"
+                            android:text="@string/snoozed"
+                            android:textAllCaps="true"
+                            android:textColor="@color/selector_color"
+                            android:textSize="@dimen/_19ssp" />
+                    </RadioGroup>
+
+                    <TextView
+                        android:layout_marginBottom="@dimen/_1sdp"
+                        android:layout_marginTop="@dimen/_1sdp"
+                        android:paddingEnd="@dimen/_15sdp"
+                        style="@style/SharpGroteskSemiBoldFont10"
+                        android:textSize="@dimen/_20ssp"
+                        android:onClick="@{(view)->fragment.onClick(view)}"
+                        android:textColor="@color/new_text_color_orange"
+                        android:textAllCaps="true"
+                        android:paddingStart="@dimen/_15sdp"
+                        android:gravity="center"
+                        android:id="@+id/ivDeleteCar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:text="@string/delete_listing"
+                        android:background="@drawable/bg_delete_listing_design"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:layout_marginEnd="@dimen/_15sdp"
+                    android:nestedScrollingEnabled="false"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/clActionButtons"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/btn_color"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <TextView
+                android:id="@+id/totalPrice"
+                style="@style/InterBold"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="@dimen/_10sdp"
+                android:paddingTop="@dimen/_5sdp"
+                android:text="@string/please_add_default_price_select_no_of_seats_no_of_doors_and_fuel_type_in_order_to_list_your_car_in_search_results"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_10sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="fragment"
+            type="com.towsal.towsal.views.fragments.CarAvailabilityFragment" />
+
+
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimary"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/mainLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible">
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/tvBufferPeriod"
+                style="@style/InterRegularFont"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:gravity="center|start"
+                android:lineSpacingExtra="@dimen/_3sdp"
+                android:text="@string/how_much_buffer_do_you_need_before_a_trip_starts"
+                android:textAlignment="gravity"
+                android:textSize="@dimen/_13ssp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <RelativeLayout
+                android:id="@+id/rlBufferPeriod"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_29sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/button_primary_bg"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="@id/tvBufferPeriod"
+                app:layout_constraintStart_toStartOf="@id/tvBufferPeriod"
+                app:layout_constraintTop_toBottomOf="@+id/tvBufferPeriod">
+
+                <Spinner
+                    android:id="@+id/spBufferPeriod"
+                    style="@style/InterRegularFont"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentStart="true"
+                    android:background="@android:color/transparent" />
+
+                <ImageView
+                    android:layout_width="@dimen/_12sdp"
+                    android:layout_height="@dimen/_12sdp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/_14sdp"
+                    android:src="@drawable/ic_down_arrow"
+                    app:tint="@color/send_msg_bg"
+                    tools:ignore="ContentDescription" />
+            </RelativeLayout>
+
+
+            <TextView
+                android:id="@+id/textView"
+                style="@style/InterRegularFont"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_15sdp"
+                android:gravity="center|start"
+                android:lineSpacingExtra="@dimen/_3sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:text="@string/trip_advance_notice_msg"
+                android:textAlignment="gravity"
+                android:textSize="@dimen/_13ssp"
+                app:layout_constraintTop_toBottomOf="@+id/rlBufferPeriod"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+
+            <RelativeLayout
+                android:id="@+id/rlNoticePeriodSpinner"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_29sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/button_primary_bg"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="@id/textView"
+                app:layout_constraintStart_toStartOf="@id/textView"
+                app:layout_constraintTop_toBottomOf="@+id/textView">
+
+                <Spinner
+                    android:id="@+id/spNoticePeriod"
+                    style="@style/InterRegularFont"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentStart="true"
+                    android:background="@android:color/transparent" />
+
+                <ImageView
+                    android:layout_width="@dimen/_12sdp"
+                    android:layout_height="@dimen/_12sdp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/_14sdp"
+                    android:src="@drawable/ic_down_arrow"
+                    app:tint="@color/send_msg_bg"
+                    tools:ignore="ContentDescription" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/textView2"
+                style="@style/InterRegularFont"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:gravity="center|start"
+                android:lineSpacingExtra="@dimen/_3sdp"
+                android:text="@string/distance_msg"
+                android:textAlignment="gravity"
+                android:textSize="@dimen/_13ssp"
+                app:layout_constraintEnd_toEndOf="@+id/rlNoticePeriodSpinner"
+                app:layout_constraintStart_toStartOf="@+id/rlNoticePeriodSpinner"
+                app:layout_constraintTop_toBottomOf="@+id/rlNoticePeriodSpinner" />
+
+            <RelativeLayout
+                android:id="@+id/rlMinTripDurationSpinner"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_29sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/button_primary_bg"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="@id/textView2"
+                app:layout_constraintStart_toStartOf="@id/textView2"
+                app:layout_constraintTop_toBottomOf="@+id/textView2">
+
+                <Spinner
+                    android:id="@+id/spMinTripDuration"
+                    style="@style/InterRegularFont"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentStart="true"
+                    android:background="@android:color/transparent" />
+
+                <ImageView
+                    android:layout_width="@dimen/_12sdp"
+                    android:layout_height="@dimen/_12sdp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/_14sdp"
+                    android:src="@drawable/ic_down_arrow"
+                    app:tint="@color/send_msg_bg"
+                    tools:ignore="ContentDescription" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlMaxTripDurationSpinner"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_29sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/button_primary_bg"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="@id/rlMinTripDurationSpinner"
+                app:layout_constraintStart_toStartOf="@id/rlMinTripDurationSpinner"
+                app:layout_constraintTop_toBottomOf="@+id/rlMinTripDurationSpinner">
+
+                <Spinner
+                    android:id="@+id/spMaxTripDuration"
+                    style="@style/InterRegularFont"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentStart="true"
+                    android:background="@android:color/transparent" />
+
+                <ImageView
+                    android:layout_width="@dimen/_12sdp"
+                    android:layout_height="@dimen/_12sdp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/_14sdp"
+                    android:src="@drawable/ic_down_arrow"
+                    app:tint="@color/send_msg_bg"
+                    tools:ignore="ContentDescription" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/noteCarAvailability"
+                style="@style/InterRegularFont"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:layout_marginBottom="@dimen/_65sdp"
+                android:text="@string/not_msg_car_availablity"
+                android:textSize="@dimen/_13ssp"
+                app:layout_constraintBottom_toTopOf="@id/next"
+                app:layout_constraintEnd_toEndOf="@+id/rlMaxTripDurationSpinner"
+                app:layout_constraintStart_toStartOf="@+id/rlMaxTripDurationSpinner"
+                app:layout_constraintTop_toBottomOf="@+id/rlMaxTripDurationSpinner"
+                app:layout_constraintVertical_bias="0" />
+
+            <Button
+                android:id="@+id/next"
+                style="@style/SharpGroteskSemiBoldFont11"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_marginHorizontal="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginBottom="@dimen/_20sdp"
+                android:background="@drawable/bg_new_button_primary_black"
+                android:onClick="@{(view)->fragment.onClick(view)}"
+                android:text="@string/next"
+                android:textAllCaps="true"
+                android:textColor="@color/coral"
+                android:textSize="@dimen/_19ssp"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</layout>

@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:cardBackgroundColor="@color/colorWhite"
+            app:cardCornerRadius="@dimen/_1sdp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/white"
+                android:paddingBottom="@dimen/_10sdp">
+
+                <include
+                    android:id="@+id/layoutToolBar"
+                    layout="@layout/layout_new_custom_action_bar" />
+
+                <ScrollView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:scrollbars="none"
+                    app:layout_constraintBottom_toTopOf="@id/btnSubmit"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/layoutToolBar">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginBottom="@dimen/_15sdp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/guidlines"
+                            style="@style/InterRegularFont"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_5sdp"
+                            android:fadeScrollbars="false"
+                            android:maxLines="10"
+                            android:scrollbarSize="@dimen/_5sdp"
+                            android:scrollbars="vertical"
+                            android:text="@string/dummyText"
+                            android:textSize="@dimen/_12ssp"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <View
+
+                            android:layout_marginBottom="@dimen/_20sdp"
+                            app:layout_constraintBottom_toBottomOf="@+id/guidlines"
+                            app:layout_constraintTop_toTopOf="@+id/guidlines"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"/>
+
+                        <TextView
+                            android:id="@+id/message"
+                            style="@style/InterSemiBold"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:text="@string/select_reasons_of_cancellation"
+                            android:textSize="@dimen/_12ssp"
+                            app:layout_constraintTop_toBottomOf="@id/guidlines" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/recyclerView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                            app:layout_constraintTop_toBottomOf="@id/message" />
+
+                        <RelativeLayout
+                            android:layout_marginBottom="@dimen/_30sdp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            android:layout_marginTop="@dimen/_10sdp"
+                           android:visibility="gone"
+                            android:id="@+id/llReason"
+                            android:layout_marginEnd="@dimen/_10sdp"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:background="@drawable/bg_edittext_rating_review"
+                            app:layout_constraintTop_toBottomOf="@+id/recyclerView"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            android:layout_width="match_parent"
+                            android:padding="@dimen/_10sdp"
+                            android:layout_height="@dimen/_70sdp">
+                            <EditText
+                                android:id="@+id/etReason"
+                                style="@style/InterRegularFont"
+                                android:background="@null"
+                                android:hint="@string/write_your_reason_here"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"/>
+                        </RelativeLayout>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                </ScrollView>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnSubmit"
+                    style="@style/NewButtonStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:layout_marginBottom="@dimen/_20sdp"
+                    android:background="@drawable/bg_new_button_primary_black"
+                    android:text="@string/submit"
+                    android:textAllCaps="true"
+                    android:textColor="@color/coral"
+                    android:textSize="@dimen/_19ssp"
+                    app:layout_constraintBottom_toBottomOf="parent" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

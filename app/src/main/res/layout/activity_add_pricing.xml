@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="activity"
+            type="com.towsal.towsal.views.activities.AddPricingActivity" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/layoutToolBar"
+            layout="@layout/layout_new_custom_action_bar" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@color/colorPrimary"
+            android:fillViewport="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layoutToolBar">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/defaultPriceLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/_23sdp"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:id="@+id/textView35"
+                        style="@style/InterRegularFont"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:layout_marginEnd="@dimen/_15sdp"
+                        android:text="@string/set_your_default_daily_price"
+                        android:textSize="@dimen/_13ssp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <EditText
+                        android:id="@+id/defaultPriceEdt"
+                        style="@style/InterRegularFont"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_29sdp"
+                        android:layout_marginTop="@dimen/_9sdp"
+                        android:background="@drawable/bg_edittext_rating_review"
+                        android:hint="@string/enter_price"
+                        android:inputType="number"
+                        android:maxLength="5"
+                        android:paddingStart="@dimen/_10sdp"
+                        android:paddingEnd="@dimen/_10sdp"
+                        android:textColorHint="@color/colorButtonGrey"
+                        android:textSize="@dimen/_11ssp"
+                        app:layout_constraintEnd_toEndOf="@+id/textView35"
+                        app:layout_constraintStart_toStartOf="@+id/textView35"
+                        app:layout_constraintTop_toBottomOf="@+id/textView35"
+                        tools:ignore="Autofill" />
+
+                    <Button
+                        android:id="@+id/saveDefaultPriceInfo"
+                        style="@style/SharpGroteskSemiBoldFont11"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_35sdp"
+                        android:layout_marginHorizontal="@dimen/_15sdp"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:layout_marginBottom="@dimen/_20sdp"
+                        android:background="@drawable/bg_new_button_primary_black"
+                        android:onClick="@{(view)->activity.onClick(view)}"
+                        android:text="@string/save"
+                        android:textAllCaps="true"
+                        android:textColor="@color/coral"
+                        android:textSize="@dimen/_19ssp"
+                        android:visibility="visible"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/discountPriceLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/_24sdp"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:id="@+id/textView36"
+                        style="@style/InterRegularFont"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:layout_marginEnd="@dimen/_15sdp"
+                        android:text="@string/discount_price_layout_msg"
+                        android:textSize="@dimen/_13ssp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textView37"
+                        style="@style/InterRegularFont"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_13sdp"
+                        android:text="@string/three_days_string"
+                        android:textSize="@dimen/_13ssp"
+                        app:layout_constraintStart_toStartOf="@+id/textView36"
+                        app:layout_constraintTop_toBottomOf="@+id/textView36" />
+
+                    <LinearLayout
+                        android:id="@+id/llThreeDay"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_29sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:background="@drawable/bg_edittext_rating_review"
+                        android:orientation="horizontal"
+                        android:paddingStart="@dimen/_15sdp"
+                        android:paddingEnd="@dimen/_10sdp"
+                        app:layout_constraintEnd_toEndOf="@+id/textView36"
+                        app:layout_constraintStart_toStartOf="@+id/textView36"
+                        app:layout_constraintTop_toBottomOf="@+id/textView37">
+
+                        <EditText
+                            android:id="@+id/threeDayPriceEdt"
+                            style="@style/InterRegularFont"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:hint="@string/enter_percentage"
+                            android:inputType="number"
+                            android:maxLength="2"
+                            android:textColorHint="@color/colorButtonGrey"
+                            android:textSize="@dimen/_11ssp"
+                            tools:ignore="Autofill" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/InterRegularFont"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/colorButtonGrey"
+                            android:textSize="@dimen/_11ssp"
+                            android:text="%" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/textView38"
+                        style="@style/InterRegularFont"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:text="@string/seven_days_string"
+                        android:textSize="@dimen/_13ssp"
+                        app:layout_constraintStart_toStartOf="@+id/llThreeDay"
+                        app:layout_constraintTop_toBottomOf="@+id/llThreeDay" />
+
+                    <LinearLayout
+                        android:id="@+id/llSevenDay"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_29sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:background="@drawable/bg_edittext_rating_review"
+                        android:orientation="horizontal"
+                        android:paddingStart="@dimen/_15sdp"
+                        android:paddingEnd="@dimen/_10sdp"
+                        app:layout_constraintEnd_toEndOf="@+id/textView36"
+                        app:layout_constraintStart_toStartOf="@+id/textView36"
+                        app:layout_constraintTop_toBottomOf="@+id/textView38">
+
+                        <EditText
+                            android:id="@+id/sevenDayPriceEdt"
+                            style="@style/InterRegularFont"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:hint="@string/enter_percentage"
+                            android:inputType="number"
+                            android:maxLength="2"
+                            android:textColorHint="@color/colorButtonGrey"
+                            android:textSize="@dimen/_11ssp"
+                            tools:ignore="Autofill" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/InterRegularFont"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/_11ssp"
+                            android:textColor="@color/colorButtonGrey"
+                            android:text="%" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/textView39"
+                        style="@style/InterRegularFont"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:text="@string/thirty_days_string"
+                        android:textSize="@dimen/_13ssp"
+                        app:layout_constraintStart_toStartOf="@+id/llSevenDay"
+                        app:layout_constraintTop_toBottomOf="@+id/llSevenDay" />
+
+                    <LinearLayout
+                        android:id="@+id/llThiryDay"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_29sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:background="@drawable/bg_edittext_rating_review"
+                        android:orientation="horizontal"
+                        android:paddingStart="@dimen/_15sdp"
+                        android:paddingEnd="@dimen/_10sdp"
+                        app:layout_constraintEnd_toEndOf="@+id/textView36"
+                        app:layout_constraintStart_toStartOf="@+id/textView36"
+                        app:layout_constraintTop_toBottomOf="@+id/textView39">
+
+                        <EditText
+                            android:id="@+id/thirtyDayPriceEdt"
+                            style="@style/InterRegularFont"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:hint="@string/enter_percentage"
+                            android:inputType="number"
+                            android:maxLength="2"
+                            android:textColorHint="@color/colorButtonGrey"
+                            android:textSize="@dimen/_11ssp"
+                            tools:ignore="Autofill" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/InterRegularFont"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/_11ssp"
+                            android:textColor="@color/colorButtonGrey"
+                            android:text="%" />
+
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/saveDiscountPriceInfo"
+                        style="@style/SharpGroteskSemiBoldFont11"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_35sdp"
+                        android:layout_marginHorizontal="@dimen/_15sdp"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:layout_marginBottom="@dimen/_20sdp"
+                        android:background="@drawable/bg_new_button_primary_black"
+                        android:onClick="@{(view)->activity.onClick(view)}"
+                        android:text="@string/save"
+                        android:textAllCaps="true"
+                        android:textColor="@color/coral"
+                        android:textSize="@dimen/_19ssp"
+                        android:visibility="visible"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/customPriceLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/_33sdp"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/textView40"
+                        style="@style/InterRegularFont"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:layout_marginEnd="@dimen/_15sdp"
+                        android:text="@string/select_days_to_add_custom_price"
+                        android:textSize="@dimen/_14ssp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_14sdp"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        app:layout_constraintBottom_toTopOf="@id/saveCustomPriceInfo"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView40"
+                        app:layout_constraintVertical_bias="0"
+                        tools:listitem="@layout/item_custom_pricing" />
+
+                    <Button
+                        android:id="@+id/saveCustomPriceInfo"
+                        style="@style/SharpGroteskSemiBoldFont11"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_35sdp"
+                        android:layout_marginHorizontal="@dimen/_15sdp"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:layout_marginBottom="@dimen/_20sdp"
+                        android:background="@drawable/bg_new_button_primary_black"
+                        android:onClick="@{(view)->activity.onClick(view)}"
+                        android:text="@string/save"
+                        android:textAllCaps="true"
+                        android:textColor="@color/coral"
+                        android:textSize="@dimen/_19ssp"
+                        android:visibility="visible"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

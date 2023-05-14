@@ -1,0 +1,509 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="activity"
+            type="com.towsal.towsal.views.activities.RegistrationActivity" />
+
+        <variable
+            name="model"
+            type="com.towsal.towsal.network.serializer.UserModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/layoutToolBar"
+            layout="@layout/layout_new_custom_action_bar" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clPopUp"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@drawable/ic_policy_design"
+
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layoutToolBar">
+
+            <!--android:background="@drawable/bg_blur"-->
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                app:cardCornerRadius="@dimen/_20sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tvTitle"
+                        style="@style/SharpGroteskSemiBoldFont10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:text="@string/terms_of_services"
+                        android:textAlignment="center"
+                        android:textAllCaps="true"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_36sdp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <LinearLayout
+                        android:id="@+id/svTermAndCondition"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_260sdp"
+
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:layout_marginEnd="@dimen/_20sdp"
+                        android:orientation="vertical"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tvTitle">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:id="@+id/acceptTerms"
+                                style="@style/WorkSansRegularFont"
+                                android:layout_width="match_parent"
+                                android:textSize="@dimen/_10ssp"
+                                android:layout_height="wrap_content"
+                                android:text="@string/please_read_the_terms_of_service_carefully_as_they_contain_important_information_that_affects_your_rights_remedies_and_obligations_they_include_an_agreement_to_arbitrate_unless_you_opt_out_these_terms_also_include_a_prohibition_of_class_and_representative_actions_and_non_individualized_relief_for_all_matters_in_either_court_or_arbitration_various_limitations_and_exclusions_a_clause_that_governs_the_jurisdiction_venue_and_governing_law_of_disputes_except_where_prohibited_and_obligations_to_comply_with_applicable_laws_and_regulations"
+                                android:textColor="@color/black"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <View
+                                android:focusable="true"
+                                android:clickable="true"
+                                android:layout_marginBottom="@dimen/_35sdp"
+                                app:layout_constraintBottom_toBottomOf="@+id/acceptTerms"
+                                app:layout_constraintTop_toTopOf="parent"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp">
+
+                            </View>
+
+                           <!-- <TextView
+                                app:layout_constraintTop_toBottomOf="@+id/acceptTerms"
+                                android:id="@+id/aa"
+                                style="@style/WorkSansRegularFont"
+                                android:layout_width="match_parent"
+                                android:textSize="@dimen/_10ssp"
+                                android:layout_height="wrap_content"
+                                android:text="more NEWSDF"
+                                android:textColor="@color/black"
+                                />-->
+
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </LinearLayout>
+
+
+
+
+                    <LinearLayout
+                        android:id="@+id/llDecline"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:layout_marginBottom="@dimen/_15sdp"
+                        android:orientation="horizontal"
+                        android:weightSum="2"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/svTermAndCondition"
+                        app:layout_constraintStart_toStartOf="@+id/svTermAndCondition"
+                        app:layout_constraintTop_toBottomOf="@+id/svTermAndCondition">
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/decline"
+                            style="@style/SharpGroteskSemiBoldFont11"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/_10sdp"
+                            android:layout_weight="1"
+                            android:paddingVertical="@dimen/_5sdp"
+                            android:text="@string/decline"
+                            android:textAlignment="center"
+                            android:textAllCaps="true"
+                            android:textColor="@color/coral"
+                            android:textSize="@dimen/_19ssp"
+                            app:cornerRadius="@dimen/_5sdp"
+                            app:strokeColor="@color/new_text_color_orange"
+                            app:strokeWidth="1dp" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/accept"
+                            style="@style/SharpGroteskSemiBoldFont11"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:backgroundTint="@color/black_text_black_variation_18"
+                            android:gravity="center"
+                            android:paddingVertical="@dimen/_5sdp"
+                            android:text="@string/accept"
+                            android:textAllCaps="true"
+                            android:textColor="@color/coral"
+                            android:textSize="@dimen/_19ssp"
+                            app:cornerRadius="@dimen/_5sdp" />
+                    </LinearLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@drawable/bg_blue"
+            android:fillViewport="true"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layoutToolBar">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/inputCL"
+                    style="@style/EditTextLayoutStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toTopOf="@id/termCondition"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/clPhone"
+                        android:layout_width="match_parent"
+                        android:layout_height="?actionBarSize"
+                        android:visibility="visible"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <com.hbb20.CountryCodePicker
+                            android:id="@+id/ccp"
+                            style="@style/SharpGroteskSemiBoldFont11"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:textSize="@dimen/_26sdp"
+                            android:theme="@style/BoldFont"
+                            android:visibility="visible"
+                            app:ccpDialog_keyboardAutoPopup="false"
+                            app:ccpDialog_textColor="@color/black"
+                            app:ccp_arrowSize="@dimen/_1sdp"
+                            app:ccp_contentColor="@color/colorWhite"
+                            app:ccp_countryPreference="SA"
+                            app:ccp_defaultNameCode="SA"
+                            app:ccp_showFlag="false"
+                            app:ccp_showFullName="false"
+                            app:ccp_showNameCode="false"
+                            app:ccp_showPhoneCode="true"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/imageView2"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <ImageView
+                            android:id="@+id/imageView2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/_20sdp"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:layout_marginBottom="@dimen/_10sdp"
+                            android:paddingHorizontal="@dimen/_10sdp"
+                            android:scaleType="center"
+                            android:src="@drawable/ic_down_arrow"
+                            android:visibility="visible"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@id/view"
+                            app:layout_constraintStart_toEndOf="@id/ccp"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:tint="@color/grey_text_color_60" />
+
+                        <View
+                            android:id="@+id/view"
+                            android:layout_width="@dimen/_1sdp"
+                            android:layout_height="match_parent"
+                            android:background="@color/grey_text_color_60"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@id/edtPhone"
+                            app:layout_constraintStart_toEndOf="@id/imageView2"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/edtPhone"
+                            style="@style/NewEditTextStyle"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:background="@null"
+                            android:gravity="center_vertical"
+                            android:hint="@string/_12345_6789"
+                            android:inputType="phone"
+                            android:paddingStart="@dimen/_10sdp"
+                            android:textColor="@color/grey_text_color_60"
+                            android:textColorHint="@color/grey_text_color_60"
+                            android:textSize="@dimen/_26sdp"
+                            android:visibility="visible"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@id/view" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    <View
+                        android:id="@+id/view1"
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:background="@color/white"
+                        app:layout_constraintEnd_toEndOf="@id/clPhone"
+                        app:layout_constraintStart_toStartOf="@id/clPhone"
+                        app:layout_constraintTop_toBottomOf="@id/clPhone" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/clEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="?actionBarSize"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:visibility="visible"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/view1">
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/edtEmail"
+                            style="@style/NewEditTextStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@null"
+                            android:gravity="center"
+                            android:hint="@string/email"
+                            android:inputType="text|textEmailAddress"
+                            android:textColor="@color/grey_text_color_60"
+                            android:textColorHint="@color/grey_text_color_60"
+                            android:textSize="@dimen/_26sdp"
+                            android:visibility="visible"
+                            app:layout_constraintEnd_toEndOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    <View
+                        android:id="@+id/view2"
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:background="@color/white"
+                        app:layout_constraintEnd_toEndOf="@id/clEmail"
+                        app:layout_constraintStart_toStartOf="@id/clEmail"
+                        app:layout_constraintTop_toBottomOf="@id/clEmail" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/clFirstName"
+                        android:layout_width="match_parent"
+                        android:layout_height="?actionBarSize"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:visibility="visible"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/view2">
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/edtFirstName"
+                            style="@style/NewEditTextStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@null"
+                            android:gravity="center"
+                            android:hint="@string/first_name_cap"
+                            android:inputType="text"
+                            android:textColor="@color/grey_text_color_60"
+                            android:textColorHint="@color/grey_text_color_60"
+                            android:textSize="@dimen/_26sdp"
+                            android:visibility="visible"
+                            app:layout_constraintEnd_toEndOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    <View
+                        android:id="@+id/view3"
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:background="@color/white"
+                        app:layout_constraintEnd_toEndOf="@id/clFirstName"
+                        app:layout_constraintStart_toStartOf="@id/clFirstName"
+                        app:layout_constraintTop_toBottomOf="@id/clFirstName" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/clLastName"
+                        android:layout_width="match_parent"
+                        android:layout_height="?actionBarSize"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:visibility="visible"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/view3">
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/edtLastName"
+                            style="@style/NewEditTextStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@null"
+                            android:gravity="center"
+                            android:hint="@string/last_name_cap"
+                            android:inputType="text"
+                            android:textColor="@color/grey_text_color_60"
+                            android:textColorHint="@color/grey_text_color_60"
+                            android:textSize="@dimen/_26sdp"
+                            android:visibility="visible"
+                            app:layout_constraintEnd_toEndOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    <View
+                        android:id="@+id/view4"
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:background="@color/white"
+                        app:layout_constraintEnd_toEndOf="@id/clLastName"
+                        app:layout_constraintStart_toStartOf="@id/clLastName"
+                        app:layout_constraintTop_toBottomOf="@id/clLastName" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/clPassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="?actionBarSize"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:visibility="visible"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/view4">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            app:hintEnabled="false"
+                            app:passwordToggleDrawable="@drawable/selector_password"
+                            app:passwordToggleEnabled="true"
+                            android:paddingHorizontal="@dimen/_10sdp"
+                            app:passwordToggleTint="@color/grey_text_color_60">
+
+
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/edtPassword"
+                                style="@style/NewEditTextStyle"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@null"
+                                android:gravity="center"
+                                android:hint="@string/password"
+                                android:imeOptions="actionDone"
+                                android:inputType="textPassword"
+                                android:paddingStart="@dimen/_35sdp"
+                                android:textColor="@color/grey_text_color_60"
+                                android:textColorHint="@color/grey_text_color_60"
+                                android:textSize="@dimen/_26sdp"
+                                android:visibility="visible" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    <View
+                        android:id="@+id/view5"
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:background="@color/white"
+                        app:layout_constraintEnd_toEndOf="@id/clPassword"
+                        app:layout_constraintStart_toStartOf="@id/clPassword"
+                        app:layout_constraintTop_toBottomOf="@id/clPassword" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <LinearLayout
+                    android:id="@+id/termCondition"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:gravity="center|start"
+                    android:onClick="@{(view)->activity.onClick(view)}"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toTopOf="@id/submit"
+                    app:layout_constraintEnd_toEndOf="@+id/inputCL"
+                    app:layout_constraintStart_toStartOf="@+id/inputCL">
+
+                    <CheckBox
+                        android:id="@+id/checkTermCondition"
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:button="@drawable/ic_term_and_condition_new_design"
+                        android:clickable="false"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false" />
+
+                    <TextView
+                        style="@style/InterRegularFont"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:paddingTop="@dimen/_1sdp"
+                        android:text="@string/i_have_read_and_agree_to_the_terms_and_conditions_and_the_privacy_policy"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_12ssp" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/submit"
+                    style="@style/SharpGroteskSemiBoldFont10"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_31sdp"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:layout_marginBottom="@dimen/_30sdp"
+                    android:background="@drawable/bg_gradient_button"
+                    android:gravity="center"
+                    android:onClick="@{(view)->activity.onClick(view)}"
+                    android:text="@string/create_account"
+                    android:textAllCaps="true"
+                    android:textSize="@dimen/_19ssp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/termCondition"
+                    app:layout_constraintStart_toStartOf="@+id/termCondition" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

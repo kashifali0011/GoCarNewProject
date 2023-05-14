@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/layoutToolBar"
+            layout="@layout/layout_new_custom_action_bar" />
+
+        <androidx.core.widget.NestedScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@color/colorWhite"
+            android:fillViewport="true"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layoutToolBar">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/_20sdp">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cvCalendarView"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_400sdp"
+                    android:layout_margin="@dimen/_6sdp"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="@dimen/_6sdp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:strokeColor="@color/bgColor">
+
+                    <com.applandeo.materialcalendarview.CalendarView
+                        android:id="@+id/calendarView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:eventsEnabled="true"
+                        app:selectionColor="@color/textColor3"
+                        app:selectionLabelColor="@color/black"
+                        app:todayLabelColor="#000"
+                        app:type="one_day_picker" />
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <LinearLayout
+                    android:id="@+id/llSeekBarContainer"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_minus10sdp"
+                    android:background="@drawable/bg_seek_bar"
+                    android:orientation="vertical"
+                    app:layout_constraintEnd_toEndOf="@id/cvCalendarView"
+                    app:layout_constraintStart_toStartOf="@id/cvCalendarView"
+                    app:layout_constraintTop_toBottomOf="@id/cvCalendarView">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:gravity="center|start"
+                        android:orientation="vertical"
+                        android:weightSum="2">
+
+                        <LinearLayout
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/end"
+                                style="@style/InterRegularFont"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="bottom"
+                                android:minWidth="@dimen/_30sdp"
+                                android:text="@string/end_time"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_14ssp" />
+
+                            <TextView
+                                android:id="@+id/tvEndTime"
+                                style="@style/InterRegularFont"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginStart="@dimen/_20sdp"
+                                android:gravity="center"
+                                android:textColor="@color/textColor3"
+                                android:textSize="@dimen/_11ssp"
+                                tools:text="09:00am" />
+                        </LinearLayout>
+
+                        <com.towsal.towsal.utils.ThumbTextSeekBar
+                            android:id="@+id/endSeekbar"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_6sdp" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llTripTimeDetails"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    app:layout_constraintEnd_toEndOf="@id/llSeekBarContainer"
+                    app:layout_constraintStart_toStartOf="@id/llSeekBarContainer"
+                    app:layout_constraintTop_toBottomOf="@+id/llSeekBarContainer">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/tvStart"
+                            style="@style/SharpGroteskSemiBoldFont11"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Start"
+                            android:textAllCaps="true"
+                            android:textColor="@color/text_receive_msg"
+                            android:textSize="@dimen/_19ssp"
+                            app:layout_constraintEnd_toStartOf="@id/pickup_date"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/pickup_date"
+                            style="@style/InterRegularFont"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_5sdp"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_11ssp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@id/tvFinish"
+                            app:layout_constraintStart_toEndOf="@id/tvStart"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/tvFinish"
+                            style="@style/SharpGroteskSemiBoldFont11"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Finish"
+                            android:textAllCaps="true"
+                            android:textColor="@color/text_receive_msg"
+                            android:textSize="@dimen/_19ssp"
+                            app:layout_constraintEnd_toStartOf="@id/dropOff_date"
+                            app:layout_constraintStart_toEndOf="@id/pickup_date"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+                        <TextView
+                            android:id="@+id/dropOff_date"
+                            style="@style/InterRegularFont"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_5sdp"
+                            android:text=""
+                            android:textSize="@dimen/_11ssp"
+                            android:textColor="@color/black"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@id/tvFinish"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </LinearLayout>
+
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/save"
+                    style="@style/InterRegularFont"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_45sdp"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_marginEnd="@dimen/_15sdp"
+                    android:backgroundTint="@color/text_receive_msg"
+                    android:gravity="center"
+                    android:text="@string/save"
+                    android:textColor="@color/bgColor"
+                    android:textSize="@dimen/_11ssp"
+                    app:cornerRadius="@dimen/_6sdp"
+                    app:layout_constraintTop_toBottomOf="@id/llTripTimeDetails" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.core.widget.NestedScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
+

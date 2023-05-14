@@ -1,0 +1,2 @@
+include ":app", ":oppwa.mobile", ':library'
+rootProject.name = "Towsal"

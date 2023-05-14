@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="activity"
+            type="com.towsal.towsal.views.activities.RatingReviewAllActivity" />
+
+        <variable
+            name="model"
+            type="com.towsal.towsal.network.serializer.settings.RatingReviewResponseModel" />
+
+    </data>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/mainLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:layoutDirection="locale"
+            android:textDirection="locale"
+            android:visibility="visible">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/image"
+                android:layout_width="@dimen/_90sdp"
+                android:layout_height="@dimen/_90sdp"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:scaleType="centerCrop"
+                app:civ_border_color="#00000000"
+                app:civ_border_width="@dimen/_1sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/name"
+                style="@style/RegularFont"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:text='@{model.host_name}'
+                android:maxLines="1"
+                android:ellipsize="end"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/image"
+                app:layout_constraintTop_toTopOf="@+id/image"
+                tools:text="Ahmad" />
+
+            <TextView
+                android:id="@+id/responseTime"
+                style="@style/RegularFont"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:text='@{@string/avg_response_time+" :"+model.host_avg_response_time}'
+                app:layout_constraintEnd_toEndOf="@+id/name"
+                app:layout_constraintStart_toStartOf="@+id/name"
+                app:layout_constraintTop_toBottomOf="@+id/name"
+                tools:text="Average Response Time -1 min" />
+
+            <TextView
+                android:id="@+id/trips"
+                style="@style/RegularFont"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:gravity="center|start"
+                android:text='@{model.total_trips+" "+@string/trips}'
+                android:textAlignment="gravity"
+                app:layout_constraintStart_toStartOf="@+id/responseTime"
+                app:layout_constraintTop_toBottomOf="@+id/responseTime"
+                tools:text="50 Trips" />
+
+
+            <View
+                android:id="@+id/view8"
+                android:layout_width="@dimen/_1sdp"
+                android:layout_height="0dp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:background="@color/black"
+                app:layout_constraintBottom_toBottomOf="@+id/trips"
+                app:layout_constraintStart_toEndOf="@+id/trips"
+                app:layout_constraintTop_toTopOf="@+id/trips" />
+
+            <TextView
+                android:id="@+id/joinedFrom"
+                style="@style/RegularFont"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:text='@{@string/joined+" "+model.host_join_date}'
+                android:textSize="@dimen/_11sdp"
+                app:layout_constraintBottom_toBottomOf="@+id/view8"
+                app:layout_constraintStart_toEndOf="@+id/view8"
+                app:layout_constraintTop_toTopOf="@+id/view8"
+                tools:text="Joined Jan 2015" />
+
+            <com.willy.ratingbar.BaseRatingBar
+                android:id="@+id/ratingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                app:layout_constraintStart_toStartOf="@+id/trips"
+                app:layout_constraintTop_toBottomOf="@+id/trips"
+                app:srb_clearRatingEnabled="false"
+                app:srb_clickable="false"
+                app:srb_drawableEmpty="@drawable/ic_empty_star"
+                app:srb_drawableFilled="@drawable/ic_filled_star"
+                app:srb_isIndicator="true"
+                app:srb_numStars="5"
+                app:srb_scrollable="false"
+                app:srb_starHeight="@dimen/_10sdp"
+                app:srb_starPadding="@dimen/_2sdp"
+                app:srb_starWidth="@dimen/_10sdp" />
+
+            <TextView
+                android:id="@+id/textView68"
+                style="@style/MediumFont"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:text='@{@string/overall_rating+" "+model.host_overall_rating}'
+                android:textColor="@color/btn_color"
+                android:textSize="@dimen/_10sdp"
+                app:layout_constraintBottom_toBottomOf="@+id/ratingBar"
+                app:layout_constraintStart_toEndOf="@+id/ratingBar"
+                app:layout_constraintTop_toTopOf="@+id/ratingBar"
+                tools:text="Overall Rating 5.0" />
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/reviewRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_5sdp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView68" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</layout>

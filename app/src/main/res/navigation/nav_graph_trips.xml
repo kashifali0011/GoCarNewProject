@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph_trips"
+    app:startDestination="@id/notificationsFragment">
+
+    <fragment
+        android:id="@+id/notificationsFragment"
+        android:name="com.towsal.towsal.views.fragments.NotificationsFragment"
+        android:label="NotificationsFragment" />
+
+    <fragment
+        android:id="@+id/bookedTripsFragment"
+        android:name="com.towsal.towsal.views.fragments.BookedTripsFragment"
+        android:label="BookedTripsFragment" />
+
+    <fragment
+        android:id="@+id/historyTripsFragment"
+        android:name="com.towsal.towsal.views.fragments.HistoryTripsFragment"
+        android:label="HistoryTripsFragment" />
+</navigation>

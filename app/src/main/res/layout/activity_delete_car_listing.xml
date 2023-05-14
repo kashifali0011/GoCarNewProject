@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="activity"
+            type="com.towsal.towsal.views.activities.DeleteCarListingActivity" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/mainLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorWhite"
+        android:visibility="visible">
+
+
+        <include
+            android:id="@+id/layoutToolBar"
+            layout="@layout/layout_new_custom_action_bar" />
+
+
+        <TextView
+            android:id="@+id/textView30"
+            style="@style/InterRegularFont"
+            android:textSize="@dimen/_12ssp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:text="@string/select_reasons_for_delete_listing"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layoutToolBar" />
+
+        <RelativeLayout
+            android:id="@+id/clReason"
+            app:layout_constraintBottom_toTopOf="@+id/deleteListing"
+            app:layout_constraintEnd_toEndOf="@+id/textView30"
+            app:layout_constraintStart_toStartOf="@+id/textView30"
+            app:layout_constraintTop_toBottomOf="@+id/textView30"
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clSelectValues"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:onClick="@{(view)->activity.onClick(view)}"
+                android:background="@drawable/bg_delete_car"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_31sdp">
+
+                <TextView
+                    android:id="@+id/tvDeleteReason"
+                    android:layout_marginEnd="@dimen/_35sdp"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    style="@style/InterRegularFont"
+                    android:textSize="@dimen/_10ssp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_width="0dp"
+                    android:gravity="start"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:hint="@string/select_reason"
+                    android:textColor="@color/send_msg_bg"
+                    android:textColorHint="@color/send_msg_bg"
+                    android:layout_height="wrap_content"/>
+
+                <ImageView
+                    android:layout_marginEnd="@dimen/_10ssp"
+                    android:background="@drawable/ic_arrow_down_blue"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.cardview.widget.CardView
+                android:visibility="gone"
+                android:id="@+id/cwOptionList"
+                android:layout_below="@+id/clSelectValues"
+                app:cardElevation="@dimen/_15sdp"
+                app:cardBackgroundColor="@color/colorWhite"
+                app:cardCornerRadius="@dimen/_2sdp"
+                android:layout_marginEnd="@dimen/_25sdp"
+                android:layout_marginStart="@dimen/_25sdp"
+                android:layout_marginBottom="@dimen/_20sdp"
+                android:shadowColor="#E5EEF7"
+                android:outlineAmbientShadowColor="@color/transparent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    />
+
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+
+
+
+
+
+
+        <Button
+            android:id="@+id/deleteListing"
+            style="@style/SharpGroteskSemiBoldFont11"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_37sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginBottom="@dimen/_20sdp"
+            android:background="@drawable/bg_button_new_design"
+            android:textColor="@color/coral"
+            android:onClick="@{(view)->activity.onClick(view)}"
+            android:text="@string/delete_permanently"
+            android:textAllCaps="true"
+            android:textSize="@dimen/_19ssp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/clReason"
+            app:layout_constraintStart_toStartOf="@+id/clReason" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</layout>

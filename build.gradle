@@ -1,0 +1,42 @@
+buildscript {
+    ext.kotlin_version = "1.7.10"
+    ext.koin_version = '2.0.1'
+    ext.navigation_version="2.3.5"
+    ext.dokkaVersion = '1.6.21'
+    ext.material = '1.6.1'
+    ext.intuit = '1.0.6'
+
+    repositories {
+        google()
+        jcenter()
+        mavenCentral()
+        maven { url "https://jitpack.io" }
+        maven { url "https://oss.sonatype.org/content/repositories/snapshots" }
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:7.3.1'
+        classpath 'org.jetbrains.kotlin:kotlin-gradle-plugin:1.7.10'
+        classpath "androidx.navigation:navigation-safe-args-gradle-plugin:$navigation_version"
+        classpath 'com.google.gms:google-services:4.3.14'
+        // Add the Crashlytics Gradle plugin
+        classpath 'com.google.firebase:firebase-crashlytics-gradle:2.9.2'
+        classpath "org.jetbrains.dokka:dokka-gradle-plugin:$dokkaVersion"
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        mavenCentral()
+        maven { url "https://jitpack.io" }
+    }
+}
+subprojects {
+    apply from: "../gradle/credentials.gradle"
+}
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

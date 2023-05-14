@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="position"
+            type="int" />
+
+        <variable
+            name="adapter"
+            type="com.towsal.towsal.views.adapters.NotificationAdapter" />
+
+        <variable
+            name="model"
+            type="com.towsal.towsal.network.serializer.trips.NotificationModel" />
+    </data>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardDetail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:onClick="@{(view)->adapter.onClick(position,view)}"
+            app:cardCornerRadius="@dimen/_8sdp"
+            app:cardElevation="@dimen/_5sdp"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            app:cardBackgroundColor="@color/transparent"
+            app:cardUseCompatPadding="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            >
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/_16sdp"
+                android:paddingTop="@dimen/_13sdp"
+                android:background="@drawable/bg_stroked_notificatiion"
+                android:paddingEnd="@dimen/_16sdp">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/image"
+                    android:layout_width="@dimen/_48sdp"
+                    android:layout_height="@dimen/_48sdp"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/notificationTitle"
+                    style="@style/InterRegularFont"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:text="@{model.notification_title}"
+                    android:textSize="@dimen/_19ssp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/image"
+                    app:layout_constraintTop_toTopOf="@+id/image"
+                    tools:text="Hyundai Accent" />
+
+                <TextView
+                    android:id="@+id/dateTime"
+                    style="@style/InterMediumFont"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    app:textAllCaps="true"
+                    android:textSize="@dimen/_9ssp"
+                    android:textColor="@color/host_name_color"
+                    app:layout_constraintEnd_toEndOf="@+id/notificationTitle"
+                    app:layout_constraintStart_toStartOf="@+id/notificationTitle"
+                    app:layout_constraintTop_toBottomOf="@+id/notificationTitle"
+                    tools:text="Thursday 13, 2021 11:50 AM" />
+
+
+                <TextView
+                    android:id="@+id/notificationDetail"
+                    style="@style/InterRegularFont"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_25sdp"
+                    android:layout_marginBottom="@dimen/_15sdp"
+                    android:textColor="@color/black_text_black_variation_18"
+                    android:textSize="@dimen/_11ssp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/notificationTitle"
+                    app:layout_constraintStart_toStartOf="@+id/image"
+                    app:layout_constraintTop_toBottomOf="@+id/dateTime"
+                    app:layout_constraintVertical_bias="0"
+                    android:text="@string/lorem_ipsum_dolor_sit_amet_consectetur_adipiscing_elit_sed_do_eiusmod_tempor_incididunt_ut_labore_et_dolore_magna_aliqua" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

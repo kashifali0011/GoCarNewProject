@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="activity"
+            type="com.towsal.towsal.views.activities.PaymentsActivity" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:id="@+id/clRoot"
+        android:layout_height="match_parent"
+        tools:context=".views.activities.PaymentsActivity">
+
+        <include
+            android:id="@+id/layoutToolBar"
+            layout="@layout/layout_new_custom_action_bar" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toTopOf="@id/tvAddAnotherPayment"
+            app:layout_constraintTop_toBottomOf="@id/layoutToolBar">
+
+            <androidx.core.widget.NestedScrollView
+                android:id="@+id/nsvPaymentMethods"
+                android:layout_width="match_parent"
+                android:visibility="gone"
+                android:layout_height="match_parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clPaymentMethods"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/tvTitle"
+                        style="@style/SharpGroteskSemiBoldFont11"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="@dimen/_10sdp"
+                        android:paddingVertical="@dimen/_5sdp"
+                        android:text="@string/your_payment_methods"
+                        android:textAllCaps="true"
+                        android:textColor="@color/black_text_black_variation_18"
+                        android:textSize="@dimen/_36sdp"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvPaymentMethods"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@id/tvTitle"
+                        tools:listitem="@layout/layout_item_payment_method" />
+
+                    <LinearLayout
+                        android:id="@+id/llBankAccountInfo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintTop_toBottomOf="@id/rvPaymentMethods">
+
+                        <TextView
+                            android:id="@+id/tvBankAccountTitle"
+                            style="@style/SharpGroteskSemiBoldFont11"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingHorizontal="@dimen/_10sdp"
+                            android:paddingTop="@dimen/_5sdp"
+                            android:text="@string/your_bank_account"
+                            android:textAllCaps="true"
+                            android:textColor="@color/black_text_black_variation_18"
+                            android:textSize="@dimen/_36sdp"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <include
+                            android:id="@+id/layoutBankAccount"
+                            layout="@layout/layout_item_payment_method"
+                            app:layout_constraintTop_toBottomOf="@id/tvBankAccountTitle" />
+
+                    </LinearLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.core.widget.NestedScrollView>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clNoPaymentMethod"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingHorizontal="@dimen/_10sdp"
+                android:paddingTop="@dimen/_10sdp">
+
+                <TextView
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:id="@+id/tvSelectPaymentMethod"
+                    style="@style/InterRegularFont"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/select_a_payment_method"
+                    android:textAllCaps="false"
+                    android:textSize="@dimen/_18ssp"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    style="@style/InterRegularFont"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="@string/setup_a_payment_methods_to_make_purchses_on_gocar"
+                    android:textSize="@dimen/_12ssp"
+                    app:layout_constraintTop_toBottomOf="@id/tvSelectPaymentMethod"
+                    tools:layout_editor_absoluteX="13dp" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/tvAddAnotherPayment"
+            style="@style/SharpGroteskSemiBoldFont11"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="@dimen/_10sdp"
+            android:paddingVertical="@dimen/_5sdp"
+            android:text="@string/add_another_payment"
+            android:textAllCaps="true"
+            android:visibility="gone"
+            android:textColor="@color/black_text_black_variation_18"
+            android:textSize="@dimen/_36sdp"
+            app:layout_constraintBottom_toTopOf="@id/btnAddAccount" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnAddAccount"
+            style="@style/NewButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:background="@drawable/bg_new_button_primary_black"
+            android:onClick="@{(view)->activity.onClick(view)}"
+            android:text="@string/add_bank_account"
+            android:textAllCaps="true"
+            android:textColor="@color/coral"
+            android:textSize="@dimen/_19ssp"
+            app:layout_constraintBottom_toTopOf="@id/btnAddCreditDebitCard" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnAddCreditDebitCard"
+            style="@style/NewButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:background="@drawable/bg_new_button_primary_black"
+            android:onClick="@{(view)->activity.onClick(view)}"
+            android:text="@string/add_new_card"
+            android:textAllCaps="true"
+            android:textColor="@color/coral"
+            android:textSize="@dimen/_19ssp"
+            app:layout_constraintBottom_toTopOf="@id/btnPayNow"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnPayNow"
+            style="@style/NewButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:background="@drawable/bg_new_button_primary_black"
+            android:onClick="@{(view)->activity.onClick(view)}"
+            android:text="@string/pay_now"
+            android:textAllCaps="true"
+            android:textColor="@color/coral"
+            android:textSize="@dimen/_19ssp"
+            android:visibility="gone"
+            android:layout_marginBottom="@dimen/_10sdp"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

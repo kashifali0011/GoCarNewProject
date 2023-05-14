@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_search_car"
+    app:startDestination="@id/searchCarFragment">
+
+    <fragment
+        android:id="@+id/searchCarFragment"
+        android:name="com.towsal.towsal.views.fragments.SearchCarFragment"
+        android:label="SearchCarFragment"
+        tools:layout="@layout/fragment_search_car" />
+    <fragment
+        android:id="@+id/filtersFragment"
+        android:name="com.towsal.towsal.views.fragments.FiltersFragment"
+        android:label="FilterFragment"
+        tools:layout="@layout/fragment_filters" />
+    <fragment
+        android:id="@+id/mapFragment"
+        android:name="com.towsal.towsal.views.fragments.MapFragment"
+        android:label="MapFragment"
+        tools:layout="@layout/fragment_map" />
+    <action
+        android:id="@+id/action_global_searchCarFragment"
+        app:popUpTo="@id/searchCarFragment" />
+
+
+</navigation>

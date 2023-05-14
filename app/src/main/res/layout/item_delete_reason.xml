@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="position"
+            type="int" />
+
+        <variable
+            name="adapter"
+            type="com.towsal.towsal.views.adapters.DeleteReasonListingAdapter" />
+
+    </data>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_width="match_parent"
+            android:background="@color/colorWhite"
+            android:layout_height="@dimen/_35sdp">
+
+
+            <TextView
+                android:id="@+id/tvDeleteReason"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                style="@style/InterMediumFont"
+                android:textSize="@dimen/_9ssp"
+               app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_width="0dp"
+                android:gravity="start"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:hint="asdfasdfasdf ghdfg hfgh fdsfds hgfdhgf trfe tre gfre tre tre tre tre gf r tre "
+                android:textColor="@color/black_text_black_variation_18"
+                android:layout_height="wrap_content"/>
+
+
+            <CheckBox
+
+                android:id="@+id/checkBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/colorAccent"
+                android:gravity="center|start"
+                android:animateLayoutChanges="true"
+                android:paddingStart="@dimen/_10sdp"
+
+                android:paddingEnd="@dimen/_10sdp"
+                android:visibility="gone"
+                style="@style/RegularFont"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+               />
+
+
+            <View
+                android:id="@+id/viewReason"
+                android:background="@color/bg_chat_bottom"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</layout>

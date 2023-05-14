@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph_transaction_history"
+    app:startDestination="@id/transactionHistoryGuestFragment">
+
+    <fragment
+        android:id="@+id/transactionHistoryGuestFragment"
+        android:name="com.towsal.towsal.views.fragments.TransactionHistoryGuestFragment"
+        android:label="TransactionHistoryGuestFragment" />
+
+    <fragment
+        android:id="@+id/transactionHistoryFragment"
+        android:name="com.towsal.towsal.views.fragments.TransactionHistoryFragment"
+        android:label="TransactionHistoryFragment" />
+</navigation>

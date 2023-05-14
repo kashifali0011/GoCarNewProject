@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/_10sdp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_40sdp"
+            android:layout_marginEnd="@dimen/_5sdp"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <TextView
+                android:id="@+id/senderText"
+                style="@style/InterRegularFont"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_receiver_text"
+                android:paddingHorizontal="@dimen/_20sdp"
+                app:layout_constraintTop_toTopOf="parent"
+                android:paddingVertical="@dimen/_15sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:textSize="@dimen/_12ssp"
+                android:textColor="@color/text_receive_msg"
+                tools:text="This is text message sksdkvksv mdmvsk sdvk mvd " />
+
+            <TextView
+                android:id="@+id/time"
+                style="@style/InterRegularFont"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#9397A3"
+                android:layout_marginEnd="@dimen/_3sdp"
+                android:textSize="@dimen/_8sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/senderText"
+                tools:text="10:00 AM" />
+
+            <TextView
+                android:id="@+id/tvStatus"
+                style="@style/InterRegularFont"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:text="@string/read"
+                android:textAllCaps="true"
+                android:textColor="#9397A3"
+                android:textSize="@dimen/_8sdp"
+                app:layout_constraintEnd_toStartOf="@+id/time"
+                app:layout_constraintTop_toBottomOf="@+id/senderText" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="activity"
+            type="com.towsal.towsal.views.activities.IntroActivity" />
+
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/introViewPager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <LinearLayout
+                android:id="@+id/layoutDots"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_100sdp"
+                android:layout_marginEnd="@dimen/_100sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:gravity="center"
+                android:minHeight="@dimen/_20sdp"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="@+id/introViewPager"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/tvSkipIntro"
+                style="@style/InterRegularFont"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:alpha="0.5"
+                android:onClick="@{(view)->activity.onClick(view)}"
+                android:text="@string/skip_intro"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_9sdp"
+                app:layout_constraintBottom_toBottomOf="@+id/layoutDots"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/layoutDots" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:alpha="0.5"
+                android:background="@color/white"
+                app:layout_constraintEnd_toEndOf="@id/tvSkipIntro"
+                app:layout_constraintStart_toStartOf="@id/tvSkipIntro"
+                app:layout_constraintTop_toBottomOf="@id/tvSkipIntro" />
+
+            <TextView
+                android:id="@+id/tvTitle"
+                style="@style/SharpGroteskSemiBoldFont11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:gravity="center"
+                android:lineSpacingMultiplier="0.7"
+                android:text="@string/shareACar"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_106sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <TextView
+                android:id="@+id/tvMessage"
+                style="@style/InterRegularFont"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:text="@string/intro_1_msg"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_14sdp"
+                app:layout_constraintEnd_toEndOf="@id/tvTitle"
+                app:layout_constraintStart_toStartOf="@id/tvTitle"
+                app:layout_constraintTop_toBottomOf="@id/tvTitle" />
+
+
+            <TextView
+                android:id="@+id/next"
+                style="@style/SharpGroteskSemiBoldFont11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:background="@android:color/transparent"
+                android:drawablePadding="@dimen/_20sdp"
+                android:gravity="end"
+                android:lineSpacingMultiplier="0"
+                android:onClick="@{(view)->activity.onClick(view)}"
+                android:text="@string/next"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_19ssp"
+                app:layout_constraintEnd_toEndOf="@+id/tvMessage"
+                app:layout_constraintStart_toStartOf="@+id/tvMessage"
+                app:layout_constraintTop_toBottomOf="@id/tvMessage" />
+
+            <ImageView
+                android:id="@+id/imgNext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:onClick="@{(view)->activity.onClick(view)}"
+                android:src="@drawable/ic_forward_arrow"
+                android:textAllCaps="true"
+                app:layout_constraintBottom_toBottomOf="@id/next"
+                app:layout_constraintStart_toEndOf="@id/next"
+                app:layout_constraintTop_toBottomOf="@id/tvMessage"
+                app:layout_constraintTop_toTopOf="@id/next" />
+
+            <TextView
+                android:id="@+id/tvGetStarted"
+                style="@style/SharpGroteskSemiBoldFont11"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_marginBottom="@dimen/_20sdp"
+                android:background="@android:color/transparent"
+                android:drawablePadding="@dimen/_10sdp"
+                android:gravity="center_vertical|center"
+                android:onClick="@{(view)->activity.onClick(view)}"
+                android:text="@string/get_started"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_18ssp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <ImageView
+                android:id="@+id/imgGetStarted"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:onClick="@{(view)->activity.onClick(view)}"
+                android:src="@drawable/ic_forward_arrow"
+                android:textAllCaps="true"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@id/tvGetStarted"
+                app:layout_constraintStart_toEndOf="@id/tvGetStarted"
+                app:layout_constraintTop_toTopOf="@id/tvGetStarted" />
+
+            <TextView
+                android:id="@+id/tvIntro4Msg"
+                style="@style/InterRegularFont"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_40sdp"
+                android:text="@string/intro_4_msg"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12sdp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toTopOf="@id/tvGoOnShoo" />
+
+            <TextView
+                android:id="@+id/tvGoOnShoo"
+                style="@style/SharpGroteskSemiBoldFont11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_50sdp"
+                android:text="@string/go_on_shoo"
+                android:textAlignment="center"
+                android:textColor="@color/new_text_color_orange"
+                android:textSize="@dimen/_36sdp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toTopOf="@id/layoutDots"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</layout>

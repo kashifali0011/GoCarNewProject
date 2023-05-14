@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="fragment"
+            type="com.towsal.towsal.views.fragments.SafetyQualityStandardFragment" />
+
+
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimary"
+        android:fillViewport="true"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/mainLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:layoutDirection="locale"
+            android:paddingBottom="@dimen/_20sdp"
+            android:textDirection="locale">
+
+            <TextView
+                android:id="@+id/textView"
+                style="@style/InterRegularFont"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:gravity="center|start"
+                android:text="@string/your_car_has_the_following_safety_standards_fulfilledes"
+                android:textAlignment="gravity"
+                android:textColor="@color/textColorPrimary"
+                android:textSize="@dimen/_13ssp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toTopOf="@id/agreeCheck"
+                app:layout_constraintEnd_toEndOf="@+id/textView"
+                app:layout_constraintStart_toStartOf="@+id/textView"
+                app:layout_constraintTop_toBottomOf="@+id/textView">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/safetyListRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/_33sdp"
+                    android:layout_marginEnd="@dimen/_33sdp"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    tools:listitem="@layout/item_safety_list" />
+            </RelativeLayout>
+
+
+            <CheckBox
+                android:id="@+id/agreeCheck"
+                style="@style/InterRegularFont"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_35sdp"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:layout_marginBottom="@dimen/_20sdp"
+                android:button="@drawable/custom_check_box_black"
+                android:buttonTint="@color/colorAccent"
+                android:gravity="top"
+                android:lineSpacingExtra="@dimen/_3sdp"
+                android:paddingStart="@dimen/_5sdp"
+                android:text="@string/i_agree_that_my_car_fulfills_the_above_mentioned_safety_standards"
+                android:textSize="@dimen/_13ssp"
+                app:layout_constraintBottom_toTopOf="@id/agreeContinueBtn"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintVertical_bias="1" />
+
+
+            <Button
+                android:id="@+id/agreeContinueBtn"
+                style="@style/SharpGroteskSemiBoldFont11"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:background="@drawable/bg_new_button_primary_black"
+                android:onClick="@{(view)->fragment.onClick(view)}"
+                android:text="@string/next"
+                android:textAllCaps="true"
+                android:textColor="@color/coral"
+                android:textSize="@dimen/_19ssp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/agreeCheck"
+                app:layout_constraintStart_toStartOf="@+id/agreeCheck" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</layout>

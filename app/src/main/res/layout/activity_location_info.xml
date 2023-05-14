@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="activity"
+            type="com.towsal.towsal.views.activities.LocationInfoActivity" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorWhite"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <include
+                android:id="@+id/layoutToolBar"
+                layout="@layout/layout_new_custom_action_bar" />
+
+
+            <TextView
+                android:id="@+id/tvCountry"
+                style="@style/InterRegularFont"
+                android:textSize="@dimen/_12ssp"
+                android:layout_width="0dp"
+                android:textColor="@color/textColorPrimary"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_26sdp"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:text="@string/country"
+                app:layout_constraintTop_toBottomOf="@+id/layoutToolBar"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                />
+
+
+            <EditText
+                android:id="@+id/countryEdt"
+                style="@style/RegularFont"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_29sdp"
+                android:background="@drawable/bg_text_view_primary"
+                android:textColor="@color/textColorPrimary"
+                android:textColorHint="@color/colorButtonGrey"
+                android:hint="@string/enter_country"
+                android:inputType="text"
+                android:focusable="false"
+                android:textSize="@dimen/_10ssp"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:paddingStart="@dimen/_10sdp"
+                android:paddingEnd="@dimen/_10sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvCountry"
+                tools:ignore="Autofill" />
+
+
+
+            <TextView
+                android:id="@+id/tvState"
+                style="@style/InterRegularFont"
+                android:textSize="@dimen/_12ssp"
+                android:layout_width="0dp"
+                android:textColor="@color/textColorPrimary"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:text="@string/state_regiones"
+                app:layout_constraintTop_toBottomOf="@+id/countryEdt"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                />
+
+
+            <EditText
+                android:id="@+id/stateEdt"
+                style="@style/RegularFont"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_29sdp"
+                android:background="@drawable/bg_text_view_primary"
+                android:textColor="@color/textColorPrimary"
+                android:textSize="@dimen/_10ssp"
+                android:textColorHint="@color/colorButtonGrey"
+                android:hint="@string/enter_state_region"
+                android:inputType="text"
+                android:focusable="false"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:paddingStart="@dimen/_10sdp"
+                android:paddingEnd="@dimen/_10sdp"
+                app:layout_constraintEnd_toEndOf="@+id/tvState"
+                app:layout_constraintStart_toStartOf="@+id/tvState"
+                app:layout_constraintTop_toBottomOf="@+id/tvState"
+                tools:ignore="Autofill" />
+
+            <TextView
+                android:id="@+id/tvCity"
+                style="@style/InterRegularFont"
+                android:textSize="@dimen/_12ssp"
+                android:layout_width="0dp"
+                android:textColor="@color/textColorPrimary"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:text="@string/city"
+                app:layout_constraintTop_toBottomOf="@+id/stateEdt"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                />
+
+
+            <EditText
+                android:id="@+id/cityEdt"
+                style="@style/RegularFont"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_29sdp"
+                android:background="@drawable/bg_text_view_primary"
+                android:textColor="@color/textColorPrimary"
+                android:textSize="@dimen/_10ssp"
+                android:textColorHint="@color/colorButtonGrey"
+                android:hint="@string/enter_city"
+                android:inputType="text"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:paddingStart="@dimen/_10sdp"
+                android:paddingEnd="@dimen/_10sdp"
+                android:focusable="false"
+                app:layout_constraintEnd_toEndOf="@+id/tvCity"
+                app:layout_constraintStart_toStartOf="@+id/tvCity"
+                app:layout_constraintTop_toBottomOf="@+id/tvCity"
+                tools:ignore="Autofill" />
+
+            <TextView
+                android:id="@+id/tvAddress"
+                style="@style/InterRegularFont"
+                android:textSize="@dimen/_12ssp"
+                android:layout_width="0dp"
+                android:textColor="@color/textColorPrimary"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:text="@string/address"
+                app:layout_constraintTop_toBottomOf="@+id/cityEdt"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                />
+
+
+            <EditText
+                android:id="@+id/streetEdt"
+                style="@style/RegularFont"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_29sdp"
+                android:background="@drawable/bg_text_view_primary"
+                android:textColor="@color/textColorPrimary"
+                android:textSize="@dimen/_10ssp"
+                android:textColorHint="@color/colorButtonGrey"
+                android:hint="@string/enter_address"
+                android:inputType="text"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:paddingStart="@dimen/_10sdp"
+                android:paddingEnd="@dimen/_10sdp"
+                app:layout_constraintEnd_toEndOf="@+id/tvAddress"
+                app:layout_constraintStart_toStartOf="@+id/tvAddress"
+                app:layout_constraintTop_toBottomOf="@+id/tvAddress"
+                tools:ignore="Autofill" />
+
+            <TextView
+                android:id="@+id/tvZipPostCode"
+                style="@style/InterRegularFont"
+                android:textSize="@dimen/_12ssp"
+                android:layout_width="0dp"
+                android:textColor="@color/textColorPrimary"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:text="@string/zip_postal_codees"
+                app:layout_constraintTop_toBottomOf="@+id/streetEdt"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                />
+
+
+
+            <EditText
+                android:id="@+id/zipCodeEdt"
+                style="@style/RegularFont"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_29sdp"
+                android:background="@drawable/bg_text_view_primary"
+                android:textColor="@color/textColorPrimary"
+                android:textSize="@dimen/_10ssp"
+                android:textColorHint="@color/colorButtonGrey"
+                android:hint="@string/zip_postal_code"
+                android:inputType="number"
+                android:imeOptions="actionDone"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:paddingStart="@dimen/_10sdp"
+                android:paddingEnd="@dimen/_10sdp"
+                app:layout_constraintEnd_toEndOf="@+id/tvZipPostCode"
+                app:layout_constraintStart_toStartOf="@+id/tvZipPostCode"
+                app:layout_constraintTop_toBottomOf="@+id/tvZipPostCode"
+                tools:ignore="Autofill" />
+
+            <Button
+                style="@style/SharpGroteskSemiBoldFont11"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:background="@drawable/bg_new_button_primary_black"
+                android:onClick="@{(view)->activity.onClick(view)}"
+                android:text="@string/next"
+                android:id="@+id/next"
+                android:textAllCaps="true"
+                android:textSize="@dimen/_19ssp"
+
+                android:textColor="@color/coral"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/zipCodeEdt"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@+id/zipCodeEdt"
+                app:layout_constraintTop_toBottomOf="@+id/zipCodeEdt"
+                app:layout_constraintVertical_bias="0.900" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</layout>

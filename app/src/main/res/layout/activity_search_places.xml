@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="activity"
+            type="com.towsal.towsal.views.activities.SearchPlacesActivity" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".views.activities.SearchPlacesActivity">
+
+        <ImageView
+            android:id="@+id/close"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:onClick="@{(view) -> activity.onClick(view)}"
+            android:src="@drawable/ic_close"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/black" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/search_place"
+            style="@style/MediumFont"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="@dimen/_8sdp"
+            android:background="@null"
+            android:hint="@string/search_place_hint"
+            android:paddingVertical="@dimen/_8sdp"
+            android:singleLine="true"
+            android:textColorHint="@color/grey"
+            android:textSize="@dimen/_12ssp"
+            android:imeOptions="actionSearch"
+            android:inputType="text"
+            android:maxLines="1"
+            app:layout_constraintTop_toBottomOf="@id/close" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:layout_marginHorizontal="@dimen/_8sdp"
+            android:background="#B7B2B2"
+            app:layout_constraintTop_toBottomOf="@id/search_place" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/default_options"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/view">
+
+            <TextView
+                android:id="@+id/current_location"
+                style="@style/MediumFont"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="@dimen/_5sdp"
+                android:paddingTop="@dimen/_8sdp"
+                android:paddingBottom="@dimen/_5sdp"
+                android:drawablePadding="@dimen/_10sdp"
+                android:gravity="center_vertical"
+                android:onClick="@{(view) -> activity.onClick(view)}"
+                android:paddingStart="@dimen/_8sdp"
+                android:text="@string/current_location"
+                app:drawableStartCompat="@drawable/ic_current_location"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvCityName"
+                style="@style/MediumFont"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_5sdp"
+                android:drawablePadding="@dimen/_10sdp"
+                android:gravity="center_vertical"
+                android:onClick="@{(view) -> activity.onClick(view)}"
+                android:paddingStart="@dimen/_8sdp"
+                android:text="Riyadh city"
+                app:drawableStartCompat="@drawable/ic_riyadh_city"
+                app:layout_constraintTop_toBottomOf="@id/current_location" />
+
+            <TextView
+                android:id="@+id/tvAirportName"
+                style="@style/MediumFont"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawablePadding="@dimen/_10sdp"
+                android:padding="@dimen/_5sdp"
+                android:gravity="center_vertical"
+                android:onClick="@{(view) -> activity.onClick(view)}"
+                android:paddingStart="@dimen/_8sdp"
+                android:text="Riyadh airport"
+                app:drawableStartCompat="@drawable/ic_riyadh_airport"
+                app:layout_constraintTop_toBottomOf="@id/tvCityName" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/no_data_found"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/search_place">
+
+          <!--  <ImageView
+                android:id="@+id/imageView15"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginBottom="@dimen/_100sdp"
+                android:alpha="0.17"
+                android:src="@drawable/ic_app_logo_white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ContentDescription" />-->
+
+            <TextView
+                android:id="@+id/textView58"
+                style="@style/RegularFont"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/data_not_found"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/view" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

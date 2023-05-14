@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FFFFFF</color>
+    <color name="newColorPrimary">#FF1420E4</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorAccent">#000000</color>
+    <color name="transparentloaderColor">#80000000</color>
+    <color name="colorWhite">#fff</color>
+    <color name="text_color_heading">#FFFFFF</color>
+    <color name="textColorPrimary">#000000</color>
+    <color name="textColorHint">#303030</color>
+    <color name="borderColor">#000000</color>
+    <color name="view_color">#DEDEDE</color>
+    <color name="textColorSecondary">#6F6F6F</color>
+    <color name="popupColor">#F0F0F0</color>
+    <color name="textColor3">#68D8F0</color>
+    <color name="colorButtonGrey">#636363</color>
+
+
+    <!-- dots inactive colors -->
+    <color name="dot_dark_screen1">#363A4B</color>
+    <color name="dot_dark_screen2">#F5F5F5</color>
+    <color name="dot_dark_screen3">#E5E5E5</color>
+    <color name="dot_dark_screen4">#E5E5E5</color>
+    <color name="btn_color">#18AB33</color>
+    <!-- dots active colors -->
+    <color name="dot_light_screen1">#18AB33</color>
+    <color name="dot_light_screen2">#18AB33</color>
+    <color name="dot_light_screen3">#18AB33</color>
+    <color name="dot_light_screen4">#18AB33</color>
+    <color name="color_bottom_nav_bg">#F5F5F5</color>
+    <color name="line_bg_1">#E1E5F1</color>
+    <color name="shadowColor">#1f212121</color>
+
+    <array name="array_dot_active">
+        <item>@color/dot_light_screen1</item>
+        <item>@color/dot_light_screen2</item>
+        <item>@color/dot_light_screen3</item>
+        <item>@color/dot_light_screen4</item>
+        <item>@color/dot_light_screen4</item>
+        <item>@color/dot_light_screen4</item>
+        <item>@color/dot_light_screen4</item>
+        <item>@color/dot_light_screen4</item>
+
+    </array>
+
+    <array name="new_array_dot_active">
+        <item>@color/white</item>
+        <item>@color/white</item>
+        <item>@color/white</item>
+        <item>@color/white</item>
+        <item>@color/white</item>
+        <item>@color/white</item>
+        <item>@color/white</item>
+        <item>@color/white</item>
+
+    </array>
+
+    <array name="array_dot_inactive">
+        <item>@color/dot_dark_screen2</item>
+        <item>@color/dot_dark_screen3</item>
+        <item>@color/dot_dark_screen4</item>
+        <item>@color/dot_dark_screen4</item>
+        <item>@color/dot_dark_screen4</item>
+        <item>@color/dot_dark_screen4</item>
+        <item>@color/dot_dark_screen4</item>
+    </array>
+
+    <array name="new_array_dot_inactive">
+        <item>@color/dot_dark_screen1</item>
+        <item>@color/dot_dark_screen1</item>
+        <item>@color/dot_dark_screen1</item>
+        <item>@color/dot_dark_screen1</item>
+        <item>@color/dot_dark_screen1</item>
+        <item>@color/dot_dark_screen1</item>
+        <item>@color/dot_dark_screen1</item>
+        <item>@color/dot_dark_screen1</item>
+    </array>
+    <color name="textColor4">#303030</color>
+    <color name="textColorRed">#E24343</color>
+    <color name="colorCurrentDay">#F2F2F2</color>
+    <color name="colorUnavailableDays">#CECECE</color>
+    <color name="textColor5">#797979</color>
+    <color name="statusColorGrey">#9D9D9D</color>
+
+    <color name="colorGreen">#18AB33</color>
+    <color name="viewColor">#707070</color>
+    <color name="grey_custom">#9F9F9F</color>
+    <color name="text_color_of_payment_details">#5A5A5A</color>
+    <color name="sky_blue_variation_1">#68D8F0</color>
+    <color name="sky_blue_variation_2">#38BEF5</color>
+    <color name="grey_text_color_60">#99FFFFFF</color>
+    <color name="grey_text_color_new">#6C6F7B</color>
+    <color name="black_text_black_variation_18">#181434</color>
+    <color name="coral">#FF7170</color>
+    <color name="new_text_color_orange">#F68764</color>
+    <color name="new_text_color_orange_with_alpha_20">#33F68764</color>
+    <color name="text_color_white_variation_6">#E3E3E3</color>
+    <color name="text_color_red_variation_">#EA001B</color>
+    <color name="booking_id_txt">#181434</color>
+    <color name="bg_chat_bottom">#BFC4D2</color>
+    <color name="text_receive_msg">#0F0F7D</color>
+    <color name="send_msg_bg">#1420E4</color>
+    <color name="grey_text_color_variation_7E">#7E7E7E</color>
+    <color name="host_name_color">#9397A3</color>
+    <color name="pink_heart_linear">#FF7DC3</color>
+    <color name="blue_heart_linear">#1442E4</color>
+    <color name="bar_chart">#18AB33</color>
+    <color name="licence_plate_color">#898DE3</color>
+    <color name="availible_time">#1218B1</color>
+    <color name="cancel_policy_color">#204851</color>
+    <color name="password_text_color">#A0A2DC</color>
+    <color name="grey_text_color_c">#C2C2C2</color>
+    <color name="grey_vat">#434656</color>
+</resources>

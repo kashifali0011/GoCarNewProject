@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="com.towsal.towsal.utils.DateUtil" />
+
+        <import type="com.towsal.towsal.utils.Constants" />
+
+        <variable
+            name="activity"
+            type="com.towsal.towsal.views.activities.TransactionDetailActivity" />
+
+        <variable
+            name="model"
+            type="com.towsal.towsal.network.serializer.trips.TripDetailModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimary"
+        android:focusable="true"
+        android:id="@+id/clMainRoot"
+        android:focusableInTouchMode="true">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:fillViewport="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/mainLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <include
+                    android:id="@+id/toolBar"
+                    layout="@layout/layout_new_custom_action_bar"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/relativeLayout2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingVertical="@dimen/_5sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/toolBar">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/profile_image"
+                        android:layout_width="@dimen/_80sdp"
+                        android:layout_height="@dimen/_80sdp"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <RelativeLayout
+                        android:layout_width="@dimen/_80sdp"
+                        android:layout_height="@dimen/_103sdp"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/card_ratings"
+                            android:layout_width="@dimen/_60sdp"
+                            android:layout_height="@dimen/_20sdp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginBottom="@dimen/_8sdp"
+                            app:cardBackgroundColor="@color/white"
+                            app:cardCornerRadius="@dimen/_10sdp"
+                            app:cardElevation="@dimen/_5sdp">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+
+                                <TextView
+                                    android:id="@+id/tv_rating"
+                                    style="@style/InterRegularFont"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginStart="@dimen/_2sdp"
+                                    android:drawableStart="@drawable/ic_filled_star"
+                                    android:drawablePadding="@dimen/_5sdp"
+                                    android:gravity="center"
+                                    android:text="4.8"
+                                    android:textSize="@dimen/_11ssp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+                        </androidx.cardview.widget.CardView>
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/guestName"
+                        style="@style/SharpGroteskSemiBoldFont11"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:layout_marginTop="@dimen/_18sdp"
+                        android:layout_marginEnd="@dimen/_15sdp"
+                        android:ellipsize="end"
+                        android:lineSpacingExtra="@dimen/_5sdp"
+                        android:maxLines="3"
+                        android:text="Name"
+                        android:textAllCaps="true"
+                        android:textColor="@color/host_name_color"
+                        android:textSize="@dimen/_18ssp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/profile_image"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tvName"
+                        style="@style/SharpGroteskSemiBoldFont11"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_15sdp"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:textAllCaps="true"
+                        android:textSize="@dimen/_24ssp"
+                        app:layout_constraintStart_toStartOf="@+id/guestName"
+                        app:layout_constraintTop_toBottomOf="@+id/guestName"
+                        tools:text="name" />
+
+                    <TextView
+                        android:id="@+id/bookingId"
+                        style="@style/SharpGroteskSemiBoldFont11"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_15sdp"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:textAllCaps="true"
+                        android:textSize="@dimen/_20ssp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/tvName"
+                        app:layout_constraintTop_toBottomOf="@+id/tvName"
+                        tools:text="Booking Id : 12345" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <View
+                    android:id="@+id/view4"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_1sdp"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginEnd="@dimen/_15sdp"
+                    android:background="@color/line_bg_1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/relativeLayout2" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayout2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_marginEnd="@dimen/_15sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/relativeLayout2"
+                    app:layout_constraintTop_toBottomOf="@+id/view4">
+
+                    <ImageView
+                        android:id="@+id/ivCalendar"
+                        android:layout_width="@dimen/_30sdp"
+                        android:layout_height="@dimen/_30sdp"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ic_new_calendar"
+                        app:layout_constraintEnd_toStartOf="@+id/tvTrips"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tvTrips"
+                        style="@style/SharpGroteskSemiBoldFont11"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_marginEnd="@dimen/_15sdp"
+                        android:text="@string/trip_date"
+                        android:textAllCaps="true"
+                        android:textSize="@dimen/_25ssp"
+                        app:layout_constraintBottom_toBottomOf="@id/ivCalendar"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/ivCalendar"
+                        app:layout_constraintTop_toTopOf="@id/ivCalendar">
+
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/tvStart"
+                        style="@style/SharpGroteskSemiBoldFont11"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:text="@string/start"
+                        android:textAllCaps="true"
+                        android:textColor="@color/send_msg_bg"
+                        android:textSize="@dimen/_19ssp"
+                        app:layout_constraintEnd_toEndOf="@+id/tvTrips"
+                        app:layout_constraintStart_toStartOf="@+id/tvTrips"
+                        app:layout_constraintTop_toBottomOf="@+id/tvTrips" />
+
+                    <TextView
+                        android:id="@+id/pickUpDate"
+                        style="@style/InterRegularFont"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:maxLines="1"
+                        android:text='@{DateUtil.INSTANCE.changeDateFormat(Constants.INSTANCE.ServerDateTimeFormat , Constants.INSTANCE.UIDateTimeFormat , model.car_pick_up)}'
+                        android:textSize="@dimen/_12ssp"
+                        app:layout_constraintEnd_toEndOf="@+id/tvTrips"
+                        app:layout_constraintStart_toStartOf="@+id/tvTrips"
+                        app:layout_constraintTop_toBottomOf="@+id/tvStart"
+                        tools:text="Tuesday, Nov 15 , 10:00 AM" />
+
+                    <TextView
+                        android:id="@+id/tvFinish"
+                        style="@style/SharpGroteskSemiBoldFont11"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:text="@string/finish"
+                        android:textAllCaps="true"
+                        android:textColor="@color/send_msg_bg"
+                        android:textSize="@dimen/_19ssp"
+                        app:layout_constraintEnd_toEndOf="@+id/tvTrips"
+                        app:layout_constraintStart_toStartOf="@+id/tvTrips"
+                        app:layout_constraintTop_toBottomOf="@+id/pickUpDate">
+
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/dropOffDate"
+                        style="@style/InterRegularFont"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:maxLines="1"
+                        android:text='@{DateUtil.INSTANCE.changeDateFormat(Constants.INSTANCE.ServerDateTimeFormat , Constants.INSTANCE.UIDateTimeFormat , model.car_drop_off)}'
+                        android:textSize="@dimen/_12ssp"
+                        app:layout_constraintEnd_toEndOf="@+id/tvTrips"
+                        app:layout_constraintStart_toStartOf="@+id/tvTrips"
+                        app:layout_constraintTop_toBottomOf="@id/tvFinish"
+                        tools:text="Tuesday, Nov 15 , 10:00 AM" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <View
+                    android:id="@+id/view5"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_1sdp"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_marginEnd="@dimen/_15sdp"
+                    android:background="@color/line_bg_1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/constraintLayout2" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayout3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_15sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/view5">
+
+                    <ImageView
+                        android:id="@+id/ivPickUpAndReturn"
+                        android:layout_width="@dimen/_30sdp"
+                        android:layout_height="@dimen/_30sdp"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ic_map_pickup_drop"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+
+                        />
+
+                    <TextView
+                        android:id="@+id/tvPickAndReturn"
+                        style="@style/SharpGroteskSemiBoldFont11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_marginEnd="@dimen/_15sdp"
+                        android:text="@string/pick_up_and_return"
+                        android:textAllCaps="true"
+                        android:textSize="@dimen/_25ssp"
+                        app:layout_constraintBottom_toBottomOf="@id/ivPickUpAndReturn"
+                        app:layout_constraintStart_toEndOf="@+id/ivPickUpAndReturn"
+                        app:layout_constraintTop_toTopOf="@id/ivPickUpAndReturn" />
+
+                    <TextView
+                        android:id="@+id/pickUpReturnAddress"
+                        style="@style/InterRegularFont"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginEnd="@dimen/_15sdp"
+                        android:textSize="@dimen/_14ssp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/tvPickAndReturn"
+                        app:layout_constraintTop_toBottomOf="@+id/tvPickAndReturn"
+                        tools:text="Riyad Saudi Arabia" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <View
+                    android:id="@+id/view13"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1sdp"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_marginEnd="@dimen/_15sdp"
+                    android:background="@color/line_bg_1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/constraintLayout3" />
+
+                <TextView
+                    android:id="@+id/tvPaidOrEarned"
+                    style="@style/SharpGroteskSemiBoldFont11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:text="@string/rent"
+                    android:textAllCaps="true"
+                    android:textColor="@color/newColorPrimary"
+                    android:textSize="@dimen/_18ssp"
+                    app:layout_constraintStart_toStartOf="@+id/constraintLayout3"
+                    app:layout_constraintTop_toBottomOf="@+id/view13" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_2sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:background="@color/newColorPrimary"
+                    app:layout_constraintEnd_toEndOf="@id/tvPaidOrEarned"
+                    app:layout_constraintStart_toStartOf="@id/tvPaidOrEarned"
+                    app:layout_constraintTop_toBottomOf="@id/tvPaidOrEarned" />
+
+                <TextView
+                    android:id="@+id/rentAmount"
+                    style="@style/SharpGroteskSemiBoldFont11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAllCaps="true"
+                    android:textSize="@dimen/_18ssp"
+                    app:layout_constraintBottom_toBottomOf="@+id/tvPaidOrEarned"
+                    app:layout_constraintEnd_toEndOf="@+id/constraintLayout3"
+                    app:layout_constraintTop_toTopOf="@+id/tvPaidOrEarned"
+                    tools:text="Rent Paid SAR 100" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </ScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

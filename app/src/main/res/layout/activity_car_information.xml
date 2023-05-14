@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="activity"
+            type="com.towsal.towsal.views.activities.CarInformationActivity" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorWhite"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <include
+                android:id="@+id/layoutToolBar"
+                layout="@layout/layout_new_custom_action_bar" />
+
+
+            <TextView
+                android:id="@+id/tvYears"
+                style="@style/InterRegularFont"
+                android:textSize="@dimen/_12ssp"
+                android:layout_width="0dp"
+                android:textColor="@color/textColorPrimary"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_26sdp"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:text="@string/year"
+                app:layout_constraintTop_toBottomOf="@+id/layoutToolBar"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                 />
+
+            <RelativeLayout
+                android:id="@+id/spinnerLL"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_29sdp"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:background="@drawable/bg_text_view_primary"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvYears"
+                app:layout_constraintStart_toStartOf="parent"
+                >
+
+                <Spinner
+                    android:id="@+id/yearList"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="0dp"
+                    android:background="@android:color/transparent" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:src="@drawable/ic_arrow_down_blue"
+                    tools:ignore="ContentDescription" />
+            </RelativeLayout>
+
+
+            <TextView
+                android:id="@+id/tvMake"
+                style="@style/InterRegularFont"
+                android:textSize="@dimen/_12ssp"
+                android:layout_width="0dp"
+                android:textColor="@color/textColorPrimary"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:text="@string/make"
+                app:layout_constraintTop_toBottomOf="@+id/spinnerLL"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                />
+
+
+            <RelativeLayout
+                android:id="@+id/spinner2LL"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_29sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/bg_text_view_primary"
+                android:onClick="@{(view) -> activity.onClick(view)}"
+                app:layout_constraintEnd_toEndOf="@+id/spinnerLL"
+                app:layout_constraintStart_toStartOf="@+id/spinnerLL"
+                app:layout_constraintTop_toBottomOf="@+id/tvMake">
+
+                <ProgressBar
+                    android:id="@+id/pbMake"
+                    android:layout_width="@dimen/_15sdp"
+                    android:layout_height="@dimen/_15sdp"
+                    android:layout_centerInParent="true"
+                    android:visibility="gone"
+                    android:progressTint="@color/grey" />
+
+
+                <TextView
+                    android:id="@+id/makeList"
+                    style="@style/InterRegularFont"
+                    android:textSize="@dimen/_11ssp"
+                    android:textColor="@color/colorButtonGrey"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentStart="true"
+                    android:background="@android:color/transparent"
+                    android:gravity="start|center_vertical"
+                    android:paddingStart="@dimen/_16sdp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:src="@drawable/ic_arrow_down_blue"
+                    tools:ignore="ContentDescription" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tvModel"
+                style="@style/InterRegularFont"
+                android:textSize="@dimen/_12ssp"
+                android:layout_width="0dp"
+                android:textColor="@color/textColorPrimary"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:text="@string/model"
+                app:layout_constraintTop_toBottomOf="@+id/spinner2LL"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                />
+
+            <RelativeLayout
+                android:id="@+id/spinner3LL"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_29sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/bg_text_view_primary"
+                app:layout_constraintEnd_toEndOf="@+id/tvModel"
+                app:layout_constraintStart_toStartOf="@+id/tvModel"
+                app:layout_constraintTop_toBottomOf="@+id/tvModel">
+
+                <ProgressBar
+                    android:id="@+id/pbModel"
+                    android:layout_width="@dimen/_15sdp"
+                    android:layout_height="@dimen/_15sdp"
+                    android:layout_centerInParent="true"
+                    android:visibility="gone"
+                    android:progressTint="@color/grey" />
+
+
+                <Spinner
+                    android:id="@+id/modelList"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="0dp"
+                    android:background="@android:color/transparent" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:src="@drawable/ic_arrow_down_blue"
+                    tools:ignore="ContentDescription" />
+            </RelativeLayout>
+
+
+            <TextView
+                android:id="@+id/tvType"
+                style="@style/InterRegularFont"
+                android:textSize="@dimen/_12ssp"
+                android:layout_width="0dp"
+                android:textColor="@color/textColorPrimary"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:text="@string/car_type"
+                android:visibility="gone"
+                app:layout_constraintTop_toBottomOf="@+id/spinner3LL"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                />
+
+            <RelativeLayout
+                android:id="@+id/spinner5LL"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_29sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/bg_text_view_primary"
+                app:layout_constraintEnd_toEndOf="@+id/tvType"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="@+id/tvType"
+                app:layout_constraintTop_toBottomOf="@+id/tvType">
+
+
+                <Spinner
+                    android:id="@+id/spCarTypes"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="0dp"
+                    android:background="@android:color/transparent" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:src="@drawable/ic_arrow_down_blue"
+                    tools:ignore="ContentDescription" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tvOdoMeter"
+                style="@style/InterRegularFont"
+                android:textSize="@dimen/_12ssp"
+                android:layout_width="0dp"
+                android:textColor="@color/textColorPrimary"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:text="@string/odometer"
+                app:layout_constraintTop_toBottomOf="@+id/spinner5LL"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                />
+
+            <RelativeLayout
+                android:id="@+id/spinner4LL"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_29sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/bg_text_view_primary"
+                app:layout_constraintEnd_toEndOf="@+id/tvOdoMeter"
+                app:layout_constraintStart_toStartOf="@+id/tvOdoMeter"
+                app:layout_constraintTop_toBottomOf="@+id/tvOdoMeter">
+
+
+                <Spinner
+                    android:id="@+id/odometerList"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="0dp"
+                    android:background="@android:color/transparent" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:src="@drawable/ic_arrow_down_blue"
+                    tools:ignore="ContentDescription" />
+            </RelativeLayout>
+
+
+            <Button
+
+                style="@style/SharpGroteskSemiBoldFont11"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:background="@drawable/bg_new_button_primary_black"
+                android:onClick="@{(view)->activity.onClick(view)}"
+                android:text="@string/next"
+                android:textAllCaps="true"
+                android:textSize="@dimen/_19ssp"
+                android:textColor="@color/coral"
+                android:id="@+id/next"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/spinner4LL"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@+id/spinner4LL"
+                app:layout_constraintTop_toBottomOf="@+id/spinner4LL"
+                app:layout_constraintVertical_bias="0.900" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</layout>

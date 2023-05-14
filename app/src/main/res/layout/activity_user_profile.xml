@@ -1,0 +1,821 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="activity"
+            type="com.towsal.towsal.views.activities.UserProfileActivity" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:id="@+id/clMainRoot"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/toolBar"
+            layout="@layout/layout_new_custom_action_bar" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/clFavourites"
+            app:layout_constraintTop_toBottomOf="@id/toolBar">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:context=".views.activities.UserProfileActivity">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cl1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingVertical="@dimen/_5sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/profile_image"
+                        android:layout_width="@dimen/_80sdp"
+                        android:layout_height="@dimen/_80sdp"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <RelativeLayout
+                        android:layout_width="@dimen/_80sdp"
+                        android:layout_height="@dimen/_103sdp"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/card_ratings"
+                            android:layout_width="@dimen/_60sdp"
+                            android:layout_height="@dimen/_20sdp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginBottom="@dimen/_8sdp"
+                            app:cardBackgroundColor="@color/white"
+                            app:cardCornerRadius="@dimen/_10sdp"
+                            app:cardElevation="@dimen/_5sdp">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+
+                                <TextView
+                                    android:id="@+id/tvNoRating"
+                                    style="@style/InterRegularFont"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    android:visibility="gone"
+                                    android:singleLine="true"
+                                    android:text="@string/no_ratings"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/_8ssp"
+                                    app:layout_constraintEnd_toEndOf="parent" />
+
+
+                                <TextView
+                                    android:id="@+id/tv_rating"
+                                    style="@style/InterRegularFont"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginStart="@dimen/_2sdp"
+                                    android:drawableStart="@drawable/ic_filled_star"
+                                    android:drawablePadding="@dimen/_5sdp"
+                                    android:gravity="center"
+                                    tools:text="4.8"
+                                    android:textSize="@dimen/_11ssp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+                        </androidx.cardview.widget.CardView>
+                    </RelativeLayout>
+
+
+                    <TextView
+                        android:id="@+id/guestName"
+                        style="@style/SharpGroteskSemiBoldFont11"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:layout_marginTop="@dimen/_18sdp"
+                        android:ellipsize="end"
+                        android:lineSpacingExtra="@dimen/_5sdp"
+                        android:maxLines="3"
+                        android:text="Name"
+                        android:textAllCaps="true"
+                        android:textColor="@color/host_name_color"
+                        android:textSize="@dimen/_18ssp"
+                        app:layout_constraintEnd_toStartOf="@id/ivAllStar"
+                        app:layout_constraintStart_toEndOf="@+id/profile_image"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/user_name"
+                        style="@style/SharpGroteskSemiBoldFont11"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="top"
+                        android:maxLines="1"
+                        android:layout_marginTop="-11dp"
+                        android:singleLine="true"
+                        android:textAllCaps="true"
+                        android:textSize="@dimen/_35ssp"
+                        app:layout_constraintEnd_toStartOf="@+id/ivAllStar"
+                        app:layout_constraintStart_toStartOf="@+id/guestName"
+                        app:layout_constraintTop_toBottomOf="@+id/guestName"
+                        tools:text="namebwqe7rnqwer6nqwer6nqwer6wer qert qert qert qert" />
+
+                    <ImageView
+                        android:id="@+id/ivAllStar"
+                        android:layout_width="@dimen/_30sdp"
+                        android:layout_height="@dimen/_30sdp"
+                        android:layout_marginEnd="@dimen/_20sdp"
+                        android:src="@drawable/ic_star"
+                        android:visibility="visible"
+                        app:layout_constraintBottom_toBottomOf="@id/user_name"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/user_name"
+                        app:layout_constraintTop_toTopOf="@id/user_name" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <View
+                    android:id="@+id/view1"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_15sdp"
+                    android:background="@color/line_bg_1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/cl1" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clHostStats"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/view1">
+
+                    <TextView
+                        android:id="@+id/tvStatsTitle"
+                        style="@style/SharpGroteskSemiBoldFont10"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/stats_overview"
+                        android:textAllCaps="true"
+                        android:textColor="@color/dot_dark_screen1"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/clStats"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        app:layout_constraintTop_toBottomOf="@id/tvStatsTitle">
+
+                        <TextView
+                            android:id="@+id/tvTotalTripsTitle"
+                            style="@style/InterBold"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Total Trips:"
+                            android:textSize="@dimen/_11ssp"
+                            app:layout_constraintEnd_toStartOf="@id/tvJoinedTitle"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/tvJoinedTitle"
+                            style="@style/InterBold"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Joined:"
+                            android:textSize="@dimen/_11ssp"
+                            app:layout_constraintEnd_toStartOf="@id/tvResponseTimeTitle"
+                            app:layout_constraintStart_toEndOf="@id/tvTotalTripsTitle"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/tvResponseTimeTitle"
+                            style="@style/InterBold"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Avg. response time:"
+                            android:textSize="@dimen/_11ssp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@id/tvJoinedTitle"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/tvTotalTrips"
+                            style="@style/InterRegularFont"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:textSize="@dimen/_11ssp"
+                            app:layout_constraintEnd_toStartOf="@id/tvJoined"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/tvTotalTripsTitle" />
+
+                        <TextView
+                            android:id="@+id/tvJoined"
+                            style="@style/InterRegularFont"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:textSize="@dimen/_11ssp"
+                            app:layout_constraintEnd_toStartOf="@id/tvResponseTime"
+                            app:layout_constraintStart_toEndOf="@id/tvTotalTrips"
+                            app:layout_constraintTop_toBottomOf="@id/tvJoinedTitle" />
+
+                        <TextView
+                            android:id="@+id/tvResponseTime"
+                            style="@style/InterRegularFont"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:textSize="@dimen/_11ssp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@id/tvJoined"
+                            app:layout_constraintTop_toBottomOf="@id/tvResponseTimeTitle" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <View
+                    android:id="@+id/view2"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_1sdp"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_marginEnd="@dimen/_15sdp"
+                    android:background="@color/line_bg_1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/clHostStats" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clVerifiedInformation"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="@id/view2"
+                    app:layout_constraintStart_toStartOf="@id/view2"
+                    app:layout_constraintTop_toBottomOf="@id/view2">
+
+                    <TextView
+                        android:id="@+id/tvVerified"
+                        style="@style/SharpGroteskSemiBoldFont10"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:gravity="center"
+                        android:text="@string/verified_information"
+                        android:textAllCaps="true"
+                        android:textColor="@color/dot_dark_screen1"
+                        android:textSize="@dimen/_19ssp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/clApprovedToDrive"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:gravity="start"
+                        android:orientation="horizontal"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvVerified">
+
+                        <TextView
+                            android:id="@+id/tvApprovedToDrive"
+                            style="@style/InterRegularFont"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="start"
+                            android:layout_marginBottom="@dimen/_5sdp"
+                            android:paddingVertical="@dimen/_5sdp"
+                            android:text="@string/approved_to_drive"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_10ssp"
+                            app:layout_constraintBottom_toTopOf="@id/viewApprovedToDrive"
+                            app:layout_constraintEnd_toStartOf="@id/ivApprovedToDrive"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <ImageView
+                            android:id="@+id/ivApprovedToDrive"
+                            android:layout_width="@dimen/_20sdp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_50sdp"
+                            android:src="@drawable/ic_gradient_tick"
+                            app:layout_constraintBottom_toBottomOf="@id/tvApprovedToDrive"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+                        <View
+                            android:id="@+id/viewApprovedToDrive"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/_1sdp"
+                            android:background="#9397A3"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/clEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_10sdp"
+                        android:gravity="start"
+                        android:orientation="horizontal"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/clApprovedToDrive">
+
+                        <TextView
+                            android:id="@+id/tvEmail"
+                            style="@style/InterRegularFont"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="start"
+                            android:layout_marginBottom="@dimen/_5sdp"
+                            android:paddingVertical="@dimen/_5sdp"
+                            android:text="@string/email_address"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_10ssp"
+                            app:layout_constraintBottom_toTopOf="@id/viewEmail"
+                            app:layout_constraintEnd_toStartOf="@id/ivEmail"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <ImageView
+                            android:id="@+id/ivEmail"
+                            android:layout_width="@dimen/_20sdp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_50sdp"
+                            android:src="@drawable/ic_gradient_tick"
+                            app:layout_constraintBottom_toBottomOf="@id/tvEmail"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+                        <View
+                            android:id="@+id/viewEmail"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/_1sdp"
+                            android:background="#9397A3"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/clPhoneNumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_10sdp"
+                        android:gravity="start"
+                        android:orientation="horizontal"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/clEmail">
+
+                        <TextView
+                            android:id="@+id/tvPhoneNumber"
+                            style="@style/InterRegularFont"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="start"
+                            android:layout_marginBottom="@dimen/_5sdp"
+                            android:paddingVertical="@dimen/_5sdp"
+                            android:text="@string/phone_number"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_10ssp"
+                            app:layout_constraintBottom_toTopOf="@id/viewPhoneNumber"
+                            app:layout_constraintEnd_toStartOf="@id/ivPhoneNumber"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <ImageView
+                            android:id="@+id/ivPhoneNumber"
+                            android:layout_width="@dimen/_20sdp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_50sdp"
+                            android:src="@drawable/ic_gradient_tick"
+                            app:layout_constraintBottom_toBottomOf="@id/tvPhoneNumber"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+                        <View
+                            android:id="@+id/viewPhoneNumber"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/_1sdp"
+                            android:background="#9397A3"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <View
+                    android:id="@+id/viewInfo1"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_1sdp"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:background="@color/line_bg_1"
+                    app:layout_constraintEnd_toEndOf="@id/clVerifiedInformation"
+                    app:layout_constraintStart_toStartOf="@id/clVerifiedInformation"
+                    app:layout_constraintTop_toBottomOf="@id/clVerifiedInformation" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_18sdp"
+                    android:id="@+id/clTopVehilces"
+
+                    app:layout_constraintTop_toBottomOf="@id/viewInfo1">
+
+                    <TextView
+                        android:id="@+id/tvTopVehicles"
+                        style="@style/SharpGroteskSemiBoldFont11"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/top_vehicles"
+                        android:textAllCaps="true"
+                        android:layout_marginHorizontal="@dimen/_15sdp"
+                        android:textSize="@dimen/_35ssp"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@id/tvTopVehicles"
+                        android:id="@+id/rvTopVehicles"/>
+
+                    <TextView
+                        android:id="@+id/tvViewAllVehicles"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:gravity="center"
+                        android:onClick="@{(view) -> activity.onClick(view)}"
+                        android:text="@string/view_all_reviews"
+                        android:textAllCaps="true"
+                        android:textSize="@dimen/_10ssp"
+                        android:layout_marginHorizontal="@dimen/_15sdp"
+                        style="@style/InterMediumFont"
+                        android:textColor="@color/newColorPrimary"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/rvTopVehicles" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_1sdp"
+                        android:background="@color/newColorPrimary"
+                        app:layout_constraintEnd_toEndOf="@id/tvViewAllVehicles"
+                        app:layout_constraintStart_toStartOf="@id/tvViewAllVehicles"
+                        app:layout_constraintTop_toBottomOf="@id/tvViewAllVehicles" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/container_guest_reviews"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:visibility="visible"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/clTopVehilces">
+
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvRatingAndReviewsTitle"
+                        style="@style/SharpGroteskSemiBoldFont10"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:gravity="center"
+                        android:text="@string/guest_reviews"
+                        android:textColor="@color/dot_dark_screen1"
+                        android:textSize="@dimen/_25ssp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:textAllCaps="true" />
+
+                    <LinearLayout
+                        android:id="@+id/llGuestRatings"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintEnd_toEndOf="@id/tvRatingAndReviewsTitle"
+                        app:layout_constraintStart_toStartOf="@id/tvRatingAndReviewsTitle"
+                        app:layout_constraintTop_toBottomOf="@id/tvRatingAndReviewsTitle">
+
+                        <com.willy.ratingbar.BaseRatingBar
+                            android:id="@+id/rbGuestRatings"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            app:srb_clearRatingEnabled="false"
+                            app:srb_clickable="false"
+                            app:srb_drawableEmpty="@drawable/ic_empty_star_review"
+                            app:srb_drawableFilled="@drawable/ic_filled_star_review"
+                            app:srb_isIndicator="true"
+                            app:srb_numStars="5"
+                            app:srb_scrollable="false"
+                            app:srb_starHeight="@dimen/_10sdp"
+                            app:srb_starPadding="@dimen/_2sdp"
+                            app:srb_starWidth="@dimen/_10sdp" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvGuestRatings"
+                            style="@style/InterRegularFont"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="@dimen/_5sdp"
+                            android:text="24 ratings"
+                            android:textSize="@dimen/_11ssp" />
+                    </LinearLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/guest_reviews_recyclerview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        app:layout_constraintTop_toBottomOf="@id/llGuestRatings" />
+
+                    <TextView
+                        android:id="@+id/view_all_guest_reviews"
+                        style="@style/InterMediumFont"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_15sdp"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:onClick="@{(view)->activity.onClick(view)}"
+                        android:text="@string/view_all_reviews"
+                        android:textAllCaps="true"
+                        android:textColor="@color/send_msg_bg"
+                        android:textSize="@dimen/_10ssp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/guest_reviews_recyclerview" />
+
+                    <View
+                        android:id="@+id/viewTermsAndConditions"
+                        style="@style/InterMediumFont"
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        android:background="@color/newColorPrimary"
+                        android:textSize="@dimen/_9ssp"
+                        app:layout_constraintEnd_toEndOf="@id/view_all_guest_reviews"
+                        app:layout_constraintStart_toStartOf="@id/view_all_guest_reviews"
+                        app:layout_constraintTop_toBottomOf="@id/view_all_guest_reviews" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/container_host_reviews"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/container_guest_reviews">
+
+
+                    <View
+                        android:id="@+id/view3"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_1sdp"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:layout_marginEnd="@dimen/_15sdp"
+                        android:background="#9397A3"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvHostReview"
+                        style="@style/SharpGroteskSemiBoldFont10"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:gravity="center"
+                        android:text="@string/host_reviews"
+                        android:textColor="@color/dot_dark_screen1"
+                        android:textSize="@dimen/_25ssp"
+                        app:layout_constraintTop_toBottomOf="@id/view3"
+                        app:textAllCaps="true" />
+
+                    <LinearLayout
+                        android:id="@+id/llHostRatings"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        app:layout_constraintEnd_toEndOf="@id/tvHostReview"
+                        app:layout_constraintStart_toStartOf="@id/tvHostReview"
+                        app:layout_constraintTop_toBottomOf="@id/tvHostReview">
+
+                        <com.willy.ratingbar.BaseRatingBar
+                            android:id="@+id/rbHostRatings"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:srb_clearRatingEnabled="false"
+                            app:srb_clickable="false"
+                            app:srb_drawableEmpty="@drawable/ic_empty_star_review"
+                            app:srb_drawableFilled="@drawable/ic_filled_star_review"
+                            app:srb_isIndicator="true"
+                            app:srb_numStars="5"
+                            app:srb_scrollable="false"
+                            app:srb_starHeight="@dimen/_10sdp"
+                            app:srb_starPadding="@dimen/_2sdp"
+                            app:srb_starWidth="@dimen/_10sdp" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvHostRatings"
+                            style="@style/InterRegularFont"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="@dimen/_5sdp"
+                            android:text="24 ratings"
+                            android:textSize="@dimen/_11ssp" />
+                    </LinearLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/host_reviews_recyclerview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        app:layout_constraintTop_toBottomOf="@id/llHostRatings" />
+
+                    <TextView
+                        android:id="@+id/view_all_host_reviews"
+                        style="@style/InterMediumFont"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_15sdp"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:onClick="@{(view)->activity.onClick(view)}"
+                        android:text="@string/view_all_reviews"
+                        android:textAllCaps="true"
+                        android:textColor="@color/send_msg_bg"
+                        android:textSize="@dimen/_10ssp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/host_reviews_recyclerview" />
+
+                    <View
+                        android:id="@+id/view6"
+                        style="@style/InterMediumFont"
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:background="@color/newColorPrimary"
+                        android:textSize="@dimen/_9ssp"
+                        app:layout_constraintEnd_toEndOf="@id/view_all_host_reviews"
+                        app:layout_constraintStart_toStartOf="@id/view_all_host_reviews"
+                        app:layout_constraintTop_toBottomOf="@id/view_all_host_reviews" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clFavourites"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <View
+                android:id="@+id/view4"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_1sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:background="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/llFavourites"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:onClick="@{(view) -> activity.onClick(view)}"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view4">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/tvFavorities"
+                    style="@style/SharpGroteskSemiBoldFont11"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/transparent"
+                    android:gravity="center"
+                    android:textAllCaps="true"
+                    android:textColor="@color/black_text_black_variation_18"
+                    android:textSize="@dimen/_27ssp"
+                    app:icon="@drawable/ic_heart_blue"
+                    app:iconGravity="textStart"
+                    app:iconSize="@dimen/_20sdp"
+                    app:iconTint="@color/send_msg_bg"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:id="@+id/view5"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_1sdp"
+                android:background="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/llFavourites" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_38sdp"
+                android:background="@color/new_text_color_orange_with_alpha_20"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/view5">
+
+                <TextView
+                    android:id="@+id/tvReportProfile"
+                    style="@style/InterMediumFont"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="@{(view)->activity.onClick(view)}"
+                    android:text="@string/report_profile"
+                    android:textAllCaps="true"
+                    android:textColor="@color/dot_dark_screen1"
+                    android:textSize="@dimen/_10ssp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <View
+                    android:id="@+id/viewReportProfile"
+                    style="@style/InterMediumFont"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:background="@color/dot_dark_screen1"
+                    android:textSize="@dimen/_9ssp"
+                    app:layout_constraintEnd_toEndOf="@+id/tvReportProfile"
+                    app:layout_constraintStart_toStartOf="@+id/tvReportProfile"
+                    app:layout_constraintTop_toBottomOf="@+id/tvReportProfile" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

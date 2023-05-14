@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/bnv_search">
+
+    <fragment
+        android:id="@+id/bnv_search"
+        android:name="com.towsal.towsal.views.fragments.SearchHomeFragment"
+        android:label="fragment_search_home"
+        tools:layout="@layout/fragment_search_home">
+
+    </fragment>
+    <fragment
+        android:id="@+id/bnv_trips"
+        android:name="com.towsal.towsal.views.fragments.TripsFragment"
+        android:label="fragment_trips"
+        tools:layout="@layout/fragment_trips">
+
+        <action
+            android:id="@+id/action_bnv_trips_to_vehicleSettingFragment"
+            app:destination="@id/vehicleSettingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/bnv_message"
+        android:name="com.towsal.towsal.views.fragments.MessagesFragment"
+        android:label="fragment_messages"
+        tools:layout="@layout/fragment_messages">
+
+    </fragment>
+    <fragment
+        android:id="@+id/bnv_host"
+        android:name="com.towsal.towsal.views.fragments.HostFragment"
+        android:label="fragment_host"
+        tools:layout="@layout/fragment_host">
+
+        <action
+            android:id="@+id/action_bnv_host_to_vehicleSettingFragment"
+            app:destination="@id/vehicleSettingFragment" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/bnv_profile"
+        android:name="com.towsal.towsal.views.fragments.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile">
+
+    </fragment>
+    <fragment
+        android:id="@+id/vehicleSettingFragment"
+        android:name="com.towsal.towsal.views.fragments.VehicleSettingFragment"
+        android:label="VehicleSettingFragment">
+        <argument
+            android:name="carId"
+            android:defaultValue="0"
+            app:argType="integer" />
+    </fragment>
+
+
+
+</navigation>

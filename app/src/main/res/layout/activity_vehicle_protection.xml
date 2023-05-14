@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="activity"
+            type="com.towsal.towsal.views.activities.VehicleProtectionActivity" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".views.activities.VehicleProtectionActivity">
+
+        <include
+            android:id="@+id/layoutToolBar"
+            layout="@layout/layout_new_custom_action_bar" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginHorizontal="@dimen/_16sdp"
+            android:layout_marginTop="@dimen/_23sdp"
+            android:background="@color/colorPrimary"
+            android:fillViewport="true"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:scrollbars="none"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layoutToolBar">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/mainLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="true"
+
+                android:focusableInTouchMode="true"
+                android:layoutDirection="locale"
+                android:paddingBottom="@dimen/_20sdp"
+                android:textDirection="locale">
+
+                <TextView
+                    android:id="@+id/textView"
+                    style="@style/InterRegularFont"
+                    android:layout_width="match_parent"
+                    android:visibility="gone"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|start"
+                    android:text="@string/do_you_have_car_insurance"
+                    android:textAlignment="gravity"
+                    android:textSize="@dimen/_13ssp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <RadioGroup
+                    android:id="@+id/radioGroup"
+                    android:layout_width="0dp"
+                    android:visibility="gone"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_13sdp"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="@+id/textView"
+                    app:layout_constraintStart_toStartOf="@+id/textView"
+                    app:layout_constraintTop_toBottomOf="@+id/textView">
+
+                    <RadioButton
+                        android:id="@+id/yesInsurance"
+                        style="@style/InterRegularFont"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorAccent"
+                        android:checked="true"
+                        android:padding="@dimen/_5sdp"
+                        android:text="@string/yes"
+                        android:textSize="@dimen/_13ssp" />
+
+
+                    <RadioButton
+                        android:id="@+id/noInsurance"
+                        style="@style/InterRegularFont"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:buttonTint="@color/colorAccent"
+                        android:checked="false"
+                        android:padding="@dimen/_5sdp"
+                        android:text="@string/no"
+                        android:textSize="@dimen/_13ssp" />
+
+                </RadioGroup>
+
+                <View
+                    android:id="@+id/view"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:background="@color/line_bg_1"
+                    app:layout_constraintEnd_toEndOf="@+id/radioGroup"
+                    app:layout_constraintStart_toStartOf="@+id/radioGroup"
+                    app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/insuranceLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_marginBottom="@dimen/_23sdp"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toTopOf="@id/save"
+                    app:layout_constraintTop_toBottomOf="@+id/view">
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        style="@style/InterRegularFont"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center|start"
+                        android:text="@string/insurance_policy_number"
+                        android:textAlignment="gravity"
+                        android:textSize="@dimen/_13ssp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <EditText
+                        android:id="@+id/insurancePolicyEdt"
+                        style="@style/InterRegularFont"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_29sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:background="@drawable/bg_edittext_rating_review"
+                        android:hint="@string/enter_number"
+                        android:inputType="number"
+                        android:paddingStart="@dimen/_15sdp"
+                        android:paddingEnd="@dimen/_15sdp"
+                        android:textColorHint="@color/colorButtonGrey"
+                        android:textSize="@dimen/_12ssp"
+                        app:layout_constraintEnd_toEndOf="@+id/textView2"
+                        app:layout_constraintStart_toStartOf="@+id/textView2"
+                        app:layout_constraintTop_toBottomOf="@+id/textView2"
+                        tools:ignore="Autofill" />
+
+                    <TextView
+                        android:id="@+id/textView3"
+                        style="@style/InterRegularFont"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_13sdp"
+                        android:gravity="center|start"
+                        android:text="@string/date_of_expiration"
+                        android:textAlignment="gravity"
+                        android:textSize="@dimen/_13ssp"
+                        app:layout_constraintEnd_toEndOf="@+id/insurancePolicyEdt"
+                        app:layout_constraintStart_toStartOf="@+id/insurancePolicyEdt"
+                        app:layout_constraintTop_toBottomOf="@+id/insurancePolicyEdt" />
+
+                    <RelativeLayout
+                        android:id="@+id/rlDatePicker"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_21sdp"
+                        app:layout_constraintTop_toBottomOf="@id/textView3">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_40sdp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="@dimen/_30sdp"
+                            android:layout_marginEnd="@dimen/_30sdp"
+                            android:src="@drawable/bg_time_design" />
+
+                        <DatePicker
+                            android:id="@+id/datePicker"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:calendarViewShown="false"
+                            android:datePickerMode="spinner"
+                            android:spinnersShown="true"
+                            android:theme="@style/MyDatePicker" />
+
+                    </RelativeLayout>
+
+                    <View
+                        android:id="@+id/view2"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_1sdp"
+                        android:layout_marginTop="@dimen/_19sdp"
+                        android:background="@color/line_bg_1"
+                        app:layout_constraintEnd_toEndOf="@+id/rlDatePicker"
+                        app:layout_constraintStart_toStartOf="@+id/rlDatePicker"
+                        app:layout_constraintTop_toBottomOf="@+id/rlDatePicker" />
+
+                    <TextView
+                        android:id="@+id/textView8"
+                        style="@style/InterRegularFont"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:text="@string/upload_snap_of_your_insurance"
+                        android:textSize="@dimen/_13ssp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/view2"
+                        app:layout_constraintTop_toBottomOf="@+id/view2" />
+
+                    <androidx.cardview.widget.CardView
+                        app:cardCornerRadius="@dimen/_10sdp"
+                        app:cardBackgroundColor="@color/white"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:id="@+id/cvInsurancePolicy"
+                        android:visibility="visible"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView8"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_130sdp">
+                        <ImageView
+                            android:id="@+id/ivInsurancePolicy"
+                            android:scaleType="fitXY"
+                            android:onClick="@{(view)->activity.onClick(view)}"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"/>
+
+                        <WebView
+                            android:visibility="gone"
+                            android:onClick="@{(view)->activity.onClick(view)}"
+                            android:id="@+id/wvPdfLoader"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+
+                        <View
+                            android:id="@+id/viewPdf"
+                            android:visibility="gone"
+                            android:onClick="@{(view)->activity.onClick(view)}"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"/>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnInsuranceImg"
+                        style="@style/InterRegularFont"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_29sdp"
+                        android:layout_marginTop="@dimen/_6sdp"
+                        android:background="@drawable/button_blue_bg"
+                        android:ellipsize="end"
+                        android:onClick="@{(view)->activity.onClick(view)}"
+                        android:paddingHorizontal="@dimen/_20sdp"
+                        android:singleLine="true"
+                        android:text="@string/upload_image"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_10ssp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/cvInsurancePolicy"
+                        tools:ignore="ContentDescription" />
+
+                    <View
+                        android:id="@+id/view3"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_1sdp"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:background="@color/line_bg_1"
+                        app:layout_constraintEnd_toEndOf="@+id/view2"
+                        app:layout_constraintStart_toStartOf="@+id/btnInsuranceImg"
+                        app:layout_constraintTop_toBottomOf="@+id/btnInsuranceImg" />
+
+                    <TextView
+                        android:id="@+id/textView4"
+                        style="@style/InterRegularFont"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:gravity="center|start"
+                        android:text="@string/what_is_the_total_liability_covered_by_your_insurance_provider"
+                        android:textAlignment="gravity"
+                        android:textSize="@dimen/_13ssp"
+                        app:layout_constraintEnd_toEndOf="@+id/view3"
+                        app:layout_constraintStart_toStartOf="@+id/view3"
+                        app:layout_constraintTop_toBottomOf="@+id/view3" />
+
+                    <EditText
+                        android:id="@+id/insuranceCoverageEdt"
+                        style="@style/RegularFont"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_29sdp"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:background="@drawable/bg_edittext_rating_review"
+                        android:hint="@string/type_here"
+                        android:inputType="number"
+                        android:paddingStart="@dimen/_15sdp"
+                        android:paddingEnd="@dimen/_15sdp"
+                        android:textColorHint="@color/colorButtonGrey"
+                        android:textSize="@dimen/_12ssp"
+                        app:layout_constraintEnd_toEndOf="@+id/textView4"
+                        app:layout_constraintStart_toStartOf="@+id/textView4"
+                        app:layout_constraintTop_toBottomOf="@+id/textView4"
+                        tools:ignore="Autofill" />
+
+                    <View
+                        android:id="@+id/view4"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_1sdp"
+                        android:layout_marginStart="@dimen/_3sdp"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:layout_marginEnd="@dimen/_3sdp"
+                        android:background="@color/line_bg_1"
+                        app:layout_constraintEnd_toEndOf="@+id/insuranceCoverageEdt"
+                        app:layout_constraintStart_toStartOf="@+id/insuranceCoverageEdt"
+                        app:layout_constraintTop_toBottomOf="@+id/insuranceCoverageEdt" />
+
+
+                    <TextView
+                        android:id="@+id/textView5"
+                        style="@style/InterRegularFont"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:gravity="center|start"
+                        android:text="@string/does_your_insurance_cover_the_recovery_cost"
+                        android:textAlignment="gravity"
+                        android:textSize="@dimen/_13ssp"
+                        app:layout_constraintEnd_toEndOf="@+id/view4"
+                        app:layout_constraintStart_toStartOf="@+id/view4"
+                        app:layout_constraintTop_toBottomOf="@+id/view4" />
+
+                    <RadioGroup
+                        android:id="@+id/radioGroup2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:orientation="horizontal"
+                        app:layout_constraintEnd_toEndOf="@+id/textView5"
+                        app:layout_constraintStart_toStartOf="@+id/textView5"
+                        app:layout_constraintTop_toBottomOf="@+id/textView5">
+
+                        <RadioButton
+                            android:id="@+id/yesInsuranceRC"
+                            style="@style/InterRegularFont"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@color/colorAccent"
+                            android:padding="@dimen/_5sdp"
+                            android:text="@string/yes"
+                            android:textSize="@dimen/_13ssp" />
+
+
+                        <RadioButton
+                            android:id="@+id/noInsuranceRC"
+                            style="@style/InterRegularFont"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_15sdp"
+                            android:buttonTint="@color/colorAccent"
+                            android:checked="true"
+                            android:padding="@dimen/_5sdp"
+                            android:text="@string/no"
+                            android:textSize="@dimen/_13ssp" />
+
+                    </RadioGroup>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <Button
+                    android:id="@+id/save"
+                    style="@style/NewButtonStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_marginBottom="@dimen/_15sdp"
+                    android:background="@drawable/bg_new_button_primary_black"
+                    android:onClick="@{(view)->activity.onClick(view)}"
+                    android:text="@string/update_"
+                    android:textAllCaps="true"
+                    android:textColor="@color/coral"
+                    android:textSize="@dimen/_19ssp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

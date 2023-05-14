@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:background="#EFEFEF"
+        android:layout_height="@dimen/_40sdp">
+
+
+
+        <CheckBox
+            android:paddingStart="@dimen/_5sdp"
+            style="@style/InterRegularFont"
+            android:singleLine="true"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:button="@drawable/ic_check_vehicle_list"
+            android:id="@+id/cbVehicleList"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:id="@+id/aaa"
+            android:visibility="gone"
+            android:background="@drawable/alipay"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="@dimen/_1sdp"
+            android:layout_height="@dimen/_40sdp"/>
+<!--
+        <CheckBox
+            android:paddingStart="@dimen/_5sdp"
+            style="@style/InterRegularFont"
+            android:singleLine="true"
+            android:visibility="gone"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:textColor="@color/black"
+            android:text="Anyasdfsadf"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:button="@drawable/ic_check_vehicle_list"
+            android:id="@+id/cbVehicleListOne"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />-->
+
+
+        <View
+            android:visibility="gone"
+            android:background="@color/bg_chat_bottom"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_width="match_parent"
+
+            android:layout_height="@dimen/_1sdp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

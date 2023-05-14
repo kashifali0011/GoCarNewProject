@@ -1,0 +1,246 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+apply plugin: "androidx.navigation.safeargs"
+apply plugin: 'com.google.firebase.crashlytics'
+apply plugin: 'com.google.gms.google-services'
+apply plugin: 'org.jetbrains.dokka'
+
+
+android {
+    compileSdkVersion 33        //was 30
+
+    defaultConfig {
+        applicationId "com.towsal.towsal"
+        minSdkVersion 23
+        targetSdkVersion 33         //was 30
+        versionCode 1
+        versionName "1.0.25"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
+        lintOptions {
+            disable 'MissingTranslation'
+        }
+    }
+    flavorDimensions 'default'
+    productFlavors {
+        development {
+            applicationIdSuffix ''
+            versionNameSuffix '_dev'
+        }
+        staging {
+            applicationIdSuffix ''
+            versionNameSuffix '_staging'
+        }
+        local {
+            applicationIdSuffix ''
+            versionNameSuffix '_local'
+        }
+        production {}
+    }
+    buildTypes {
+        release {
+            ndk {
+                abiFilters "armeabi-v7a", "armeabi" // includes ARM SO files only, so no x86 SO file
+            }
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            ndk {
+                abiFilters "armeabi-v7a", "armeabi" // includes ARM SO files only, so no x86 SO file
+            }
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8.toString()
+    }
+    buildFeatures {
+        viewBinding true
+        dataBinding true
+    }
+
+    project.android.applicationVariants.all { variant ->
+        for (cred in project.ext."${variant.flavorName}".creds) {
+            if (cred.type == 1) {
+                variant.buildConfigField(cred.data_type, cred.name, cred.value)
+            } else {
+                variant.resValue((cred.data_type as String).toLowerCase(), cred.name, cred.value)
+            }
+        }
+        variant.outputs.all { output ->
+            outputFileName = new File("${project.ext.settings.appName}${variant.flavorName == null ? "" : variant.flavorName == '' ? '' : '-' + variant.flavorName}" +
+                    "-${variant.buildType.name}-v${variant.mergedFlavor.versionName}.apk")
+        }
+    }
+
+    dokkaHtml.configure {
+        dokkaSourceSets {
+            named("main") {
+                noAndroidSdkLink.set(false)
+            }
+        }
+    }
+
+    androidResources {
+        noCompress 'tflite'
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar", '*.aar'])
+    implementation project(":oppwa.mobile")
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation 'androidx.core:core-ktx:1.9.0'
+    implementation 'androidx.appcompat:appcompat:1.6.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1"
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.coordinatorlayout:coordinatorlayout:1.2.0'
+    implementation 'androidx.compose.ui:ui:1.3.3'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+    // Koin AndroidX Scope features
+    implementation "org.koin:koin-androidx-scope:$koin_version"
+// Koin AndroidX ViewModel features
+    implementation "org.koin:koin-androidx-viewmodel:$koin_version"
+// Koin AndroidX Experimental features
+    implementation "org.koin:koin-androidx-ext:$koin_version"
+    def lifecycle_version = "2.2.0"
+
+    // ViewModel and LiveData
+    implementation "androidx.lifecycle:lifecycle-extensions:$lifecycle_version"
+    kapt "androidx.lifecycle:lifecycle-common-java8:$lifecycle_version"
+    //Localization Activity
+    implementation 'com.akexorcist:localization:1.2.6'
+    // Glide
+    def glide_version = "4.11.0"
+    implementation "com.github.bumptech.glide:glide:$glide_version"
+    kapt "com.github.bumptech.glide:compiler:$glide_version"
+
+    // Retrofit
+    implementation "com.squareup.retrofit2:retrofit:2.9.0"
+    implementation "com.squareup.retrofit2:converter-gson:2.9.0"
+    implementation 'com.squareup.okhttp3:okhttp:5.0.0-alpha.2'
+    implementation 'com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.2'
+
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
+    implementation 'io.reactivex.rxjava2:rxjava:2.2.21'
+    implementation 'io.reactivex.rxjava2:rxkotlin:2.3.0'
+    def rxcalladapter_version = '2.7.1'
+    implementation "com.squareup.retrofit2:adapter-rxjava2:$rxcalladapter_version"
+
+    // Reactive Streams (convert Observable to LiveData)
+    def reactivestreams_version = "1.1.1"
+    implementation "android.arch.lifecycle:reactivestreams:$reactivestreams_version"
+
+    // Dagger 2
+    implementation "com.google.dagger:dagger-android:2.35.1"
+    implementation "com.google.dagger:dagger-android-support:2.35.1"
+    // if you use the support libraries
+    kapt "com.google.dagger:dagger-android-processor:2.35.1"
+    kapt "com.google.dagger:dagger-compiler:2.37"
+
+    //loader library
+    implementation 'com.wang.avi:library:2.1.3'
+
+//scalable sizes
+    implementation "com.intuit.ssp:ssp-android:$intuit"
+    implementation "com.intuit.sdp:sdp-android:$intuit"
+    //androidx support library
+    implementation "com.google.android.material:material:$material"
+    //country code picker
+    implementation 'com.hbb20:ccp:2.5.1'
+    //--------PinView
+    implementation 'com.github.aabhasr1:OtpView:v1.1.2'
+
+    def room_version = "2.2.3"
+
+    // Kotlin
+    implementation "androidx.navigation:navigation-fragment-ktx:$navigation_version"
+    implementation "androidx.navigation:navigation-ui-ktx:$navigation_version"
+
+    // Feature module Support
+    implementation "androidx.navigation:navigation-dynamic-features-fragment:$navigation_version"
+
+    // Testing Navigation
+    androidTestImplementation "androidx.navigation:navigation-testing:$navigation_version"
+
+    // Jetpack Compose Integration
+    implementation "android.arch.navigation:navigation-fragment-ktx:1.0.0"
+    //Map Implementation
+    implementation 'com.google.android.gms:play-services-location:21.0.1'
+    implementation 'com.google.android.gms:play-services-maps:18.1.0'
+    implementation 'com.google.android.gms:play-services-places:17.0.0'
+    implementation 'com.google.android.gms:play-services-wallet:19.1.0'
+    implementation 'com.google.android.libraries.places:places:3.0.0'
+    implementation 'com.google.maps.android:android-maps-utils:2.2.2'
+    implementation 'com.jakewharton.retrofit:retrofit2-kotlin-coroutines-adapter:0.9.2'
+
+    //Image loading
+    implementation 'com.github.bumptech.glide:glide:4.12.0'
+    kapt 'com.github.bumptech.glide:compiler:4.11.0'
+    implementation 'com.github.dhaval2404:imagepicker:1.8'
+    implementation 'com.github.florent37:inline-activity-result-kotlin:1.0.4'
+    implementation 'com.baoyz.actionsheet:library:1.1.7'
+    //Circle ImageView
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+    implementation project(path: ':library')
+    implementation "com.rizlee.view:rangeseekbar:1.0.0"
+    implementation 'org.apache.commons:commons-text:1.9'
+    implementation 'com.github.devendroid:ReadMoreOption:1.0.1'
+
+    implementation 'androidx.fragment:fragment-ktx:1.5.5'
+
+    // Firebase
+    // Add the Firebase Crashlytics SDK.
+    implementation 'com.google.firebase:firebase-crashlytics:18.3.3'
+    implementation 'com.google.firebase:firebase-messaging-directboot:23.1.1'
+    implementation 'com.google.firebase:firebase-messaging:23.1.1'
+    // Apply the Crashlytics Gradle plugin
+    apply plugin: 'com.google.firebase.crashlytics'
+
+
+    //------------RatingBar----------
+    implementation 'com.github.ome450901:SimpleRatingBar:1.5.0'
+
+    //------Chart View MP Chart Library------
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
+    //-----------App Center-----------
+    def appCenterSdkVersion = '4.1.0'
+    implementation "com.microsoft.appcenter:appcenter-analytics:${appCenterSdkVersion}"
+    implementation "com.microsoft.appcenter:appcenter-crashes:${appCenterSdkVersion}"
+
+    //---------Pinch Zoom Library
+    implementation 'com.jsibbold:zoomage:1.3.1'
+
+    //infinite view pager
+    implementation 'com.asksira.android:loopingviewpager:1.4.1'
+
+    implementation 'androidx.browser:browser:1.4.0'
+
+    dokkaHtmlPlugin("org.jetbrains.dokka:kotlin-as-java-plugin:1.6.21")
+
+
+    implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0'
+
+    implementation 'com.github.HBiSoft:PickiT:2.0.5'
+
+    implementation 'com.otaliastudios:cameraview:2.7.2'
+    implementation 'com.google.android.gms:play-services-vision:20.1.3'
+    implementation 'com.google.mlkit:object-detection:17.0.0'
+    implementation 'com.google.mlkit:object-detection-custom:17.0.0'
+
+    implementation 'com.github.Dimezis:BlurView:version-2.0.2'
+
+    implementation "com.anggrayudi:storage:1.5.1"
+}

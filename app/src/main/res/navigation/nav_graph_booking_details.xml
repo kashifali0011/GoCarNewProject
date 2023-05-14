@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph_booking_details"
+    app:startDestination="@id/guestTripDetailFragment">
+
+    <fragment
+        android:id="@+id/guestTripDetailFragment"
+        android:name="com.towsal.towsal.views.fragments.GuestTripDetailFragment"
+        android:label="GuestTripDetailFragment" />
+
+    <fragment
+        android:id="@+id/messagesDetailsFragment"
+        android:name="com.towsal.towsal.views.fragments.MessagesDetailsFragment"
+        android:label="MessagesDetailsFragment" />
+
+    <fragment
+        android:id="@+id/hostTripDetailFragment"
+        android:name="com.towsal.towsal.views.fragments.HostTripDetailFragment"
+        android:label="HostTripDetailFragment" />
+
+    <action
+        android:id="@+id/action_global_messagesDetailsFragment"
+        app:destination="@id/messagesDetailsFragment"
+        app:popUpTo="@id/messagesDetailsFragment"
+        app:popUpToInclusive="true" />
+
+
+</navigation>

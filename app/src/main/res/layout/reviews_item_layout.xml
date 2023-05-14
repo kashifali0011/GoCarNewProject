@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_10sdp"
+    android:background="@drawable/bg_reviews">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="@dimen/_100sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/reviewer_image"
+            android:layout_width="@dimen/_70sdp"
+            android:layout_height="@dimen/_70sdp"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_13sdp"
+            android:src="@drawable/profile_image"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.willy.ratingbar.BaseRatingBar
+            android:id="@+id/ratingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            app:layout_constraintStart_toEndOf="@id/reviewer_image"
+            app:layout_constraintTop_toTopOf="@+id/reviewer_image"
+            app:srb_clearRatingEnabled="false"
+            app:srb_clickable="false"
+            app:srb_drawableEmpty="@drawable/ic_empty_star_review"
+            app:srb_drawableFilled="@drawable/ic_filled_star_review"
+            app:srb_isIndicator="true"
+            app:srb_numStars="5"
+            app:srb_scrollable="false"
+            app:srb_starHeight="@dimen/_10sdp"
+            app:srb_starPadding="@dimen/_2sdp"
+            app:srb_starWidth="@dimen/_10sdp" />
+
+        <TextView
+            android:id="@+id/reviewer_city"
+            style="@style/InterRegularFont"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Los Angles"
+            android:textColor="@color/dot_dark_screen1"
+            android:textSize="@dimen/_12ssp"
+            app:layout_constraintEnd_toStartOf="@+id/review_date"
+            app:layout_constraintStart_toStartOf="@+id/ratingBar"
+            app:layout_constraintTop_toBottomOf="@id/ratingBar" />
+
+        <TextView
+            android:id="@+id/review_date"
+            style="@style/InterRegularFont"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:text="17 Oct 2021"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:textColor="@color/dot_dark_screen1"
+            android:textSize="@dimen/_12ssp"
+            app:layout_constraintBottom_toBottomOf="@+id/reviewer_city"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/reviewer_city"
+            app:layout_constraintTop_toBottomOf="@+id/ratingBar" />
+
+
+        <TextView
+            android:id="@+id/review_description"
+            style="@style/InterRegularFont"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:text="Great Car! Darrel is the best"
+            android:textColor="@color/dot_dark_screen1"
+            android:textSize="@dimen/_11ssp"
+            android:ellipsize="end"
+            app:layout_constraintVertical_bias="0"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/ratingBar"
+            app:layout_constraintTop_toBottomOf="@id/reviewer_city" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

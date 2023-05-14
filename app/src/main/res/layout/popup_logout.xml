@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginStart="@dimen/_10sdp"
+    android:layout_marginEnd="@dimen/_10sdp"
+    android:background="@android:color/transparent">
+
+    <androidx.cardview.widget.CardView
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/colorWhite"
+        app:cardCornerRadius="@dimen/_5sdp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white"
+            android:paddingBottom="@dimen/_10sdp">
+
+            <ImageButton
+                android:id="@+id/cross"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:padding="@dimen/_10sdp"
+                android:src="@drawable/ic_baseline_cancel_24"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@+id/help"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/help" />
+
+            <TextView
+                android:gravity="center"
+                android:textSize="@dimen/_36ssp"
+                android:textAllCaps="true"
+                android:id="@+id/help"
+                style="@style/SharpGroteskSemiBoldFont11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="@string/logout"
+                android:textAlignment="center"
+                android:textColor="@color/textColorPrimary"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/guidlines"
+                style="@style/InterRegularFont"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:fadeScrollbars="false"
+                android:gravity="center"
+                android:maxLines="10"
+                android:textSize="@dimen/_13ssp"
+                android:minLines="10"
+                android:paddingHorizontal="@dimen/_10sdp"
+                android:scrollbarSize="@dimen/_5sdp"
+                android:scrollbars="vertical"
+                android:text="@string/aur_you_sure_you_want_to_logout"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/help" />
+
+            <LinearLayout
+                app:layout_constraintTop_toBottomOf="@+id/guidlines"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <Button
+                    android:id="@+id/btnNo"
+                    style="@style/SharpGroteskSemiBoldFont11"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_8sdp"
+                    android:layout_weight="1"
+                    android:textAllCaps="true"
+                    android:textColor="@color/new_text_color_orange"
+                    android:background="@drawable/bg_new_primary_button_orange"
+                    android:textSize="@dimen/_19ssp"
+                    app:layout_constraintBottom_toBottomOf="parent" />
+
+                <Button
+                    android:id="@+id/btnYes"
+                    style="@style/SharpGroteskSemiBoldFont11"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_8sdp"
+                    android:textAllCaps="true"
+                    android:layout_weight="1"
+                    android:textColor="@color/new_text_color_orange"
+                    android:background="@drawable/bg_new_button_primary_black"
+                    android:textSize="@dimen/_19ssp"
+                    app:layout_constraintBottom_toBottomOf="parent" />
+            </LinearLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

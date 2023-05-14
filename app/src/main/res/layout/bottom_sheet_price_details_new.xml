@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_top_left_right_corner">
+
+            <ImageView
+                android:id="@+id/ivClose"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_14sdp"
+                android:layout_marginEnd="@dimen/_22sdp"
+                android:src="@drawable/ic_closed_price_details"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvTitle"
+                style="@style/SharpGroteskSemiBoldFont11"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_16sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_16sdp"
+                android:text="@string/price_details"
+                android:textAllCaps="true"
+                android:textSize="@dimen/_34ssp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ivClose" />
+
+            <TextView
+                android:id="@+id/tvIncluded"
+                style="@style/SharpGroteskSemiBoldFont11"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_16sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_16sdp"
+                android:text="@string/included"
+                android:textAllCaps="true"
+                android:textSize="@dimen/_24ssp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvTitle" />
+
+            <View
+                android:id="@+id/viewIncluded"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_1sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="#9397A3"
+                app:layout_constraintEnd_toEndOf="@id/tvIncluded"
+                app:layout_constraintStart_toStartOf="@id/tvIncluded"
+                app:layout_constraintTop_toBottomOf="@id/tvIncluded" />
+
+            <LinearLayout
+                android:id="@+id/llDays"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="@id/viewIncluded"
+                app:layout_constraintStart_toStartOf="@id/tvIncluded"
+                app:layout_constraintTop_toBottomOf="@id/viewIncluded"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clDefaultDay"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/ivTick"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:src="@drawable/ic_tick"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tvDefaultDay"
+                        style="@style/InterRegularFont"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:gravity="center_vertical"
+                        android:text="230 SAR x 3 days"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_11ssp"
+                        app:layout_constraintBottom_toBottomOf="@id/ivTick"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/ivTick"
+                        app:layout_constraintTop_toTopOf="@id/ivTick" />
+
+                    <View
+                        android:id="@+id/viewDays"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_1sdp"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:background="#9397A3"
+                        app:layout_constraintEnd_toEndOf="@id/tvDefaultDay"
+                        app:layout_constraintStart_toStartOf="@id/ivTick"
+                        app:layout_constraintTop_toBottomOf="@id/ivTick" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clMonday"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/ivTickMonday"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:src="@drawable/ic_tick"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tvMonday"
+                        style="@style/InterRegularFont"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:gravity="center_vertical"
+                        android:text="230 SAR x 3 days"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_11ssp"
+                        app:layout_constraintBottom_toBottomOf="@id/ivTickMonday"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/ivTickMonday"
+                        app:layout_constraintTop_toTopOf="@id/ivTickMonday" />
+
+                    <View
+                        android:id="@+id/viewDaysMonday"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_1sdp"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:background="#9397A3"
+                        app:layout_constraintEnd_toEndOf="@id/tvMonday"
+                        app:layout_constraintStart_toStartOf="@id/ivTickMonday"
+                        app:layout_constraintTop_toBottomOf="@id/ivTickMonday" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </LinearLayout>
+
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clDiscount"
+                android:layout_width="0dp"
+                android:visibility="gone"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="@id/viewIncluded"
+                app:layout_constraintStart_toStartOf="@id/tvIncluded"
+                app:layout_constraintTop_toBottomOf="@id/llDays">
+
+                <ImageView
+                    android:id="@+id/ivTick1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:src="@drawable/ic_tick"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clDiscountDetails"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:background="@drawable/bg_text_view_sky_blue"
+                    app:layout_constraintBottom_toBottomOf="@id/ivTick1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/ivTick1"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/tvDiscountTitle"
+                        style="@style/InterRegularFont"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:gravity="center_vertical"
+                        android:paddingVertical="@dimen/_3sdp"
+                        android:text="3+ days discount"
+                        android:textColor="@color/send_msg_bg"
+                        android:textSize="@dimen/_11ssp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tvDiscountAmount"
+                        style="@style/InterRegularFont"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_15sdp"
+                        android:gravity="center_vertical"
+                        android:paddingVertical="@dimen/_3sdp"
+                        android:text="13.42 SAR/day"
+                        android:textColor="@color/send_msg_bg"
+                        android:textSize="@dimen/_11ssp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <View
+                    android:id="@+id/viewDiscount"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_1sdp"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:background="#9397A3"
+                    app:layout_constraintEnd_toEndOf="@id/clDiscountDetails"
+                    app:layout_constraintStart_toStartOf="@id/ivTick1"
+                    app:layout_constraintTop_toBottomOf="@id/ivTick1" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/tvNotIncluded"
+                style="@style/SharpGroteskSemiBoldFont11"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_16sdp"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:layout_marginEnd="@dimen/_16ssp"
+                android:text="@string/not_yet_included"
+                android:textAllCaps="true"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_24ssp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/clDiscount" />
+
+            <TextView
+                style="@style/InterRegularFont"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/applied_at_checkout"
+                android:textColor="@color/host_name_color"
+                android:textSize="@dimen/_11ssp"
+                app:layout_constraintBottom_toBottomOf="@id/tvNotIncluded"
+                app:layout_constraintEnd_toEndOf="@id/tvNotIncluded"
+                app:layout_constraintTop_toTopOf="@id/tvNotIncluded" />
+
+            <View
+                android:id="@+id/viewNotIncluded"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_1sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="#9397A3"
+                app:layout_constraintEnd_toEndOf="@id/tvNotIncluded"
+                app:layout_constraintStart_toStartOf="@id/tvNotIncluded"
+                app:layout_constraintTop_toBottomOf="@id/tvNotIncluded" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="@+id/tvNotIncluded"
+                app:layout_constraintStart_toStartOf="@id/viewNotIncluded"
+                app:layout_constraintTop_toBottomOf="@id/viewNotIncluded">
+
+                <TextView
+                    style="@style/SharpGroteskSemiBoldFont11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:text="@string/protection_plan"
+                    android:textAllCaps="true"
+                    android:textColor="@color/text_receive_msg"
+                    android:textSize="@dimen/_18ssp"
+                    app:layout_constraintBottom_toBottomOf="@id/tvNotIncluded"
+                    app:layout_constraintEnd_toEndOf="@id/tvNotIncluded"
+                    app:layout_constraintTop_toTopOf="@id/tvNotIncluded" />
+
+                <TextView
+                    style="@style/InterRegularFont"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:text="@string/includes_liability_insurance_and_physical_damage_protection_options_you_ll_select_a_plan_when_you_re_checking_out"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_11ssp"
+                    app:layout_constraintBottom_toBottomOf="@id/tvNotIncluded"
+                    app:layout_constraintEnd_toEndOf="@id/tvNotIncluded"
+                    app:layout_constraintTop_toTopOf="@id/tvNotIncluded" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:background="#9397A3"
+                    app:layout_constraintEnd_toEndOf="@id/tvNotIncluded"
+                    app:layout_constraintStart_toStartOf="@id/tvNotIncluded"
+                    app:layout_constraintTop_toBottomOf="@id/tvNotIncluded" />
+
+                <TextView
+                    style="@style/SharpGroteskSemiBoldFont11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:text="@string/trip_fee"
+                    android:textAllCaps="true"
+                    android:textColor="@color/text_receive_msg"
+                    android:textSize="@dimen/_18ssp" />
+
+                <TextView
+                    style="@style/InterRegularFont"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:text="@string/this_helps_us_run_the_gocar_platform"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_11ssp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginBottom="@dimen/_30sdp"
+                    android:background="#9397A3" />
+
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+</layout>

@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="activity"
+            type="com.towsal.towsal.views.activities.AddCreditCardActivity" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/layoutToolBar"
+            layout="@layout/layout_new_custom_action_bar" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:fillViewport="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layoutToolBar">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:background="@color/colorWhite"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="@dimen/_20sdp"
+                android:paddingTop="@dimen/_5sdp"
+                android:paddingBottom="@dimen/_40sdp">
+
+
+                <TextView
+                    android:id="@+id/tvCardNumber"
+                    style="@style/InterRegularFont"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:text="@string/card_number"
+                    android:textSize="@dimen/_12ssp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edtCardNumber"
+                    style="@style/InterRegularFont"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_32sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:background="@drawable/bg_text_view_primary"
+                    android:hint="@string/enter_card_number"
+                    android:inputType="number"
+                    android:maxLength="19"
+                    android:imeOptions="actionNext"
+                    android:paddingHorizontal="@dimen/_10sdp"
+                    android:singleLine="true"
+                    android:textAllCaps="true"
+                    android:textSize="@dimen/_10ssp"
+                    android:textColor="@color/colorButtonGrey"
+                    android:textColorHint="@color/colorButtonGrey"
+                    android:visibility="visible"
+                    app:hintTextAppearance="@style/InterRegularFont"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvCardNumber" />
+
+                <ImageView
+                    android:id="@+id/ivCardBrand"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    app:layout_constraintBottom_toBottomOf="@id/edtCardNumber"
+                    app:layout_constraintEnd_toEndOf="@id/edtCardNumber"
+                    app:layout_constraintTop_toTopOf="@id/edtCardNumber" />
+
+                <TextView
+                    android:id="@+id/tvCardHolderName"
+                    style="@style/InterRegularFont"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:text="@string/card_holder_name"
+                    android:textSize="@dimen/_12ssp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/edtCardNumber" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edtCardHolderName"
+                    style="@style/InterRegularFont"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_32sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:background="@drawable/bg_text_view_primary"
+                    android:digits="QWERTYUIOPASDFGHJKLZXCVBNM "
+                    android:hint="@string/enter_name"
+                    android:inputType="textCapCharacters"
+                    android:textAllCaps="true"
+                    android:imeOptions="actionNext"
+                    android:paddingHorizontal="@dimen/_10sdp"
+                    android:singleLine="true"
+                    android:textSize="@dimen/_10ssp"
+                    android:textColor="@color/colorButtonGrey"
+                    android:textColorHint="@color/colorButtonGrey"
+                    app:hintTextAppearance="@style/InterRegularFont"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvCardHolderName" />
+
+                <TextView
+                    android:id="@+id/tvExpiryDate"
+                    style="@style/InterRegularFont"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:text="@string/expiry_date"
+                    android:textSize="@dimen/_12ssp"
+                    app:layout_constraintEnd_toStartOf="@id/tvCVV"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/edtCardHolderName" />
+
+                <TextView
+                    android:id="@+id/tvCVV"
+                    style="@style/InterRegularFont"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:text="@string/cvv"
+                    android:textSize="@dimen/_12ssp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/tvExpiryDate"
+                    app:layout_constraintTop_toBottomOf="@+id/edtCardHolderName" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edtExpiryDate"
+                    style="@style/InterRegularFont"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:background="@drawable/bg_text_view_primary"
+                    android:hint="@string/mm_yy"
+                    android:inputType="number"
+                    android:maxLength="5"
+                    android:imeOptions="actionNext"
+                    android:paddingHorizontal="@dimen/_10sdp"
+                    android:textColor="@color/colorButtonGrey"
+                    android:textColorHint="@color/colorButtonGrey"
+                    android:textSize="@dimen/_10ssp"
+                    app:layout_constraintEnd_toStartOf="@id/edtCVV"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvExpiryDate" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edtCVV"
+                    style="@style/InterRegularFont"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:background="@drawable/bg_text_view_primary"
+                    android:hint="000"
+                    android:inputType="number"
+                    android:imeOptions="actionDone"
+                    android:maxLength="3"
+                    android:paddingHorizontal="@dimen/_10sdp"
+                    android:textColor="@color/colorButtonGrey"
+                    android:textColorHint="@color/colorButtonGrey"
+                    android:textSize="@dimen/_10ssp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/edtExpiryDate"
+                    app:layout_constraintTop_toBottomOf="@+id/tvExpiryDate" />
+
+
+                <Button
+                    android:id="@+id/btnSave"
+                    style="@style/SharpGroteskSemiBoldFont11"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_35sdp"
+                    android:background="@drawable/bg_new_button_primary_black"
+                    android:onClick="@{(view) -> activity.onClick(view)}"
+                    android:text="@string/save"
+                    android:textAllCaps="true"
+                    android:textColor="@color/coral"
+                    android:textSize="@dimen/_19ssp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
+

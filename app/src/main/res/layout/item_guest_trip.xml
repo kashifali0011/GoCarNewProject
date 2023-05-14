@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="position"
+            type="int" />
+
+        <variable
+            name="adapter"
+            type="com.towsal.towsal.views.adapters.TripsMultiViewAdapter" />
+
+    </data>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_10sdp">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:layout_marginVertical="@dimen/_8sdp"
+            app:cardCornerRadius="@dimen/_10sdp"
+            app:cardElevation="@dimen/_5sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:strokeColor="@color/line_bg_1"
+            app:strokeWidth="@dimen/_1sdp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/guest"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:onClick="@{(view)->adapter.onClick(position,view)}">
+
+                <RelativeLayout
+                    android:id="@+id/relativeLayout2"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_200sdp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/imageView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/status"
+                    style="@style/InterBold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:textColor="@color/btn_color"
+                    android:textSize="@dimen/_11ssp"
+                    app:layout_constraintStart_toStartOf="@id/relativeLayout2"
+                    app:layout_constraintTop_toBottomOf="@id/relativeLayout2"
+                    tools:text="Completed" />
+
+                <TextView
+                    android:id="@+id/bookingId"
+                    style="@style/InterRegularFont"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:textColor="@color/black_text_black_variation_18"
+                    android:textSize="@dimen/_11ssp"
+                    app:layout_constraintBottom_toBottomOf="@id/status"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/status"
+                    tools:text="Trip ID: GB1079" />
+
+                <TextView
+                    android:id="@+id/tvBookingDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:background="@color/bg_chat_bottom"
+                    android:gravity="end"
+                    android:paddingHorizontal="@dimen/_10sdp"
+                    android:paddingVertical="@dimen/_5sdp"
+                    android:textAllCaps="true"
+                    android:textSize="@dimen/_10ssp"
+                    android:textColor="@color/black_text_black_variation_18"
+                    app:layout_constraintTop_toBottomOf="@id/bookingId"
+                    tools:text="BOOKED MAR 16, 2022, at 1:22 PM" />
+
+                <TextView
+                    android:id="@+id/tvHostName"
+                    style="@style/InterMediumFont"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:textAllCaps="true"
+                    app:layout_constraintEnd_toStartOf="@id/rating"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvBookingDate"
+                    tools:text="AHMAD's" />
+
+                <TextView
+                    android:id="@+id/tvCarName"
+                    style="@style/SharpGroteskSemiBoldFont11"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_15sdp"
+                    android:singleLine="true"
+                    android:textAllCaps="true"
+                    android:textSize="@dimen/_25ssp"
+                    app:layout_constraintEnd_toStartOf="@id/trips"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvHostName"
+                    tools:text="Hyundai Accent 2020 " />
+
+                <TextView
+                    android:id="@+id/rating"
+                    style="@style/InterRegularFont"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:gravity="center|start"
+                    android:onClick="@{(view)->adapter.onClick(position,view)}"
+                    android:textAlignment="gravity"
+                    android:textSize="@dimen/_13ssp"
+                    app:layout_constraintBottom_toBottomOf="@id/tvHostName"
+                    app:layout_constraintEnd_toStartOf="@id/ivRating"
+                    app:layout_constraintTop_toBottomOf="@id/tvHostName"
+                    tools:text="4.8" />
+
+                <ImageView
+                    android:id="@+id/ivRating"
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginEnd="@dimen/_15sdp"
+                    android:onClick="@{(view)->adapter.onClick(position,view)}"
+                    android:padding="@dimen/_5sdp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_rating_blue_gradient"
+                    app:layout_constraintBottom_toBottomOf="@+id/rating"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/rating"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:id="@+id/trips"
+                    style="@style/InterMediumFont"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_7sdp"
+                    android:layout_marginEnd="@dimen/_15sdp"
+                    android:textAllCaps="true"
+                    android:textColor="#9397A3"
+                    android:textSize="@dimen/_10ssp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/ivRating"
+                    tools:text="(40 Trips)" />
+
+
+                <View
+                    android:id="@+id/viewCarName"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1sdp"
+                    android:layout_marginHorizontal="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:background="@color/black_text_black_variation_18"
+                    app:layout_constraintTop_toBottomOf="@id/tvCarName" />
+
+                <TextView
+                    android:id="@+id/tvStart"
+                    style="@style/SharpGroteskSemiBoldFont11"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:text="@string/start"
+                    android:textAllCaps="true"
+                    android:textColor="@color/newColorPrimary"
+                    android:textSize="@dimen/_19ssp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/viewCarName" />
+
+                <TextView
+                    android:id="@+id/tvStartTime"
+                    style="@style/InterRegularFont"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_15sdp"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_12ssp"
+                    app:layout_constraintTop_toBottomOf="@id/tvStart"
+                    tools:text="Tue, Nov 15th, 10:00 AM" />
+
+                <TextView
+                    android:id="@+id/tvFinish"
+                    style="@style/SharpGroteskSemiBoldFont11"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:text="@string/finish"
+                    android:textAllCaps="true"
+                    android:textColor="@color/newColorPrimary"
+                    android:textSize="@dimen/_19ssp"
+                    app:layout_constraintTop_toBottomOf="@id/tvStartTime" />
+
+                <TextView
+                    android:id="@+id/tvFinishTime"
+                    style="@style/InterRegularFont"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_15sdp"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_12ssp"
+                    app:layout_constraintTop_toBottomOf="@id/tvFinish"
+                    tools:text="Tue, Nov 15th, 10:00 AM" />
+
+                <TextView
+                    android:id="@+id/tvLocation"
+                    style="@style/InterRegularFont"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:drawablePadding="@dimen/_3sdp"
+                    android:textSize="@dimen/_12ssp"
+                    app:drawableStartCompat="@drawable/ic_location_pick_up"
+                    app:drawableTint="#363A4B"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvFinishTime"
+                    tools:text="Riyadh, Saudi Arabia" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

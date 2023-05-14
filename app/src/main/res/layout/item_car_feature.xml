@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="position"
+            type="int" />
+
+        <variable
+            name="adapter"
+            type="com.towsal.towsal.views.adapters.CarFeatureAdapter" />
+
+    </data>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/mainLayout"
+        android:layout_width="match_parent"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/ivCarFeatures"
+            android:layout_marginStart="@dimen/_10sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/tvFeatureName"
+            app:layout_constraintTop_toTopOf="@id/tvFeatureName"
+            android:layout_width="@dimen/_24sdp"
+            android:layout_height="@dimen/_24sdp"/>
+
+        <TextView
+            android:id="@+id/tvFeatureName"
+            style="@style/RegularFont"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:includeFontPadding="false"
+            android:singleLine="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="@dimen/_10sdp"
+            app:layout_constraintEnd_toStartOf="@id/scFeatureSelected"
+            app:layout_constraintStart_toEndOf="@+id/ivCarFeatures"
+            app:layout_constraintBottom_toBottomOf="@id/scFeatureSelected"
+            app:layout_constraintTop_toTopOf="@id/scFeatureSelected"
+            tools:text="Automatic Transmission" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/scFeatureSelected"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginEnd="@dimen/_2sdp"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:thumb="@drawable/ic_toggle_blue"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:switchMinWidth="@dimen/_55sdp"
+            app:track="@drawable/ic_toggle_track" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.75dp"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:layout_marginBottom="@dimen/_3sdp"
+            android:background="#E1E5F1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvFeatureName" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

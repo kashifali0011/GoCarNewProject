@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_host_graph"
+    app:startDestination="@id/myVehicleListingFragment">
+
+    <fragment
+        android:id="@+id/myVehicleListingFragment"
+        android:name="com.towsal.towsal.views.fragments.MyVehicleListingFragment"
+        android:label="MyVehicleListingFragment" />
+
+    <fragment
+        android:id="@+id/performanceSettingFragment"
+        android:name="com.towsal.towsal.views.fragments.PerformanceSettingFragment"
+        android:label="PerformanceSettingFragment" />
+
+    <fragment
+        android:id="@+id/earningSettingFragment"
+        android:name="com.towsal.towsal.views.fragments.EarningSettingFragment"
+        android:label="EarningSettingFragment" />
+
+    <fragment
+        android:id="@+id/reviewSettingFragment"
+        android:name="com.towsal.towsal.views.fragments.ReviewSettingFragment"
+        android:label="ReviewSettingFragment" />
+
+</navigation>

@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="activity"
+            type="com.towsal.towsal.views.activities.OTPVerificationActivity" />
+
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_blue"
+        android:fillViewport="true"
+        android:focusable="false">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imgGoCar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_100sdp"
+                android:src="@drawable/ic_app_logo_new"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvMessage"
+                style="@style/InterRegularFont"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="@string/car_sharing_done_right"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_13ssp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/imgGoCar" />
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="@dimen/_80sdp"
+                android:layout_height="@dimen/_110sdp"
+                android:layout_marginTop="@dimen/_40sdp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_new_otp_img"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvMessage" />
+
+            <TextView
+                android:id="@+id/tvInfo"
+                style="@style/InterRegularFont"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:gravity="center"
+                android:text="@string/enter_the_otp_we_ve_sent_to_your_registered_phone_number"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12ssp"
+                app:layout_constraintEnd_toEndOf="@id/imageView"
+                app:layout_constraintStart_toStartOf="@id/imageView"
+                app:layout_constraintTop_toBottomOf="@id/imageView" />
+
+            <TextView
+                android:id="@+id/tvPhoneNumber"
+                style="@style/InterRegularFont"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:gravity="center"
+                android:text="@string/_966_4564_556_89"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12ssp"
+                app:layout_constraintEnd_toEndOf="@id/imageView"
+                app:layout_constraintStart_toStartOf="@id/imageView"
+                app:layout_constraintTop_toBottomOf="@id/tvInfo" />
+
+
+            <LinearLayout
+                android:id="@+id/llOtpView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toTopOf="@+id/btnVerify"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvPhoneNumber">
+
+                <in.aabhasjindal.otptextview.OtpTextView
+                    android:id="@+id/otpView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:elevation="@dimen/shadow_dimen"
+                    android:textColor="@color/grey_text_color_60"
+                    app:bar_active_color="@color/white"
+                    app:bar_enabled="true"
+                    android:importantForAutofill="noExcludeDescendants"
+                    android:autoText="false"
+                    style="@style/SharpGroteskSemiBoldFont11"
+                    app:bar_inactive_color="@color/white"
+                    app:bar_margin_top="@dimen/_20sdp"
+                    app:length="4"
+                    app:otp_text_size="@dimen/_26sdp"
+                    app:width="@dimen/_40sdp" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnVerify"
+                style="@style/SharpGroteskSemiBoldFont10"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_31sdp"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:layout_marginBottom="@dimen/_20sdp"
+                android:background="@drawable/bg_gradient_button"
+                android:onClick="@{(view)->activity.onClick(view)}"
+                android:text="@string/submit"
+                android:textAllCaps="true"
+                android:textSize="@dimen/_19sdp"
+                app:layout_constraintBottom_toTopOf="@+id/tvMessage2"
+                app:layout_constraintTop_toBottomOf="@id/llOtpView"
+                app:layout_constraintVertical_bias="0" />
+
+
+            <TextView
+                android:id="@+id/tvMessage2"
+                style="@style/InterMediumFont"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/didn_t_recieve_your_code"
+                android:textAllCaps="true"
+                android:textColor="@color/sky_blue_variation_1"
+                android:textSize="@dimen/_10sdp"
+                app:layout_constraintBottom_toTopOf="@id/clActions"
+                app:layout_constraintEnd_toEndOf="@id/btnVerify"
+                app:layout_constraintStart_toStartOf="@id/btnVerify" />
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clActions"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_30sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@id/tvMessage2"
+                app:layout_constraintStart_toStartOf="@id/tvMessage2">
+
+
+                <TextView
+                    android:id="@+id/tvChangePhoneNumber"
+                    style="@style/InterMediumFont"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_3sdp"
+                    android:gravity="center_vertical|left"
+                    android:onClick="@{(view)->activity.onClick(view)}"
+                    android:text="@string/change_phone_number"
+                    android:textAllCaps="true"
+                    android:textColor="@color/sky_blue_variation_1"
+                    android:textSize="@dimen/_10sdp"
+                    app:layout_constraintStart_toEndOf="@id/tvOr"
+                    app:layout_constraintTop_toTopOf="@id/tvResend" />
+
+                <TextView
+                    android:id="@+id/tvOr"
+                    style="@style/InterMediumFont"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_3sdp"
+                    android:text="@string/or"
+                    android:textColor="@color/sky_blue_variation_1"
+                    android:textSize="@dimen/_10ssp"
+                    app:layout_constraintStart_toEndOf="@id/tvResend"
+                    app:layout_constraintTop_toTopOf="@id/tvResend" />
+
+                <TextView
+                    android:id="@+id/tvResend"
+                    style="@style/InterMediumFont"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:onClick="@{(view)->activity.onClick(view)}"
+                    android:text="@string/resend"
+                    android:textAllCaps="true"
+                    android:textColor="@color/sky_blue_variation_1"
+                    android:textSize="@dimen/_10sdp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:background="@color/sky_blue_variation_1"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@id/tvChangePhoneNumber"
+                    app:layout_constraintStart_toStartOf="@id/tvChangePhoneNumber" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:background="@color/sky_blue_variation_1"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@id/tvResend"
+                    app:layout_constraintStart_toStartOf="@id/tvResend" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</layout>

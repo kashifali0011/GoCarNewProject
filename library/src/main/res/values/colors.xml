@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="daysLabelColor">#181434</color>
+    <color name="currentMonthDayColor">#de000000</color>
+    <color name="nextMonthDayColor">#1F000000</color>
+    <color name="disabledDialogButtonColor">#1F000000</color>
+
+    <color name="itemHighlightColor">#1F000000</color>
+    <color name="itemFocusedColor">#1A000000</color>
+    <color name="bgColor">#F6F7FB</color>
+
+    <color name="defaultColor">#2962FF</color>
+    <color name="circle_color">#6C6F7B</color>
+    <color name="range_color">#6C6F7B</color>
+    <color name="seprator_color">#BFC4D2</color>
+</resources>

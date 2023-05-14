@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:id="@+id/llRoot"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp">
+
+
+        <TextView
+
+            android:layout_gravity="center"
+            android:id="@+id/tvTimeSelectView"
+            android:textColor="@color/black"
+            android:visibility="gone"
+            style="@style/InterRegularFont"
+            android:textSize="@dimen/_20ssp"
+            android:hint="11 : 50 am"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+
+            android:layout_gravity="center"
+            android:id="@+id/tvTimeSelect"
+            android:textColor="@color/black"
+            style="@style/InterRegularFont"
+            android:textSize="@dimen/_20ssp"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+       <!-- <View
+            android:visibility="gone"
+            android:id="@+id/view1"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"/>-->
+
+    </LinearLayout>
+</layout>

@@ -1,0 +1,1269 @@
+<resources>
+    <string name="custom_google_api_key" translatable="false">AIzaSyBzWfttcfGIP5NNk1BSTMpHvl2H-n7xR50</string>
+    <string name="app_name">GOCAR</string>
+    <string name="english">English</string>
+    <string name="arabic">عربي</string>
+    <string name="it_s_more_than_a_car_rental_app">It’s more than a car rental app!</string>
+    <string name="select_email_or_phone">EMAIL OR PHONE NUMBER</string>
+    <string name="email">EMAIL</string>
+    <string name="email_txt">Email</string>
+    <string name="phone">PHONE NUMBER</string>
+    <string name="phone_txt">Phone Number</string>
+    <string name="mobile_num">Mobile number</string>
+    <string name="phone_">Phone</string>
+    <string name="enter_email">Enter email</string>
+    <string name="enter_phone">Enter Phone</string>
+    <string name="enter_your_password">Enter your password</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="login">Log in</string>
+    <string name="register_now">Register now</string>
+    <string name="skip">Skip</string>
+    <string name="email_pass_err_msg">Enter email or phone number</string>
+    <string name="password_err_msg">Enter your password</string>
+    <string name="first_name">First name</string>
+    <string name="first_Name">First name</string>
+    <string name="first_name_cap">FIRST NAME</string>
+    <string name="last_name">Last name</string>
+    <string name="last_Name">Last name</string>
+    <string name="password">PASSWORD</string>
+    <string name="confirm_password">Confirm password</string>
+    <string name="i_accept_terms_conditions"><![CDATA[I accept the terms of service]]></string>
+    <string name="submit">Submit</string>
+    <string name="registration">Registration</string>
+    <string name="enter_phone_err_msg">@string/phone</string>
+    <string name="enter_email_err_msg">@string/email</string>
+    <string name="inalid_email_err_msg">Invalid email</string>
+    <string name="first_name_err_msg">@string/first_name</string>
+    <string name="last_name_err_msg">@string/last_name</string>
+    <string name="enter_password_err_msg">Enter your password</string>
+    <string name="enter_confirm_password_err_msg">Please re-confirm password</string>
+    <string name="password_mismatch_err_msg">Passwords mismatch</string>
+    <string name="term_condition_err_msg">Please agree to the terms of service</string>
+    <string name="terms_conditions"><![CDATA[Terms of service]]></string>
+    <string name="dummyText">Nam et ante quis dolor elementum semper. Nullam cond imentum feugiat dapibus. Vestibulum ante ipsum pri mis in faucibus orci luctus et ultrices posuere cubilia curae; Fusce consectetur erat non purus convallis tempus.lla ligula ut elit ullamcorper dictum. Vivamus egestas luctus enim nec gravida. Nam mollis cursus tortor ac vehicula. Quisque feugiat, dolor eget pretium imperdiet, neque mi placerat lacus, ac molestie leo mauris a sem. ondimentum quis quis quam. Nam et ante quis dolor elementum semper. Nullam cond imentum feugiat dapibus. Vestibulum ante ipsum pri mis in faucibus orci luctus et ultrices posuere cubilia curae; Fusce consectetur erat non purus convallis tempus. Aenean aliquet tempus dapibus. Donec fringilla quam.</string>
+    <string name="accept">Accept</string>
+    <string name="decline">Decline</string>
+    <string name="enter_otp">Enter verification code</string>
+    <string name="we_have_sent_otp_on_your_number">We have sent a verification code to your number</string>
+    <string name="verify">Verify</string>
+    <string name="verified_information">Verified Information</string>
+    <string name="if_you_did_not_receive_otp_resend">Resend verification code</string>
+    <string name="otp">Verification code</string>
+    <string name="otp_validation_err_msg">Enter verification code</string>
+    <string name="location_permission">Location permission</string>
+    <string name="location_permission_info">Allow us to access your location\nto better find cars around you.</string>
+    <string name="allow">Allow</string>
+    <string name="don_t_allow">Don’t allow</string>
+    <string name="select_city">Select city</string>
+    <string name="continue_">Continue</string>
+    <string name="find">Find</string>
+    <string name="intro_1_msg">Whether you’re looking \n for a car to rent or to \n rent out your car, \n you’ve come to the \n right place!</string>
+    <string name="book">Book</string>
+    <string name="intro_2_msg">Select a location, \na date, \na time, \nbook the right \ncar for you. \n\nAn experience that’s as easy \nas it is customizable.</string>
+    <string name="drive">Drive</string>
+    <string name="intro_3_msg">For the entrepreneurs with a twinkle in\ntheir eyes, this is definitely the app for\nyou.\nWe’ll show you the ropes on how to list\nyour cars and make some income.</string>
+    <string name="earn">Earn</string>
+    <string name="intro_4_msg">We’re happy you made it this far into the welcome screen, but now it’s time to get your feet wet! \n\nRent out a car, and make some memories.</string>
+    <string name="let_s_start">Let’s Start</string>
+    <string name="forgot_password_title">Forgot password</string>
+    <string name="reset_password">Reset password</string>
+    <string name="search">Search</string>
+    <string name="trips">Trips</string>
+    <string name="trip">Trip</string>
+    <string name="trips_">trips</string>
+    <string name="messages">Messages</string>
+    <string name="host">Host</string>
+    <string name="profile">Profile</string>
+    <string name="password_length_err_msg">Password must be at least 6 characters, and must contain each of the following: uppercase letter, lowercase letter, special character, and a number </string>
+    <string name="list_your_car">List your car</string>
+    <string name="tell_us_about_your_car">Tell us about your car</string>
+    <string name="national_id">National ID</string>
+    <string name="enter_">Enter</string>
+    <string name="enter_plate_number">Enter plate number</string>
+    <string name="upload_snap_of_your_national_id">Upload copy of your national ID</string>
+    <string name="pickup_location">Pickup location</string>
+    <string name="enter_location">Enter location</string>
+    <string name="edit_">Edit</string>
+    <string name="what_car_do_you_have">What car do you have?</string>
+    <string name="upload_latest_technical_report">Upload latest technical report</string>
+    <string name="upload_latest_technical_report_">Upload Latest Technical Report</string>
+    <string name="upload_snap_of_istimara">Upload vehicle registration card</string>
+    <string name="enter_vin_chassis_number">Enter chassis number</string>
+    <string name="vin_chassis_number">Chassis Number</string>
+    <string name="transmission">Transmission</string>
+    <string name="automatic">Automatic</string>
+    <string name="manual">Manual</string>
+    <string name="car_has_never_been_in_any_major_accident">%s car has never been in any\nmajor accident</string>
+    <string name="i_have_listed_my_personal_vehicle">I have listed my personal vehicle</string>
+    <string name="this_car_is_owned_by_the_company">This car is owned by the company</string>
+    <string name="licence_plate_number">License Plate Number</string>
+    <string name="car_registration_city">Car registration city</string>
+    <string name="car_features">Car features</string>
+    <string name="add">Add</string>
+    <string name="car_description">Car description</string>
+    <string name="type_here">Type here</string>
+    <string name="type">Type …</string>
+    <string name="next">Next</string>
+    <string name="country">Country</string>
+    <string name="street_address">Street address</string>
+    <string name="zip_postal_code">Zip / Postal code</string>
+    <string name="confirm">Confirm</string>
+    <string name="user_status_related_number_err_msg">%s should begin with 1 and be 10-digits long.</string>
+    <string name="the_national_id">The National ID</string>
+    <string name="the_company_registration_number">The registration number</string>
+
+    <string name="select_location_err_msg">Select location</string>
+    <string name="state_region">State</string>
+    <string name="city">City</string>
+    <string name="car_feature_err_msg">Select features</string>
+    <string name="year">Year</string>
+    <string name="car_type">Car type</string>
+    <string name="model">Model</string>
+    <string name="make">Make</string>
+    <string name="odometer">Odometer</string>
+    <string name="odometer_err_message">Select odometer range</string>
+    <string name="model_err_msg">Select model</string>
+    <string name="car_type_err_msg">Select car type</string>
+    <string name="make_err_msg">Select make</string>
+    <string name="year_err_msg">Select year</string>
+    <string name="address_err_msg">Enter address</string>
+    <string name="zip_code_err_msg">Enter zip code</string>
+    <string name="trip_advance_notice_msg">How much advance notice do you need before a trip starts?</string>
+    <string name="car_availability">Car availability</string>
+    <string name="distance_msg">What’s the shortest and longest possible trip you’ll accept?</string>
+    <string name="not_msg_car_availablity">Note: the default options will be 6 hours for minimum trip duration, and 30 days for maximum trip duration.</string>
+    <string name="note">Note:</string>
+    <string name="car_photos">Car photos</string>
+    <string name="minimum_trip_duration">Minimum trip duration</string>
+    <string name="maximum_trip_duration">Maximum trip duration</string>
+    <string name="resend">Resend</string>
+    <string name="list_your_car_now">List your car now</string>
+    <string name="logout">Logout</string>
+    <string name="help">Help</string>
+    <string name="take_snap_of_front_side_of_your_national_id">Take a photo of front-side of your National ID</string>
+    <string name="put_the_camera_right_above_and_take_the_snap_clearly_as_demonstrated_in_the_picture">Take a photo as demonstrated in the example shown</string>
+    <string name="make_sure_the_light_is_sufficient">Take a well-lit and clear, legible photo </string>
+    <string name="take_snap_of_your_istamara_id">Take a photo of your vehicle registration / istimara</string>
+    <string name="istamara_Id">Vehicle registration / istimara</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="min_hour_err_msg">Enter minimum hour</string>
+    <string name="max_hour_err_msg">Enter maximum hour</string>
+    <string name="advance_notice_hour_msg">Select advance-notice hour</string>
+    <string name="front">Front</string>
+    <string name="back">Back</string>
+    <string name="right">Right</string>
+    <string name="left">Left</string>
+    <string name="dashboard">Dashboard</string>
+    <string name="add_another">Add another</string>
+    <string name="vehicle_protection">Vehicle protection</string>
+    <string name="car_photos_err_msg">Add all photos</string>
+    <string name="camera">Camera</string>
+    <string name="gallery">Gallery</string>
+    <string name="file">File</string>
+    <string name="cancel_">Cancel</string>
+    <string name="do_you_have_car_insurance">Do you have car insurance?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="insurance_policy_number">Insurance policy number</string>
+    <string name="date_of_expiration">Date of expiration</string>
+    <string name="select">Select</string>
+    <string name="what_is_the_total_liability_covered_by_your_insurance_provider">What is the total liability covered by your insurance provider?</string>
+    <string name="does_your_insurance_cover_the_recovery_cost">Does your insurance cover the recovery cost?</string>
+    <string name="upload_snap_of_your_insurance">Upload a copy of your insurance policy</string>
+    <string name="take_a_snap_of_your_insurance">Take a copy of your insurance document</string>
+    <string name="insurance_doc">Insurance document</string>
+    <string name="saftey_quality_standard">Safety &amp; Quality</string>
+    <string name="your_car_has_the_following_safety_standards_fulfilled">Does your car have the following safety standards fulfilled?</string>
+    <string name="agree_continue"><![CDATA[Agree & continue]]></string>
+    <string name="i_agree_that_my_car_fulfills_the_above_mentioned_safety_standards">I agree that my car fulfills the above\nmentioned safety standards</string>
+    <string name="view_all">View all</string>
+    <string name="cars_types">Browse by type</string>
+    <string name="cars_around_you">Cars around you</string>
+    <string name="pick_your">PICK YOUR</string>
+    <string name="ride">RIDE</string>
+    <string name="earn_extra_cash">Earn extra cash</string>
+    <string name="list_your_car_and_earn_extra_money">List your car and earn extra money</string>
+    <string name="trusted_and_secure">Trusted and secure</string>
+    <string name="enjoy_trusted_reliable_and_insured_rides">Enjoy trusted, reliable and insured rides</string>
+    <string name="easy_and_quick_access">Easy and quick access</string>
+    <string name="rent_your_ride_in_a_few_clicks">Rent your ride in a few clicks</string>
+    <string name="quick_read">Quick read</string>
+    <string name="how_its_works">How it works</string>
+    <string name="privacy_policy">Privacy policy</string>
+    <string name="sar_day">SAR/day</string>
+    <string name="sar_day_">%s SAR/day</string>
+    <string name="enter_city_airport_address_or_hotel_name">Enter city, airport, address, or hotel name</string>
+    <string name="search_place_hint">City, airport, address, or hotel</string>
+    <string name="current_location">Current location</string>
+    <string name="car_details">Car details</string>
+    <string name="trip_date">Trip date</string>
+    <string name="extended_trip_date">Extended Trip date</string>
+    <string name="pick_up">Pick up</string>
+    <string name="drop_off">Drop off</string>
+    <string name="trip_discounts">Trip discounts</string>
+    <string name="pickup_return"><![CDATA[PICKUP & RETURN]]></string>
+    <string name="delivery_fee">Delivery fee</string>
+    <string name="distance_included">Included distance</string>
+    <string name="distance_included_">Distance Included</string>
+    <string name="host_by">Host by</string>
+    <string name="guidelines_by_host">Guidelines\nby host</string>
+    <string name="report_listing">Report\nlisting</string>
+    <string name="cancellation_policy">Cancellation\npolicy</string>
+    <string name="days">days</string>
+    <string name="sar">SAR</string>
+    <string name="sar_">%s SAR</string>
+    <string name="description">Description</string>
+    <string name="joined">Joined %s</string>
+    <string name="joined_">Joined:</string>
+    <string name="pickup_only">Pick-up only</string>
+    <string name="deliverable">Deliverable</string>
+    <string name="day">day</string>
+    <string name="deposit_amount">Deposit amount</string>
+    <string name="avg_response_time">Average response time</string>
+    <string name="reset">Reset</string>
+    <string name="save">Save</string>
+    <string name="select_pickup_dropoff_date">Select pick-up and drop-off date</string>
+    <string name="start">Start</string>
+    <string name="start_time">Start time</string>
+    <string name="end_time">End time</string>
+    <string name="end">End</string>
+    <string name="make_your_trip_enjoyable">Search vehicles</string>
+    <string name="sort_by">Sort by</string>
+    <string name="price">Price</string>
+    <string name="distance">Distance</string>
+    <string name="book_immediately">Book immediately</string>
+    <string name="book_without_waiting">Book without waiting</string>
+    <string name="car_location">Car location</string>
+    <string name="deliver_fee">Deliver fee</string>
+    <string name="vehicle_type">Vehicle type</string>
+    <string name="apply">Apply</string>
+    <string name="your_car">Your car</string>
+    <string name="vehicle">Vehicles</string>
+    <string name="performance">Performance</string>
+    <string name="earnings">Earnings</string>
+    <string name="review">Reviews</string>
+    <string name="calendar">Calendar</string>
+    <string name="pricing">Pricing</string>
+    <string name="location_delivery">Location and delivery</string>
+    <string name="photos">Photos</string>
+    <string name="details">Details</string>
+    <string name="trip_prefrence">Trip preferences</string>
+    <string name="listed">Listed</string>
+    <string name="your_car_appears_in_search_results_and_can_be_requested">Your car appears in search results and can be requested</string>
+    <string name="change">Change</string>
+    <string name="default_price">Default price</string>
+    <string name="custom_prices">Custom prices</string>
+    <string name="discounts">Discounts</string>
+    <string name="three_days_string">3+ day discount</string>
+    <string name="seven_days_string">7+ day discount</string>
+    <string name="thirty_days_string">30+ day discount</string>
+    <string name="set_your_default_daily_price">Set your default daily price</string>
+    <string name="enter_price">Enter price</string>
+    <string name="discount_price_layout_msg">Set your discount prices according to days</string>
+    <string name="enter_percentage">Enter percentage</string>
+    <string name="discount">Discount</string>
+    <string name="select_weekends_to_add_custom_price">Select days for custom pricing</string>
+    <string name="car_default_price_err_msg">Enter Daily price for car</string>
+    <string name="car_default_price_save_err_msg">Daily price must be greater than 0</string>
+    <string name="car_three_day_discount_price_err_msg">Enter 3+ days discount percentage</string>
+    <string name="car_seven_day_discount_price_err_msg">Enter 7+ days discount percentage</string>
+    <string name="car_thirty_day_discount_price_err_msg">Enter 30+ days discount percentage</string>
+    <string name="enter_custom_price_err_msg">Enter custom price</string>
+    <string name="select_days_err_msg">Select days for custom price</string>
+    <string name="pricing_info_err_msg">Add pricing information</string>
+    <string name="listing_status">Listing status</string>
+    <string name="snoozed">Snoozed</string>
+    <!--
+    <string name="deleting_your_listing_permanently_remove_it_from_toswal">Deleting your listing permanently remove it from GoCar</string>
+-->
+    <string name="delete_listing">Delete listing</string>
+    <string name="to_">to</string>
+    <string name="select_reasons_for_delete_listing">Select Reasons for Delete Listing</string>
+    <string name="delete_permanently">Delete permanently</string>
+    <string name="login_list_car_err_msg">Please login to list your car</string>
+    <string name="status">Status</string>
+    <string name="mark_unavailable">Mark unavailable</string>
+    <string name="booked">Booked</string>
+    <string name="available">Available</string>
+    <string name="unavailable">Unavailable</string>
+    <string name="book_instantly">Book instantly</string>
+    <string name="delivery">Delivery</string>
+    <string name="select_book_instantly_msg">Select book instantly option</string>
+    <string name="update_">Update</string>
+    <string name="updated">Updated</string>
+    <string name="add_instructions_for_the_guest">Add instructions for guests</string>
+    <string name="guidelines_by_host_">Guidelines by host</string>
+    <string name="guidelines">Guidelines</string>
+    <string name="unlimited_distance">Unlimited Distance</string>
+    <string name="off">Off</string>
+    <string name="distance_included_km_day">Included distance (km/day)</string>
+    <string name="kilo_included_day">Kilometres included per day</string>
+    <string name="disctance_include_err_msg">Select Distance Included</string>
+    <string name="on">On</string>
+    <string name="detail">Detail</string>
+    <string name="basic_car_details">Basic car details</string>
+    <string name="kmp">Kilometer per liter</string>
+    <string name="kmp_optional">Kilometer per liter</string>
+    <string name="num_seats">Number of seats</string>
+    <string name="num_doors">Number of doors</string>
+    <string name="fuel">Fuel type</string>
+    <string name="select_no_of_seat_err_msg">Select number of seats</string>
+    <string name="select_no_of_door_err_msg">Select number of doors</string>
+    <string name="select_fuel_type_err_msg">Select fuel type</string>
+    <string name="enter_kmp_err_msg">Enter kilometer per liter</string>
+    <string name="add_car_feature_err_msg">Add car feature</string>
+    <string name="add_snap_national_id_err_msg">Add a copy of national ID</string>
+    <string name="enter_car_info_err_msg">Enter car info</string>
+    <string name="enter_snap_of_istamara_err_msg">Upload a photo of the vehicle\'s registration </string>
+    <string name="enter_vin_chassis_err_msg">Enter Vin/chassis number</string>
+    <string name="check_major_accident_err_msg">Please tick the check box if your car has never been in any major accident.</string>
+    <string name="check_personal_vehicle_accident_err_msg">Please tick the check box if you are the owner of the car.</string>
+    <string name="enter_licence_plate_err_msg">Enter licence plate number</string>
+    <string name="select_registration_err_msg">Select registration city</string>
+    <string name="enter_description_car_err_msg">Car description</string>
+    <string name="location_deliver_heading">Location and deliver</string>
+    <string name="delivery_">Delivery</string>
+    <string name="see_more">See More</string>
+    <string name="km_day">Km/day</string>
+    <string name="km_day_">%s km/day</string>
+    <string name="adjust_pin">Adjust Pin</string>
+    <string name="ca_guidlines_not_available_err_msg">Car guidelines not available</string>
+    <string name="image">Image</string>
+    <string name="km_radius">KM radius</string>
+    <string name="profile_photo">Profile photo</string>
+    <string name="upload">Upload</string>
+    <string name="add_profile_picture">Add Profile Picture</string>
+    <string name="upload_again">Upload Again</string>
+    <string name="driver_license">Driver\'s license</string>
+    <string name="upload_copy_of_your_driving_licence">Upload image of your driver license</string>
+    <string name="licence_s_expiration_date">Licence’s expiration date</string>
+    <string name="date_of_birth">Date of birth</string>
+    <string name="add_profile_photo_err_msg">Add a profile photo</string>
+    <string name="addP_copy_of">Upload image of your</string>
+    <string name="credit_card_info">Add credit card</string>
+    <string name="licence_s_expiration_date_err_msg">Select license expiration date</string>
+    <string name="enter_dob_err_msg">Select date of birth</string>
+    <string name="enter_dob_under_18_err_msg">Only users that are 18 and older can use our services</string>
+    <string name="title">Title</string>
+    <string name="card_number_err_msg">Card number must be 16 digits</string>
+    <string name="card_number">Card Number</string>
+    <string name="expiry_date">Expiry date</string>
+    <string name="mm_yy">MM/YY</string>
+    <string name="cvc">CVC</string>
+    <string name="enter_card_title_err_msg">Enter card title</string>
+    <string name="enter_card_number_err_msg">Enter card number</string>
+    <string name="enter_card_expiry_err_msg">Enter card expiry date</string>
+    <string name="enter_card_cvc_err_msg">Enter card CVC</string>
+    <string name="enter_card_expiry_length_err_msg">Card expiry date must be in month / year format (mm/yy)</string>
+    <string name="enter_card_cvc_length_err_msg">Card CVC minimum length must be 3</string>
+    <string name="take_snap_of_your_driving_licence">Take copy of your driver\'s Licence</string>
+    <string name="driving_licence">Driver\'s licence</string>
+    <string name="take_copy_of">Take copy of your</string>
+    <string name="login_to_book_car">Login to Book car</string>
+    <string name="chekout">Checkout</string>
+    <string name="pickup_date_err_msg">Enter pick-up date and time</string>
+    <string name="dropOff_date_err_msg">Enter drop-off date and time</string>
+    <string name="terms_conditions_">Terms &amp; Conditions</string>
+    <string name="summary">Trip Summary</string>
+    <string name="deposit">Deposit</string>
+    <string name="subtotal">Subtotal</string>
+    <string name="grand_total">Grand total</string>
+    <string name="book_trip">Book trip</string>
+    <!-- <string name="dear_customer_to_process_your_order_upon_arrival_in_a_timely_n1_valid_id_driver_license_n2_valid_abshir_for_residents_in_saudi_arabia"><![CDATA[Dear Customer, To process your order upon arrival in a timely\n1- Valid ID & Driver License\n2- Valid Abshir for Residents in Saudi Arabia]]></string>
+    -->
+    <string name="dear_customer_to_process_your_order_upon_arrival_in_a_timely_n1_valid_id_driver_license_n2_valid_abshir_for_residents_in_saudi_arabia">Stay safe, adhere to traffic laws of the country, keep the car clean and tidy, and make sure to return the vehicle to the drop-off location at the agreed time.\n\nClick here for our <a href='https://gocar.sa/help'>TERMS OF SERVICE.</a></string>
+
+    <string name="fuel_policy">Fuel policy</string>
+    <string name="fule_policy_msg">You are expected to return the car with the same amount of gas or electric charge it had at the time of pick-up. If you don\'t replace the fuel, the host is entitled reimburdement from you. Take pictures of fuel/charge level before and after your trip for proof in case of dispuate.</string>
+    <string name="i_agree">I agree</string>
+    <string name="day_rent">Day rent</string>
+    <string name="vat">VAT</string>
+    <string name="vat_">VAT (%s)</string>
+    <string name="pickup_at_car_location">Pick-up at car location</string>
+    <string name="free">Free</string>
+    <string name="delivery_to_you">Delivery To You</string>
+    <string name="km">KM</string>
+    <string name="km_">%s KM</string>
+    <string name="km_small">Km</string>
+    <string name="within">Within</string>
+    <string name="enter_a_delivery_address">Enter a delivery address</string>
+    <string name="remove_location">Remove location</string>
+    <string name="thank_you">Thank You</string>
+    <string name="for_booking_with_towsal">for booking with GOCAR</string>
+    <string name="trip_details">Trip Details</string>
+    <string name="contact_host">Contact host</string>
+    <string name="home">Home</string>
+    <string name="charge_extra_msg"> %s %s fee for each additional kilometer</string>
+    <string name="outside_radius_err_msg">Car can\'t be delivered because you\'re outside the delivery radius.</string>
+    <string name="hosted_by">Hosted by</string>
+    <string name="feature_under_development">Feature under development</string>
+    <string name="report_listing_">Report listing</string>
+    <string name="report">Report</string>
+    <string name="cancellation_policy_">Cancellation policy</string>
+    <string name="car_location_address">Car location and delivery address can\'t be the same</string>
+    <string name="dates_not_available_for_booking_err_msg">Dates not available for booking</string>
+    <string name="hours">Hours</string>
+    <string name="date_not_available_err_msg">Date is not available for booking. Please change date</string>
+    <string name="enter_insurance_policy_number">Enter insurance policy number</string>
+    <string name="enter_insurance_policy_expiry_date">Enter insurance policy\'s expiry date</string>
+    <string name="enter_copy_of_insurance_policy">Provide a copy of insurance policy</string>
+    <string name="enter_total_liablity_covered">Enter total liability covered</string>
+    <string name="booking_day_exceeds_limit_err_msg">This car can be booked for</string>
+    <string name="this_car_can_be_booked_for">This car can be booked for</string>
+    <string name="same_day_err_msg">Pick-up and drop-off date can\'t be same</string>
+    <string name="same_time_err_msg">Pick-up and drop-off time can not be the same</string>
+    <string name="same_day_err_msg_2">Pickup time can\'t be after the drop-off time</string>
+    <string name="payment">Payments</string>
+    <string name="licence">Licence</string>
+    <string name="photo_">Photo</string>
+    <string name="away">Away</string>
+    <string name="select_distnce">Select distance</string>
+    <string name="select_vehicle_type">Select vehicle type</string>
+    <string name="select_car_location_type">Car pick-up and deliver</string>
+    <string name="please_add_default_price_select_no_of_seats_no_of_doors_and_fuel_type_in_order_to_list_your_car_in_search_results">Please fill out the highlighted missing sections in order to list your car</string>
+    <string name="no_cars_found">There are no vehicles in your area</string>
+    <string name="login_trips_err_msg">Please login to view your trips details</string>
+    <string name="history">History</string>
+    <string name="activity_">Activity</string>
+    <string name="notifications">Notifications</string>
+    <string name="filter">Filter</string>
+    <string name="filters">Filters</string>
+    <string name="read_more">Read more</string>
+    <string name="read_less">Read less</string>
+    <string name="notifications_not_found">No activity</string>
+    <string name="no_trips_found">No trips found</string>
+    <!--    &#160;-->
+    <string name="channel_id" translatable="false">p2p-channel</string>
+    <string name="channel_name" translatable="false">p2p</string>
+    <string name="booking_details">Booking details</string>
+    <string name="upload_photos">Upload photos</string>
+    <string name="reported_accident">Reported accident</string>
+    <string name="approve_all">Approve all</string>
+    <string name="reject_all">Reject all</string>
+    <string name="at_pickup">At pick-up</string>
+    <string name="rejection_reason">Rejection Reason</string>
+    <string name="upload_photo">Upload photo</string>
+    <string name="upload_your_photo">Upload your photo</string>
+    <string name="week">Week</string>
+    <string name="month">Month</string>
+    <string name="revenue">Revenue</string>
+    <string name="bookings">Bookings</string>
+    <string name="total_bookings">Total bookings</string>
+    <string name="total_revenue">Total revenue</string>
+    <string name="select_reasons_for_booking_rejection">Select reason for rejecting this booking</string>
+    <string name="booked_by">Booked by :</string>
+    <string name="conflicted">In review</string>
+    <string name="rejected">Rejected</string>
+    <string name="booking_id">Booking ID</string>
+    <string name="total_price">Total price</string>
+    <string name="select_reasons_for_booking_cancellation">Select reason for booking cancellation</string>
+    <string name="select_reasons">Write your reason</string>
+    <string name="enter_odometer_reading_err_msg">Enter odometer reading</string>
+    <string name="enter_reason_for_rejection">Enter reason for rejecting</string>
+    <string name="accepted">Accepted</string>
+    <string name="reason">Reason</string>
+    <string name="approved">Approved</string>
+    <string name="approved_to_drive">Approved to Drive</string>
+    <string name="submitted_pending_approval">Submitted - Pending approval</string>
+    <string name="drop_off_images_err_msg">Drop-off images are pending from guest side</string>
+    <string name="pickup_images_err_msg">Pickup images are pending from guest side</string>
+    <string name="pending_approval_err_msg">Pending approval from host\'s side</string>
+    <string name="add_counter_image_err_msg">Add counter image</string>
+
+    <string name="pick_up_">Pick-up</string>
+    <string name="drop_off_">Drop-off</string>
+    <string name="rent_details">Renting details</string>
+    <string name="invoice">Invoice</string>
+    <string name="contact">Contact</string>
+    <string name="start_trip">Start trip</string>
+    <string name="cancel_trip">Cancel trip</string>
+    <string name="review_photos">Review photos</string>
+    <string name="view">View</string>
+    <string name="accident">Accident</string>
+    <string name="reject">Reject</string>
+    <string name="all_">All</string>
+    <string name="pending">Pending</string>
+    <string name="in_progress">In progress</string>
+    <string name="future">Future</string>
+    <string name="cancelled">Cancelled</string>
+    <string name="cancellation_pending">Cancellation pending</string>
+    <string name="completed">Completed</string>
+    <string name="enter_odometer_reading">Enter odometer reading</string>
+    <string name="odometer_reading">Odometer reading</string>
+    <string name="call_najam">Call Najam</string>
+    <string name="support">Support</string>
+    <string name="report_accident">REPORT AN INCIDENT</string>
+    <string name="report_incident">REPORT AN INCIDENT</string>
+    <string name="at_dropoff">At drop-off</string>
+    <string name="write_review">Write review</string>
+    <string name="rating_review">Rating and reviews</string>
+    <string name="rating_and_review">Ratings &amp; Reviews</string>
+    <string name="rate_your_experience_with_driver">Rate your experience with this host</string>
+    <string name="enter_review">Enter review</string>
+    <string name="overall_rating">Overall rating</string>
+    <string name="earnings_not_available_for_selected_type">Earnings not available for selected type</string>
+    <string name="no_messages_found">No messages found</string>
+    <string name="message">Message</string>
+    <string name="send">Send</string>
+    <string name="enter_message">Enter message</string>
+    <string name="five_star_rating">Five star rating</string>
+    <string name="commitment_rate">Commitment rate</string>
+    <string name="response_rate">Response rate</string>
+    <string name="acceptance_rate">Acceptance rate</string>
+    <string name="select_reasons_of_cancellation">Select reason for cancellation:</string>
+    <string name="quarter">Quarter</string>
+    <string name="type_a_message">Type message...</string>
+    <string name="result_not_found">Result not found</string>
+    <string name="total_rent_sar">Total SAR</string>
+    <string name="login_messages_err_msg">Please login to view your messages</string>
+
+
+    <string name="account">Account</string>
+    <string name="favorites">Favorites</string>
+    <string name="favorite_car">Favorite Cars</string>
+    <string name="payments">Payments</string>
+    <string name="transaction_history">Transaction history</string>
+    <string name="legal">Legal</string>
+    <string name="change_password">Change password</string>
+    <string name="change_language">Change language</string>
+
+    <string name="aur_you_sure_you_want_to_logout">Are you sure you want to logout?</string>
+    <string name="login_profile_err_msg">Please login to view your profile</string>
+    <string name="listview">List view</string>
+    <string name="map_view">Map view</string>
+    <string name="guest">Guest</string>
+    <string name="drop_off_location">Drop-off location</string>
+    <string name="rent">Rent</string>
+    <string name="log_in_to_add_fav_car_err_msg">Please log in to add car to favorites</string>
+    <string name="host_name">Host</string>
+    <string name="earned">Earned</string>
+    <string name="guest_name">Guest</string>
+    <string name="paid">Paid</string>
+    <string name="old_password">Old password</string>
+    <string name="new_password">New password</string>
+    <string name="old_pass_err_msg">Please enter your old password</string>
+    <string name="new_pass_err_msg">Please enter your new password</string>
+    <string name="confirm_pass_err_msg">Please enter confirm password</string>
+    <string name="pass_not_match_err_msg">Passwords don\'t match</string>
+    <string name="pass_length_err_msg">Password must be at least 6 characters, and must contain each of the following: uppercase letter, lowercase letter, special character, and a number</string>
+    <string name="deleting_your_listing_permanently_remove_it_from_gocar">Deleting your listing permanently\nremove it from GOCAR.</string>
+    <string name="can_not_book_your_car">You Can\'t book your own car</string>
+    <string name="securityAmount">Security amount</string>
+    <string name="security">Security</string>
+    <string name="press_again_to_exit">"Press back again "</string>
+    <string name="expired">Expired</string>
+    <string name="pick_up_rejected_cannt_see_msg">You have already rejected photos</string>
+    <string name="contactViaPhone">Dial phone</string>
+    <string name="contactVieEmail">Email support</string>
+    <string name="title_activity_scrolling">ScrollingActivity</string>
+    <string name="large_text">
+        "Material is the metaphor.\n\n"
+
+        "A material metaphor is the unifying theory of a rationalized space and a system of motion."
+        "The material is grounded in tactile reality, inspired by the study of paper and ink, yet "
+        "technologically advanced and open to imagination and magic.\n"
+        "Surfaces and edges of the material provide visual cues that are grounded in reality. The "
+        "use of familiar tactile attributes helps users quickly understand affordances. Yet the "
+        "flexibility of the material creates new affordances that supercede those in the physical "
+        "world, without breaking the rules of physics.\n"
+        "The fundamentals of light, surface, and movement are key to conveying how objects move, "
+        "interact, and exist in space and in relation to each other. Realistic lighting shows "
+        "seams, divides space, and indicates moving parts.\n\n"
+
+        "Bold, graphic, intentional.\n\n"
+
+        "The foundational elements of print based design typography, grids, space, scale, color, "
+        "and use of imagery guide visual treatments. These elements do far more than please the "
+        "eye. They create hierarchy, meaning, and focus. Deliberate color choices, edge to edge "
+        "imagery, large scale typography, and intentional white space create a bold and graphic "
+        "interface that immerse the user in the experience.\n"
+        "An emphasis on user actions makes core functionality immediately apparent and provides "
+        "waypoints for the user.\n\n"
+
+        "Motion provides meaning.\n\n"
+
+        "Motion respects and reinforces the user as the prime mover. Primary user actions are "
+        "inflection points that initiate motion, transforming the whole design.\n"
+        "All action takes place in a single environment. Objects are presented to the user without "
+        "breaking the continuity of experience even as they transform and reorganize.\n"
+        "Motion is meaningful and appropriate, serving to focus attention and maintain continuity. "
+        "Feedback is subtle yet clear. Transitions are efﬁcient yet coherent.\n\n"
+
+        "3D world.\n\n"
+
+        "The material environment is a 3D space, which means all objects have x, y, and z "
+        "dimensions. The z-axis is perpendicularly aligned to the plane of the display, with the "
+        "positive z-axis extending towards the viewer. Every sheet of material occupies a single "
+        "position along the z-axis and has a standard 1dp thickness.\n"
+        "On the web, the z-axis is used for layering and not for perspective. The 3D world is "
+        "emulated by manipulating the y-axis.\n\n"
+
+        "Light and shadow.\n\n"
+
+        "Within the material environment, virtual lights illuminate the scene. Key lights create "
+        "directional shadows, while ambient light creates soft shadows from all angles.\n"
+        "Shadows in the material environment are cast by these two light sources. In Android "
+        "development, shadows occur when light sources are blocked by sheets of material at "
+        "various positions along the z-axis. On the web, shadows are depicted by manipulating the "
+        "y-axis only. The following example shows the card with a height of 6dp.\n\n"
+
+        "Resting elevation.\n\n"
+
+        "All material objects, regardless of size, have a resting elevation, or default elevation "
+        "that does not change. If an object changes elevation, it should return to its resting "
+        "elevation as soon as possible.\n\n"
+
+        "Component elevations.\n\n"
+
+        "The resting elevation for a component type is consistent across apps (e.g., FAB elevation "
+        "does not vary from 6dp in one app to 16dp in another app).\n"
+        "Components may have different resting elevations across platforms, depending on the depth "
+        "of the environment (e.g., TV has a greater depth than mobile or desktop).\n\n"
+
+        "Responsive elevation and dynamic elevation offsets.\n\n"
+
+        "Some component types have responsive elevation, meaning they change elevation in response "
+        "to user input (e.g., normal, focused, and pressed) or system events. These elevation "
+        "changes are consistently implemented using dynamic elevation offsets.\n"
+        "Dynamic elevation offsets are the goal elevation that a component moves towards, relative "
+        "to the component’s resting state. They ensure that elevation changes are consistent "
+        "across actions and component types. For example, all components that lift on press have "
+        "the same elevation change relative to their resting elevation.\n"
+        "Once the input event is completed or cancelled, the component will return to its resting "
+        "elevation.\n\n"
+
+        "Avoiding elevation interference.\n\n"
+
+        "Components with responsive elevations may encounter other components as they move between "
+        "their resting elevations and dynamic elevation offsets. Because material cannot pass "
+        "through other material, components avoid interfering with one another any number of ways, "
+        "whether on a per component basis or using the entire app layout.\n"
+        "On a component level, components can move or be removed before they cause interference. "
+        "For example, a floating action button (FAB) can disappear or move off screen before a "
+        "user picks up a card, or it can move if a snackbar appears.\n"
+        "On the layout level, design your app layout to minimize opportunities for interference. "
+        "For example, position the FAB to one side of stream of a cards so the FAB won’t interfere "
+        "when a user tries to pick up one of cards.\n\n"
+    </string>
+    <string name="action_settings">Settings</string>
+    <string name="verifyEmail">Verify Email</string>
+    <string name="please_confirm_your_email">To be able to access this section of the\n app, please confirm your email by clicking \n the link we sent to:</string>
+    <string name="testMail">test@gmail.com</string>
+    <string name="changeMail">Change Email</string>
+    <string name="openEmailBox">Open Email App</string>
+    <string name="resendEmail">Resend Email</string>
+    <string name="pass_number_err_msg">Your Password must contain at least one digit</string>
+    <string name="pass_lower_case_err_msg">Password must contain atleast one lower case letter</string>
+    <string name="pass_upper_case_err_msg">Password must contain atleast one Upper Case letter</string>
+    <string name="pass_special_ch_err_msg">Password must contain atleast one special character</string>
+    <string name="pass_err_msg">Password must be at least 8 characters, and must contain each of the following: uppercase letter, lowercase letter, special character, and a number</string>
+    <string name="contactSupport">Contact Support</string>
+    <string name="shareACar">Share\na Car</string>
+    <string name="getToIt">Get to it</string>
+    <string name="any_">Any</string>
+    <string name="reviews_and_ratings">Ratings and reviews</string>
+    <string name="pickup_and_return_hours"><![CDATA[Pickup & Return Hours]]></string>
+    <string name="availability">Availability</string>
+    <string name="car_pickup_and_returns_hour_text">Set your availability. Guests will only be able to book trips within your custom available times. Your availability will apply to all your cars.</string>
+    <string name="dailyAvailablility">Daily Availability</string>
+    <string name="alwaysAvailable">Always available</string>
+    <string name="edit_trip">Edit Trip</string>
+    <string name="fromTime">From Time</string>
+    <string name="toTime">To Time</string>
+    <string name="carPlayText">Apple CarPlay is a registered trademark of Apple Inc.</string>
+    <string name="search_vehicles">Search Vehicles</string>
+    <string name="both_">Both</string>
+    <string name="mark_unavailable_date_err_msg">Please select the date to mark as a unavailable/available.</string>
+    <string name="mark_available">Mark Available</string>
+    <string name="would_login">Would you like to login to continue?</string>
+    <string name="trip_extension">Ask for extension</string>
+    <string name="trip_total">Trip total</string>
+    <string name="select_to_from_time">Select from time and to time</string>
+    <string name="receipt">Receipt</string>
+    <string name="range_time_selection_err_msg">Minimum 6 hours range is required.</string>
+    <string name="no_of_days">Number of days</string>
+    <string name="total_trip_fee">Trip fee</string>
+    <string name="total">Total</string>
+    <string name="car_rent">Car rent</string>
+    <string name="view_all_guest_reviews">View all guest reviews</string>
+    <string name="reviews_from_hosts">Reviews From Hosts</string>
+    <string name="host_reviews">Host Reviews</string>
+    <string name="reviews_from_guests">Reviews From Guests</string>
+    <string name="guest_reviews">Guest Reviews</string>
+    <string name="view_all_host_reviews">View all host reviews</string>
+    <string name="trip_receipt">Trip receipt</string>
+    <string name="trip_invoice">Trip invoice</string>
+    <string name="login_alert">Login Alert!</string>
+    <string name="new_account_confirmation_msg">Would you like to use your new account?</string>
+    <string name="trip_start">TRIP START</string>
+    <string name="trip_end">TRIP END</string>
+    <string name="pick_up_location">PICK-UP LOCATION</string>
+    <string name="_300_total_kilometers">300 total kilometers</string>
+    <string name="total_kilometers_">%s total kilometers</string>
+    <string name="trip_summary">TRIP SUMMARY</string>
+    <string name="kilometers_included">KILOMETERS INCLUDED</string>
+    <string name="cannot_book_consecutive">Cannot extend trip because consecutive bookings</string>
+    <string name="time">Time</string>
+    <string name="select_any_time">Please select any date from calendar</string>
+    <string name="drop_off_date">Drop off date</string>
+    <string name="extended_trip_amount">Extended trip amount</string>
+    <string name="already_paid_amount">Already paid amount</string>
+    <string name="no_make_found">No make found</string>
+    <string name="extended_days">Extended days</string>
+    <string name="reduced_days">Reduced days</string>
+    <string name="extended_trip_price">Extended trip price</string>
+    <string name="edition_trip_fee">Addition charges</string>
+    <string name="reduced_trip_price">Reduced trip price</string>
+    <string name="no_results_found">No results found</string>
+    <string name="search_by_make">Search by Make</string>
+    <string name="total_per_day">Total per day</string>
+    <string name="additional_charges">Additional charges</string>
+    <string name="choose_the_experience">Choose the experience</string>
+    <string name="you_want">you want</string>
+    <string name="days_rent">days trip</string>
+    <string name="additional_invoice">Additional Invoice</string>
+    <string name="updated_invoice">Updated Invoice</string>
+    <string name="additional">Additional</string>
+    <string name="kilometers_exceeded">Kilometers exceeded</string>
+    <string name="price_for_kilometers">Price for kilometers</string>
+    <string name="gocar_fee_20">GOCAR fee (20%)</string>
+    <string name="gocar_fee_20_">GOCAR fee (%s)</string>
+    <string name="gocar_fee">GOCAR fee</string>
+    <string name="additionally_charged">Additionally charged</string>
+    <string name="total_charged">Total charged</string>
+    <string name="previously_earned">Previous earnings</string>
+    <string name="paid_trip_price">Previous trip price</string>
+    <string name="you_earned">You earned</string>
+    <string name="trip_price">TRIP PRICE</string>
+    <string name="outsanding_amount">Outstanding amount</string>
+    <string name="payable">Payable </string>
+    <string name="receivable">Receivable </string>
+    <string name="renting_details">Renting details</string>
+    <string name="update_booking">Update booking</string>
+    <string name="to">%s - %s</string>
+    <string name="like_to_book_car_always_available">Are you sure you want your car to always be available?</string>
+    <string name="confirmation">Confirmation</string>
+    <string name="please_enter_your_query">Enter your query</string>
+    <string name="please_enter_valid_query">Enter a valid query</string>
+    <string name="documents">Documents</string>
+    <string name="documents_success_msg">Your documents have been sent for approval to the GOCAR team. Your car will be listed when the documents are approved</string>
+    <string name="photos_success_msg">Your images have been sent for approval to the GOCAR team. Your car will be listed when the images are approved</string>
+    <string name="read">Read</string>
+
+    <array name="availability">
+        <item>Always available</item>
+        <item>Unavailable</item>
+        <item>Custom hours</item>
+    </array>
+
+    <array name="hours">
+        <item>12:00 AM</item>
+        <item>12:30 AM</item>
+        <item>01:00 AM</item>
+        <item>01:30 AM</item>
+        <item>02:00 AM</item>
+        <item>02:30 AM</item>
+        <item>03:00 AM</item>
+        <item>03:30 AM</item>
+        <item>04:00 AM</item>
+        <item>04:30 AM</item>
+        <item>05:00 AM</item>
+        <item>05:30 AM</item>
+        <item>06:00 AM</item>
+        <item>06:30 AM</item>
+        <item>07:00 AM</item>
+        <item>07:30 AM</item>
+        <item>08:00 AM</item>
+        <item>08:30 AM</item>
+        <item>09:00 AM</item>
+        <item>09:30 AM</item>
+        <item>10:00 AM</item>
+        <item>10:30 AM</item>
+        <item>11:00 AM</item>
+        <item>11:30 AM</item>
+        <item>12:00 PM</item>
+        <item>12:30 PM</item>
+        <item>01:00 PM</item>
+        <item>01:30 PM</item>
+        <item>02:00 PM</item>
+        <item>02:30 PM</item>
+        <item>03:00 PM</item>
+        <item>03:30 PM</item>
+        <item>04:00 PM</item>
+        <item>04:30 PM</item>
+        <item>05:00 PM</item>
+        <item>05:30 PM</item>
+        <item>06:00 PM</item>
+        <item>06:30 PM</item>
+        <item>07:00 PM</item>
+        <item>07:30 PM</item>
+        <item>08:00 PM</item>
+        <item>08:30 PM</item>
+        <item>09:00 PM</item>
+        <item>09:30 PM</item>
+        <item>10:00 PM</item>
+        <item>10:30 PM</item>
+        <item>11:00 PM</item>
+        <item>11:30 PM</item>
+    </array>
+
+    <array name="hourses">
+        <item></item>
+        <item>12 : 00 am</item>
+        <item>12 : 30 am</item>
+        <item>01 : 00 am</item>
+        <item>01 : 30 am</item>
+        <item>02 : 00 am</item>
+        <item>02 : 30 am</item>
+        <item>03 : 00 am</item>
+        <item>03 : 30 am</item>
+        <item>04 : 00 am</item>
+        <item>04 : 30 am</item>
+        <item>05 : 00 am</item>
+        <item>05 : 30 am</item>
+        <item>06 : 00 am</item>
+        <item>06 : 30 am</item>
+        <item>07 : 00 am</item>
+        <item>07 : 30 am</item>
+        <item>08 : 00 am</item>
+        <item>08 : 30 am</item>
+        <item>09 : 00 am</item>
+        <item>09 : 30 am</item>
+        <item>10 : 00 am</item>
+        <item>10 : 30 am</item>
+        <item>11 : 00 am</item>
+        <item>11 : 30 am</item>
+        <item>12 : 00 pm</item>
+        <item>12 : 30 pm</item>
+        <item>01 : 00 pm</item>
+        <item>01 : 30 pm</item>
+        <item>02 : 00 pm</item>
+        <item>02 : 30 pm</item>
+        <item>03 : 00 pm</item>
+        <item>03 : 30 pm</item>
+        <item>04 : 00 pm</item>
+        <item>04 : 30 pm</item>
+        <item>05 : 00 pm</item>
+        <item>05 : 30 pm</item>
+        <item>06 : 00 pm</item>
+        <item>06 : 30 pm</item>
+        <item>07 : 00 pm</item>
+        <item>07 : 30 pm</item>
+        <item>08 : 00 pm</item>
+        <item>08 : 30 pm</item>
+        <item>09 : 00 pm</item>
+        <item>09 : 30 pm</item>
+        <item>10 : 00 pm</item>
+        <item>10 : 30 pm</item>
+        <item>11 : 00 pm</item>
+        <item></item>
+
+    </array>
+
+    <array name="secondListHour">
+        <item>12 : 00 am</item>
+        <item>12 : 30 am</item>
+        <item>01 : 00 am</item>
+        <item>01 : 30 am</item>
+        <item>02 : 00 am</item>
+        <item>02 : 30 am</item>
+        <item>03 : 00 am</item>
+        <item>03 : 30 am</item>
+        <item>04 : 00 am</item>
+        <item>04 : 30 am</item>
+        <item>05 : 00 am</item>
+        <item>05 : 30 am</item>
+        <item>06 : 00 am</item>
+        <item>06 : 30 am</item>
+        <item>07 : 00 am</item>
+        <item>07 : 30 am</item>
+        <item>08 : 00 am</item>
+        <item>08 : 30 am</item>
+        <item>09 : 00 am</item>
+        <item>09 : 30 am</item>
+        <item>10 : 00 am</item>
+        <item>10 : 30 am</item>
+        <item>11 : 00 am</item>
+        <item>11 : 30 am</item>
+        <item>12 : 00 pm</item>
+        <item>12 : 30 pm</item>
+        <item>01 : 00 pm</item>
+        <item>01 : 30 pm</item>
+        <item>02 : 00 pm</item>
+        <item>02 : 30 pm</item>
+        <item>03 : 00 pm</item>
+        <item>03 : 30 pm</item>
+        <item>04 : 00 pm</item>
+        <item>04 : 30 pm</item>
+        <item>05 : 00 pm</item>
+        <item>05 : 30 pm</item>
+        <item>06 : 00 pm</item>
+        <item>06 : 30 pm</item>
+        <item>07 : 00 pm</item>
+        <item>07 : 30 pm</item>
+        <item>08 : 00 pm</item>
+        <item>08 : 30 pm</item>
+        <item>09 : 00 pm</item>
+        <item>09 : 30 pm</item>
+        <item>10 : 00 pm</item>
+        <item>10 : 30 pm</item>
+        <item>11 : 00 pm</item>
+        <item>11 : 30 pm</item>
+        <item></item>
+    </array>
+
+    <string name="app_center_key">27e089d6-fb10-43c1-a59a-7104f4d26aca</string>
+    <string name="get_started">Get Started</string>
+    <string name="car_sharing_done_right">Car sharing done right</string>
+    <string name="start_by_picking_your_preferred_language">Start by picking your preferred language</string>
+    <string name="language">LANGUAGE</string>
+    <string name="select_your_city">Select your city</string>
+    <string name="skip_intro">Skip Intro</string>
+    <string name="go_on_shoo">GO ON, SHOO!</string>
+    <string name="sign_up">Sign up</string>
+    <string name="_12345_6789">12345-6789</string>
+    <string name="choose">choose</string>
+    <string name="enter_the_otp_we_ve_sent_to_your_registered_phone_number">Enter the OTP sent to your\nregistered phone number:</string>
+    <string name="_966_4564_556_89">+966 4564 556 89</string>
+    <string name="didn_t_recieve_your_code">Didn’t recieve your code?</string>
+    <string name="or">OR</string>
+    <string name="change_phone_number">Change phone number</string>
+    <string name="enter_confirm_password">CONFIRM NEW PASSWORD</string>
+    <string name="register">Register</string>
+    <string name="create_account">Create Account</string>
+    <string name="i_have_read_and_agree_to_the_terms_and_conditions_and_the_privacy_policy">I have read and agree to the terms of service.</string>
+    <string name="last_name_cap">LAST NAME</string>
+    <string name="terms_amp_conditions"><![CDATA[terms & conditions]]></string>
+    <string name="terms_of_services">TERMS OF SERVICE</string>
+    <string name="click_here_if_you_can_t_see_the_n_email_in_your_inbox">CLICK HERE IF YOU CAN’T SEE THE\n EMAIL IN YOUR INBOX</string>
+    <string name="pick_your_ride">Pick your ride</string>
+    <string name="cars_nearby">Cars nearby</string>
+    <string name="available_for_delivery">Available for delivery</string>
+    <string name="deactivated">Deactivated</string>
+    <string name="enter_new_password">ENTER NEW PASSWORD</string>
+    <string name="pay_now">pay now</string>
+    <string name="message_payment_confirmation">Payment will be executed</string>
+    <string name="custom_ui_callback_scheme">customui</string>
+
+    <string name="message_successful_payment">The payment was successful</string>
+    <string name="message_unsuccessful_payment">"The payment was unsuccessful"</string>
+    <string name="add_credit_debit_card">Add credit / debit card</string>
+    <string name="add_new_card">Add new card</string>
+    <string name="your_payment_methods">your payment methods</string>
+    <string name="add_another_payment">Add another payment</string>
+    <string name="credit_card_0465">Credit Card (0465)</string>
+    <string name="your_bank_account">your bank account</string>
+    <string name="select_debit_credit_card">Select Debit / Credit Card</string>
+    <string name="enter_card_number">Enter card number</string>
+    <string name="card_holder_name">Card Holder\'s Name</string>
+    <string name="enter_name">Enter name</string>
+    <string name="cvv">CVV</string>
+    <string name="add_bank_account">Add bank account</string>
+    <string name="enter_account_title">Enter account title</string>
+    <string name="iban_number">IBAN Number</string>
+    <string name="enter_iban_number">Enter IBAN number</string>
+    <string name="account_title">Account Title</string>
+    <string name="payment_method">payment method</string>
+    <string name="payment_successful">payment successful</string>
+    <string name="your_payment_has_successfully_done_following_is_the_detail_for_the_transaction_of_your_payment">Your payment has successfully done, Following is the detail for the transaction of your payment</string>
+    <string name="transaction_number">Transaction number</string>
+    <string name="on_hold">On Hold</string>
+    <string name="your_listing_is_on_hold_because_we_could_not_find_any_payment_methods_against_your_account_in_order_to_list_your_car_please_add_a_payment_method_and_a_mandatory_bank_account">Your listing is on-hold because we could not find any payment methods against your account. In order to list your car, please add a payment method and a mandatory bank account.</string>
+    <string name="invalid_card_number">Invalid card number</string>
+    <string name="finish">finish</string>
+    <string name="al_olaya_street_riyadh_saudi_arabia">Al Olaya street, Riyadh, Saudi\nArabia</string>
+    <string name="terms_and_conditions">terms and conditions</string>
+    <string name="lorem_ipsum_dolor_sit_amet_consectetur_adipiscing_elit_sed_do_eiusmod_tempor_incididunt_ut_labore_et_dolore_magna_aliqua_ut_enim_ad_minim_veniam_quis_nostrud_exercitation_ullamco_laboris">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris</string>
+    <string name="view_all_ratings">view all ratings</string>
+    <string name="stats_overview">OVERVIEW</string>
+    <string name="host_s_guidelines">HOST\'S GUIDELINES</string>
+    <string name="summary_">Summary</string>
+    <string name="setup_a_payment_methods_to_make_purchses_on_gocar">Setup a payment method to\nuse GOCAR\'s services</string>
+    <string name="trip_saving">trip savings</string>
+    <string name="list_your_cars_for_free_set_your_own_prices_availability_and_conditions_pick_ups_and_drop_offs_are_made_easy_and_after_that_enjoy_getting_paid_we_ll_be_here_to_help_you_every_step_of_the_way_and_show_you_the_ropes_on_how_to_maintain_a_solid_listing">List your cars for free, set your own prices, availability, and conditions. Pick- ups and drop-offs are made easy, and after that, enjoy getting paid. We’ll be here to help you every step of the way and show you the ropes on how to maintain a solid listing.</string>
+    <string name="if_you_don_t_have_comprehensive_insurance_we_re_partnered_with_allianz_to_offer_you_all_the_coverage_you_ll_need_to_host_confidently_the_plan_covers_up_to_insert_amount_here_in_insert_type_of_coverage_and_or_damages_listed_by_allianz">If you don’t have comprehensive insurance, we’re partnered with Allianz to offer you all the coverage you’ll need to host confidently. The plan covers up to [insert amount here] in [insert type of coverage and/or damages listed by Allianz]</string>
+    <string name="coverage">COVERAGE</string>
+    <string name="put_your_mind_at_ease">Put your mind at ease</string>
+    <string name="thank_you_for_booking_with_gocar">Thank you for booking with GOCAR</string>
+    <string name="no_messages_yet">no messages yet</string>
+    <string name="no_past_trips">no past trips</string>
+    <string name="invoice_reciept">Invoice reciept</string>
+    <string name="delivery_address">Delivery Address</string>
+    <string name="trip_details_">trip details</string>
+    <string name="price_details">price details</string>
+    <string name="included">included</string>
+    <string name="not_yet_included">not yet included</string>
+    <string name="trip_photos">Trip PHOTOS</string>
+    <string name="add_photos">add photos</string>
+    <string name="add_trip_images">Add trip images</string>
+    <string name="undefined">Undefined</string>
+    <string name="rating_amp_reviews"><![CDATA[ratings & REVIEWS]]></string>
+    <string name="rating_amp_reviews_"><![CDATA[rating & REVIEW]]></string>
+    <string name="pre_trip">Pre-trip</string>
+    <string name="post_trip">Post-trip</string>
+    <string name="complete_trip">Complete trip</string>
+    <string name="trip_fee">Trip fee</string>
+    <string name="booking_cancelled_successfully">Booking Cancelled Successfully</string>
+    <string name="ok">ok</string>
+    <string name="select_reasons_of_rejection">Select Reasons of Rejection:</string>
+    <string name="rate_your_experience_of_the_trip">Rate your experience of the Trip</string>
+    <string name="add_review">Add Review</string>
+    <string name="book_id">Booking ID:</string>
+    <string name="no_trips">no trips</string>
+    <string name="trip_id">Trip ID # %s</string>
+    <string name="owner_name">%s\'s</string>
+
+
+    <string name="personal_info">Personal information</string>
+    <string name="how_i_can_help_you">How can we help?</string>
+    <string name="get_in_touch">Get in touch with GOCAR support</string>
+    <string name="get_support">GOCAR support</string>
+    <string name="report_an_accident">Report an accident</string>
+    <string name="call_now">Call now</string>
+    <string name="report_online">Report online</string>
+    <string name="delete_confirmation_message">Are you sure , you want to delete?</string>
+    <string name="delete_confirmation_card">Are you sure you want to remove this card?</string>
+    <string name="delete_confirmation_bank">Are you sure you want to remove this bank account?</string>
+    <string name="trips_date">Trips date</string>
+    <string name="pick_up_and_return">Pick up and return</string>
+    <string name="total_trip">Total trips:</string>
+    <string name="total_tripa">Total trips</string>
+    <string name="view_all_reviews">View all reviews</string>
+    <string name="view_all_reviews_link"><u>View all reviews</u></string>
+    <string name="report_profile">Report profile</string>
+    <string name="profile_process">Profile\nProcess</string>
+    <string name="upload_images">Upload Images</string>
+    <string name="upload_images_now">UPLOAD IMAGES</string>
+    <string name="you_need_minimum_1_and_nmaximum_6">You need a minimum of 1 and a\nmaximum of 6</string>
+    <string name="please_upload_images_of_the_car">Please upload images of the car</string>
+    <string name="no_transaction_found">No transaction history available</string>
+    <string name="no_favourites_available">No favourites available</string>
+    <string name="email_address">Email Address</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="ratings">ratings</string>
+    <string name="select_registration_type">Select registration type</string>
+    <string name="company">Company</string>
+    <string name="individual">Individual</string>
+    <string name="you_need_to_upload">You need to upload your</string>
+    <string name="vat_registration_certificate">Vat registration certificate</string>
+    <string name="company_registration_document">Company registration \ndocument</string>
+    <string name="active">active</string>
+    <string name="please_upload_vat_img">Please upload Vat image</string>
+    <string name="please_upload_company_img">Please upload Company image</string>
+    <string name="add_another_vehicle">Add Another Vehicle</string>
+    <string name="your_calendar">Your Calendar</string>
+    <string name="your_trip">TRIP DATES</string>
+    <string name="please_select_date">Please select date</string>
+    <string name="user_status">User Status*</string>
+    <string name="identification_status">Identification status</string>
+    <string name="select_user_status">Select user status</string>
+    <string name="national_id_number">National ID Number</string>
+    <string name="id_number">Enter national ID Number</string>
+    <string name="upload_image_of_your_national_id">Upload image of your national ID</string>
+    <string name="upload_image_of_vat_certificate">Upload image of VAT certificate</string>
+    <string name="upload_image_of_commercial_registration">Upload image of commercial registration</string>
+    <string name="corporate_registration_number">Corporate Registration Number</string>
+    <string name="cr_number">Enter CR number</string>
+    <string name="upload_image">Upload image</string>
+    <string name="the_picture_is_not_clear">The picture is not clear</string>
+    <string name="accept_all">Accept All</string>
+    <string name="not_accepted">Not accepted</string>
+    <string name="clear_filter">Clear filters</string>
+    <string name="budget">Budget</string>
+    <string name="apply_filter">Apply filters</string>
+    <string name="reset_all_filter">Reset all filters</string>
+    <string name="map">Map</string>
+    <string name="start_date">Start:</string>
+    <string name="end_date">End:</string>
+    <string name="list">List</string>
+
+    <string name="commitment_rate_capital">Commitment\nrate</string>
+    <string name="five_star_rating_capital">Five star\nrating</string>
+    <string name="joinedes">Joined:</string>
+    <string name="avg_response_timeees">Avg. response time</string>
+    <string name="monday">Monday</string>
+    <string name="enter_licence_plate">Licence plate number</string>
+    <string name="view_listing">view listing</string>
+    <string name="five_star_ratees">five-star ratings</string>
+    <string name="toes">To</string>
+    <string name="from">From</string>
+
+    <string name="notification_text">Don’t worry! You can cancel your \ntrip for free, up to 24 hours \nbefore it starts.</string>
+    <string name="delete">Delete</string>
+    <string name="host_joined">Host - Joined</string>
+    <string name="guest_joined">Guest - Joined</string>
+    <string name="select_reason">Select Reason</string>
+    <string name="warning">warning</string>
+    <string name="select_a_payment_method">Select a payment method</string>
+    <string name="name">Name</string>
+
+
+    <string name="select_daily_price">Select the daily rate for your vehicle</string>
+    <string name="daily_price">Daily Price</string>
+    <string name="set_special_discounts">Set special discounts depending on rental duration</string>
+    <string name="set_special_rates">Set special rates for specific days</string>
+    <string name="radius_in_km">Radius in kilometer</string>
+    <string name="what_features_does_your_car_have">What features does your car have?</string>
+    <string name="view_less">See Less</string>
+    <string name="see_less">See Less</string>
+    <string name="enter_number">Enter number</string>
+    <string name="open_camera">Open Camera</string>
+    <string name="choose_pictures">Choose Pictures</string>
+    <string name="tuesday">Tuesday</string>
+    <string name="wednesday">Wednesday</string>
+    <string name="thursday">Thursday</string>
+    <string name="friday">Friday</string>
+    <string name="saturday">Saturday</string>
+    <string name="sunday">Sunday</string>
+    <string name="mon">mon</string>
+    <string name="tue">tue</string>
+    <string name="wed">wed</string>
+    <string name="thu">thu</string>
+    <string name="fri">fri</string>
+    <string name="sat">sat</string>
+    <string name="sun">sun</string>
+    <string name="select_price">Select price</string>
+    <string name="select_days_to_add_custom_price">Set your custom pricing for any day of the week</string>
+    <string name="basics">basics</string>
+    <string name="features">Features</string>
+    <string name="applied_at_checkout">(applied at checkout)</string>
+    <string name="young_delivery_fee">Young delivery fee</string>
+    <string name="applies_to_all_drivers_under_26_years_old">Applies to all drivers under 26 years old</string>
+    <string name="protection_plan">ProTECTION PLAN</string>
+    <string name="includes_liability_insurance_and_physical_damage_protection_options_you_ll_select_a_plan_when_you_re_checking_out">Includes comprehensive insurance plan; you’ll select a plan when you’re checking out</string>
+    <string name="this_helps_us_run_the_gocar_platform">This helps us run the GOCAR platform</string>
+    <string name="view_more">view more</string>
+    <string name="pick_up_and_returnes">pick up and return</string>
+    <string name="pickup">pickup</string>
+    <string name="enter_address">Enter address</string>
+    <string name="fuel_level">Fuel level</string>
+    <string name="enter_car">Enter car</string>
+    <string name="enter_country">Enter country</string>
+    <string name="state_regiones">State / Region</string>
+    <string name="enter_state_region">Enter state / region</string>
+    <string name="enter_city">Enter city</string>
+    <string name="address">Address</string>
+    <string name="zip_postal_codees">Zip / Postal Code</string>
+    <string name="your_car_has_the_following_safety_standards_fulfilledes">Your car has the following safety standards fulfilled?</string>
+    <string name="take_photo">take a photo</string>
+    <string name="take_picture">Take Picture</string>
+    <string name="guidelines_to_take_photo">To take a picture of your documents:</string>
+    <string name="guidelines_to_take_photo_1"> 1. Make sure you have sufficient lighting</string>
+    <string name="guidelines_to_take_photo_2"> 2. Position the document right below the camera</string>
+    <string name="guidelines_to_take_photo_2_1">and make sure it fits correctly within the frame</string>
+    <string name="guidelines_to_take_photo_3"> 3. Take the picture and upload it!</string>
+    <string name="this_">This</string>
+    <string name="my">My</string>
+    <string name="pick_up_time_in_placeholder"><b>Pick-up time in</b> 23 hours 8 minutes</string>
+    <string name="pick_up_time_in">Pick-up time in </string>
+    <string name="drop_off_time_in">Drop-off time in </string>
+    <string name="host_name_place_holder">Ahmed Sultan</string>
+    <string name="added">Added</string>
+    <string name="total_rent">Total   %s %s</string>
+    <string name="earning_details">Earning Details</string>
+    <string name="this_invoice_has_been_generated_for_the_additional_kilometers_driven">THIS INVOICE HAS BEEN GENERATED FOR THE ADDITIONAL KILOMETERS DRIVEN.</string>
+    <string name="extended_reduced_days">Extended / Reduced days</string>
+    <string name="extended_reduced_trip_price">Extended / Reduced trip price</string>
+    <string name="_10_ratings">10 ratings</string>
+    <string name="updated_charges">Updated charges</string>
+    <string name="enter_old_password">ENTER OLD PASSWORD</string>
+    <string name="enter_new_passwordS">ENTER NEW PASSWORD</string>
+    <string name="confirm_new_password">CONFIRM NEW PASSWORD</string>
+    <string name="change_in_fee_note">SUBJECT TO CHANGE IN THE EVENT OF\nADDITIONAL FEES AND/OR REFUNDS DURING OR\nAFTER THE TRIP</string>
+    <string name="thank_you_for_using_go_car">Thank you for using GOCAR</string>
+    <string name="leave_review">Leave a review</string>
+    <string name="request_for_extension">request an extension</string>
+    <string name="terms_of_service">Terms of service</string>
+    <string name="please_read_the_terms_of_service_carefully_as_they_contain_important_information_that_affects_your_rights_remedies_and_obligations_they_include_an_agreement_to_arbitrate_unless_you_opt_out_these_terms_also_include_a_prohibition_of_class_and_representative_actions_and_non_individualized_relief_for_all_matters_in_either_court_or_arbitration_various_limitations_and_exclusions_a_clause_that_governs_the_jurisdiction_venue_and_governing_law_of_disputes_except_where_prohibited_and_obligations_to_comply_with_applicable_laws_and_regulations">PLEASE READ THE TERMS OF SERVICE CAREFULLY AS THEY CONTAIN IMPORTANT INFORMATION THAT AFFECTS YOUR RIGHTS, REMEDIES, AND OBLIGATIONS. THEY INCLUDE AN AGREEMENT TO ARBITRATE (UNLESS YOU OPT OUT). THESE TERMS ALSO INCLUDE A PROHIBITION OF CLASS AND REPRESENTATIVE ACTIONS AND NON-INDIVIDUALIZED RELIEF FOR ALL MATTERS IN EITHER COURT OR ARBITRATION, VARIOUS LIMITATIONS AND EXCLUSIONS, A CLAUSE THAT GOVERNS THE JURISDICTION, VENUE, AND GOVERNING LAW OF DISPUTES, EXCEPT WHERE PROHIBITED, AND OBLIGATIONS TO COMPLY WITH APPLICABLE LAWS AND REGULATIONS.<font color="#FF1420E4">READ MORE</font></string>
+    <string name="incorrect_password">Incorrect password</string>
+    <string name="support_not_available_yet">support not available yet</string>
+    <string name="accept_trip">accept trip</string>
+    <string name="reject_trip">reject trip</string>
+    <string name="lorem_ipsum_dolor_sit_amet_consectetur_adipiscing_elit_sed_do_eiusmod_tempor_incididunt_ut_labore_et_dolore_magna_aliqua">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\n\nUt enim ad minim veniam, quis nostrud exercitation ullamco laboris</string>
+    <string name="days_refunded">Days refunded</string>
+    <string name="credit_due">Credit due</string>
+    <string name="credit">Credit</string>
+    <string name="view_photos">View photos</string>
+    <string name="incident">Incident</string>
+    <string name="done">done</string>
+    <string name="requested_dates">requested dates</string>
+    <string name="accept_request">accept request</string>
+    <string name="reject_request">reject request</string>
+    <string name="become_a_host_message">List your cars for free, set your own prices, availability, and conditions. Pick-ups and drop-offs are made easy, and after that, enjoy getting paid. We’ll be here to help you every step of the way and show you the ropes on how to maintain a solid listing.</string>
+    <string name="rest_easy">REST EASY</string>
+    <string name="rest_easy_message">Whether it’s our customer support, how we screen guests, or our guides and rules. When it comes to sharing your car, we’re here to give you the peace of mind and confidence you need to do just that.</string>
+    <string name="contact_gocar">contact GOCAR</string>
+    <string name="total_trips">Total Trips:</string>
+    <string name="car_place_holder">%s %s (%s)</string>
+    <string name="customer_support">Customer Support</string>
+    <string name="upload_pdfs_now">UPLOAD PDF</string>
+    <string name="upload_new_pdf">Upload New PDF</string>
+    <string name="top_vehicles">%s\'s Top Vehicles</string>
+    <string name="no_vehicle_is_currently_available_in_your_city">No vehicle is currently available in your city</string>
+    <string name="no_data">NO DATA</string>
+    <string name="upload_documents">Upload Documents</string>
+    <string name="the_car_has_been_snoozed_by_you">The car has been snoozed by you</string>
+    <string name="the_car_has_been_snoozed_by_host">The car has been snoozed by the host</string>
+    <string name="report_late_return">Report Late Return</string>
+    <string name="write_your_reason_here">write your reason here</string>
+    <string name="other_field_required">Other field is required</string>
+    <string name="This_car_can_be_booked_for">This car can be booked for</string>
+    <string name="days_at_most">days at most</string>
+    <string name="mark_unavailable_dates">Mark unavailable dates</string>
+    <string name="kms_are_unlimited">Unlimited km/day</string>
+    <string name="no_ratings">no ratings</string>
+    <string name="contact_us">contact us</string>
+    <string name="share_your_concern_with_us">Share your concern with us</string>
+    <string name="enter_your_message_here">ENTER YOUR MESSAGE HERE...</string>
+    <string name="send_message">Send message</string>
+    <string name="second_email">Email now</string>
+    <string name="please_take_10_15_photos_to_document_the_car_s_condition_be_sure_to_take_photos_of_the_exterior_and_interior_walk_around_the_car_and_take_photos_of_all_sides_including_close_ups">Please take 10-15 photos to document the car’s condition. Be sure to take photos of the exterior and interior. Walk around the car and take photos of all sides, including close-ups.</string>
+    <string name="enter_driving_license_number">Enter Driving License Number</string>
+    <string name="enter_license_number">Enter License number</string>
+
+    <plurals name="days_">
+        <item quantity="one">%d day</item>
+        <item quantity="other">%d days</item>
+    </plurals>
+    <plurals name="day_trip">
+        <item quantity="one">%d-day trip</item>
+        <item quantity="other">%d-days trip</item>
+    </plurals>
+    <plurals name="day_rent">
+        <item quantity="one">%d-day rent</item>
+        <item quantity="other">%d-days rent</item>
+    </plurals>
+    <string name="title_activity_full_screen_image_car_details">FullScreenImageCarDetailsActivity
+    </string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="select_reason_of_reporting">Select reason of reporting:</string>
+    <string name="driver_s_license">Driver’s License</string>
+    <string name="report_listings">REPORT LISTING</string>
+    <string name="support_gocar_sa">support@gocar.sa</string>
+    <string name="enter_your_reason_here">ENTER YOUR REASON HERE</string>
+    <string name="data_not_found">Data not found</string>
+    <string name="Update_image">update image</string>
+    <string name="Update_document">update document</string>
+    <string name="protection_planS">Protection plan</string>
+    <string name="accrued_fines">Accrued Fines</string>
+    <string name="fine_invoice">Fine Invoice</string>
+    <string name="failure_to_report_no_show">Failure to report no-show</string>
+    <string name="host_no_show">Host no-show</string>
+    <string name="trip_cancellation">Trip Cancellation</string>
+    <string name="this_invoice_has_been_generated_for_accrued_fines">This invoice has been generated for accrued fines</string>
+    <string name="late_return">Late return</string>
+    <string name="improper_return">Improper return</string>
+    <string name="vat_15">VAT (15%)</string>
+    <string name="total_before_tax">Total before tax</string>
+    <string name="pickup_and_returnes">PICKUP AND RETURN</string>
+    <string name="date_of_payment">Date of payment</string>
+    <string name="total_amount_paid">Total amount paid</string>
+    <string name="how_much_buffer_do_you_need_before_a_trip_starts">How much buffer do you need\nbefore a trip starts?</string>
+</resources>

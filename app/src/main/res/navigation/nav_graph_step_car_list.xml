@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_step_car_list"
+    app:startDestination="@id/carInformationFragment">
+
+    <fragment
+        android:id="@+id/carInformationFragment"
+        android:name="com.towsal.towsal.views.fragments.CarInformationFragment"
+        android:label="@string/list_your_car"
+        tools:layout="@layout/fragment_car_information">
+
+
+        <action
+            android:id="@+id/action_carInformationFragment_to_carAvailabilityFragment"
+            app:destination="@id/carAvailabilityFragment"
+            app:enterAnim="@anim/animation_enter"
+            app:exitAnim="@anim/animation_exist" />
+    </fragment>
+    <fragment
+        android:id="@+id/carAvailabilityFragment"
+        android:name="com.towsal.towsal.views.fragments.CarAvailabilityFragment"
+        android:label="@string/car_availability"
+        tools:layout="@layout/fragment_car_availability">
+
+        <action
+            android:id="@+id/action_carAvailabilityFragment_to_carPhotosFragment"
+            app:destination="@id/carPhotosFragment"
+            app:enterAnim="@anim/animation_enter"
+            app:exitAnim="@anim/animation_exist" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/carPhotosFragment"
+        android:name="com.towsal.towsal.views.fragments.CarPhotosFragment"
+        android:label="fragment_car_phtos"
+        tools:layout="@layout/fragment_car_photos">
+
+        <action
+            android:id="@+id/action_carPhotosFragment_to_vehicleProtectionFragment"
+            app:destination="@id/vehicleProtectionFragment"
+            app:enterAnim="@anim/animation_enter"
+            app:exitAnim="@anim/animation_exist" />
+    </fragment>
+    <fragment
+        android:id="@+id/vehicleProtectionFragment"
+        android:name="com.towsal.towsal.views.fragments.VehicleProtectionFragment"
+        android:label="fragment_vehicle_protection"
+        tools:layout="@layout/fragment_vehicle_protection">
+        <action
+            android:id="@+id/action_vehicleProtectionFragment_to_safteyQualityStandardFragment"
+            app:destination="@id/safteyQualityStandardFragment"
+            app:enterAnim="@anim/animation_enter"
+            app:exitAnim="@anim/animation_exist" />
+    </fragment>
+    <fragment
+        android:id="@+id/safteyQualityStandardFragment"
+        android:name="com.towsal.towsal.views.fragments.SafetyQualityStandardFragment"
+        android:label="fragment_saftey_quality_standard"
+        tools:layout="@layout/fragment_saftey_quality_standard" />
+
+</navigation>

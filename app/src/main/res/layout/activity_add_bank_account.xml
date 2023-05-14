@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="activity"
+            type="com.towsal.towsal.views.activities.AddBankAccountActivity" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:background="@color/colorWhite"
+        android:layout_height="match_parent"
+        tools:context=".views.activities.AddBankAccountActivity">
+
+        <include
+            android:id="@+id/layoutToolBar"
+            layout="@layout/layout_new_custom_action_bar" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="@dimen/_20sdp"
+            android:paddingBottom="@dimen/_5sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layoutToolBar">
+
+            <TextView
+                android:id="@+id/tvAccountTitle"
+                style="@style/InterRegularFont"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/account_title"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12ssp"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edtAccountTitle"
+                style="@style/InterRegularFont"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_32sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/bg_text_view_primary"
+                android:hint="@string/enter_account_title"
+                android:inputType="textPersonName|textCapCharacters"
+                android:paddingHorizontal="@dimen/_10sdp"
+                android:singleLine="true"
+                android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ "
+                android:textAllCaps="true"
+                android:textColor="@color/colorButtonGrey"
+                android:textColorHint="@color/colorButtonGrey"
+                android:textSize="@dimen/_11ssp"
+                app:hintTextAppearance="@style/InterRegularFont"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvAccountTitle" />
+
+
+            <TextView
+                android:id="@+id/tvIbanNumber"
+                style="@style/InterRegularFont"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:text="@string/iban_number"
+                android:textSize="@dimen/_12ssp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edtAccountTitle" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edtAccountNumber"
+                style="@style/InterRegularFont"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_32sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/bg_text_view_primary"
+                android:hint="@string/enter_iban_number"
+                android:inputType="text"
+                android:paddingHorizontal="@dimen/_10sdp"
+                android:singleLine="true"
+                android:textAllCaps="true"
+                android:textColor="@color/colorButtonGrey"
+                android:textColorHint="@color/colorButtonGrey"
+                android:textSize="@dimen/_11ssp"
+                app:hintTextAppearance="@style/InterRegularFont"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvIbanNumber" />
+
+
+            <Button
+                android:id="@+id/btnSave"
+                style="@style/SharpGroteskSemiBoldFont11"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_35sdp"
+                android:background="@drawable/bg_new_button_primary_black"
+                android:onClick="@{(view) -> activity.onClick(view)}"
+                android:text="@string/save"
+                android:textAllCaps="true"
+                android:textColor="@color/coral"
+                android:textSize="@dimen/_19ssp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
+
+

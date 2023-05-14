@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="position"
+            type="int" />
+
+        <variable
+            name="adapter"
+            type="com.towsal.towsal.views.adapters.TransactionHistoryListAdapter" />
+
+    </data>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/messageView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:onClick="@{(view)->adapter.onClick(position,view)}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0">
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout2"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginStart="@dimen/_15sdp"
+                app:layout_constraintBottom_toBottomOf="@+id/guestName"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/image"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@color/quantum_orange"
+                    app:civ_border_color="#00000000"
+                    app:civ_border_width="@dimen/_1sdp" />
+
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/bookingId"
+                style="@style/SharpGroteskSemiBoldFont11"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textAllCaps="true"
+                android:textColor="@color/black_text_black_variation_18"
+                android:textSize="@dimen/_19ssp"
+                app:layout_constraintEnd_toStartOf="@id/ivArrowForward"
+                app:layout_constraintStart_toEndOf="@+id/relativeLayout2"
+                app:layout_constraintTop_toTopOf="@+id/relativeLayout2"
+                tools:text="Booking Id : 12345" />
+
+
+            <TextView
+                android:id="@+id/guestName"
+                style="@style/InterSemiBold"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:ellipsize="end"
+                android:lineSpacingExtra="@dimen/_5sdp"
+                android:maxLines="3"
+                android:text="Host Name:"
+                android:textColor="@color/black_text_black_variation_18"
+                android:textSize="@dimen/_11ssp"
+                app:layout_constraintStart_toStartOf="@+id/bookingId"
+                app:layout_constraintTop_toBottomOf="@+id/bookingId" />
+
+            <TextView
+                android:id="@+id/tvName"
+                style="@style/InterRegularFont"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:ellipsize="end"
+                android:lineSpacingExtra="@dimen/_5sdp"
+                android:maxLines="1"
+                android:text="junaid"
+                android:textColor="@color/black_text_black_variation_18"
+                android:textSize="@dimen/_11ssp"
+                app:layout_constraintBottom_toBottomOf="@+id/guestName"
+                app:layout_constraintEnd_toStartOf="@id/ivArrowForward"
+                app:layout_constraintStart_toEndOf="@+id/guestName"
+                app:layout_constraintTop_toTopOf="@+id/guestName" />
+
+            <TextView
+                android:id="@+id/tvEarnedAndPaid"
+                style="@style/InterSemiBold"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:ellipsize="end"
+                android:lineSpacingExtra="@dimen/_5sdp"
+                android:maxLines="3"
+                android:text="Earned:"
+                android:textColor="@color/black_text_black_variation_18"
+                android:textSize="@dimen/_11ssp"
+                app:layout_constraintStart_toStartOf="@+id/guestName"
+                app:layout_constraintTop_toBottomOf="@+id/guestName" />
+
+            <TextView
+                android:id="@+id/tvSAR"
+                style="@style/InterRegularFont"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:lineSpacingExtra="@dimen/_5sdp"
+                android:maxLines="3"
+                android:text="SAR"
+                android:textColor="@color/black_text_black_variation_18"
+                android:textSize="@dimen/_11ssp"
+                app:layout_constraintBottom_toBottomOf="@+id/tvEarnedAndPaid"
+                app:layout_constraintEnd_toStartOf="@+id/ivArrowForward"
+                app:layout_constraintStart_toEndOf="@+id/tvEarnedAndPaid"
+                app:layout_constraintTop_toTopOf="@+id/tvEarnedAndPaid" />
+
+            <ImageView
+                android:id="@+id/ivArrowForward"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:src="@drawable/ic_arrow_right"
+                app:layout_constraintBottom_toBottomOf="@+id/tvEarnedAndPaid"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/bookingId"
+                app:tint="@color/black_text_black_variation_18" />
+
+            <View
+                android:id="@+id/view4"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_1sdp"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:background="@color/grey_text_color_new"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvEarnedAndPaid" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
